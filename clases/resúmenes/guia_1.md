@@ -4,10 +4,10 @@
 
 ### General
 
-- $\R\rightarrow$ Conjunto de números reales
-- $\Z\rightarrow$ Conjunto de números enteros
-- $\N\rightarrow$ Conjunto de números naturales
-- $\omega=\N\cup\{0\}$, y $\forall x,y\in\omega$:
+- $R\rightarrow$ Conjunto de números reales
+- $Z\rightarrow$ Conjunto de números enteros
+- $N\rightarrow$ Conjunto de números naturales
+- $\omega=N\cup\{0\}$, y $\forall x,y\in\omega$:
   - $x\dot{-}y=x-y$ si $x\geq y$ y $0$ cc.
   - $x|y$ si $\exists z\in w$ tal que $y=x\cdot z$
   - Por convención nuestra, $0^0=1$
@@ -24,7 +24,7 @@
 - Dados $A_1,..,A_n$ con $n\geq 2$, $A_1\times ..\times A_n$ denota su producto cartesiano, es decir, al conjunto formado por todas las $n$-uplas $(a_1,..,a_n)$ con $a_i\in A_i$ para $i=1,..,n$
 - Si $A_1=..=A_n=A$, se denota $A^n$
 - Denotamos con $\Diamond$ a la única $0$-upla, por lo que definimos $A^0=\{\Diamond\}$
-- $A^N$ denota al conjunto formado por todas las *infinituplas* $(a_1,a_2,..)$ con $a_i\in A$ para todo $i\in\N$
+- $A^N$ denota al conjunto formado por todas las *infinituplas* $(a_1,a_2,..)$ con $a_i\in A$ para todo $i\in N$
 
 ## Alfabetos
 
@@ -80,7 +80,7 @@
     $$D_{f\circ g}=\{x\in D_g:g(x)\in D_f\}$$
     $$(f\circ g)(x)=f(g(x))$$
     *Notar que entonces* $f\circ g=\{(u,v):\exists z:(u,z)\in g\text{ y }(z,v)\in f\}$
-- *"Agrupadas"*: Dadas funciones $f_1,..,f_n$ con $n\in\N$, definimos $[f_1,..,f_n]$ como
+- *"Agrupadas"*: Dadas funciones $f_1,..,f_n$ con $n\in N$, definimos $[f_1,..,f_n]$ como
     $$D_{[f_1,..,f_n]}=D_{f_1}\cap ..\cap D_{f_n}$$
     $$[f_1,..,f_n](x)=(f_1(x),..,f_n(x))$$
     Notar que $I_{[f_1,..,f_n]}\subseteq I_{f_1}\times ..\times I_{f_n}$ y $[f_1]=f_1$.
@@ -127,7 +127,7 @@
     $$Suc:\omega\rightarrow\omega$$
     $$n\rightarrow n+1$$
 - *Pred*: Predecesor de un número:
-    $$Pred:\N\rightarrow\omega$$
+    $$Pred:N\rightarrow\omega$$
     $$n\rightarrow n-1$$
 - *Derecha*: Sea $\Sigma$ un alfabeto no vacío, entonces $\forall b\in\Sigma$ definimos
     $$d_b:\Sigma^*\rightarrow\Sigma^*$$
