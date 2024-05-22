@@ -14,7 +14,7 @@ Repositorio que contiene todo el material correspondiente a la materia de Lengua
 
 | Unidad | Tema | Material | Resumen |
 |--------|------|----------| ------- |
-| 1 | Notación + Conceptos básicos + Funciones/Conjuntos $\Sigma$-mixtos + Notación $\lambda$ | [Guía 1](clases/material/guia_1.pdf) | . |
+| 1 | Notación + Conceptos básicos + Funciones/Conjuntos $\Sigma$-mixtos + Notación $\lambda$ | [Guía 1](/famaf-computer_science-formal_languages_and_computability/clases/material/guia_1.pdf) | . |
 | 2 | Infinituplas + Órdenes totales + Orden natural sobre $\Sigma^*$ | [Guía 2](clases/material/guia_2.pdf) | . |
 | 3 | Procedimientos efectivos + Funciones/Conjuntos $\Sigma$-efectivamente computables + Conjuntos $\Sigma$-efectivamente enumerables | [Guía 3](clases/material/guia_3.pdf) | . |
 | 4 | Paradigma de Turing (Máquina de Turing + Funciones $\Sigma$-Turing computables)  | [Guía 4](clases/material/guia_4.pdf) | . |
