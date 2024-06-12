@@ -146,7 +146,7 @@
 - *Lemas*:
     - Si $S_1,S_2\subseteq\omega^n\times\Sigma^{*m}$ son $\Sigma$-p.r., entonces $S_1\cup S_2,S_1\cap S_2,S_1-S_2$ son $\Sigma$-p.r. también
     - Si $S\subseteq\omega^n\times\Sigma^{*m}$ es *finito*, entonces $S$ es $\Sigma$-p.r.
-    - *Conjunto rectangular $\Sigma$-p.r.:* Sean $S_1,..,S_n\in\omega,L_1,..,L_m\in\Sigma^*$ conjuntos no vacíos, entonces $S_1\times..\times S_n\times L_1\times..\times L_m$ es $\Sigma$-p.r. $\Leftrightarrow S_1,..,S_n,L_1,..,L_m$ son $\Sigma$-p.r.
+    - *Conjunto rectangular $\Sigma$-p.r.:* Sean $S_1,..,S_n\subseteq\omega,L_1,..,L_m\subseteq\Sigma^*$ conjuntos no vacíos, entonces $S_1\times..\times S_n\times L_1\times..\times L_m$ es $\Sigma$-p.r. $\Leftrightarrow S_1,..,S_n,L_1,..,L_m$ son $\Sigma$-p.r.
     - *$\Sigma$-p.r. para función restringida*: Sea $f:D_f\subseteq\omega^n\times\Sigma^{*m}\to O$ que es $\Sigma$-p.r. (con $O\in\{\omega,\Sigma^*\}$), si $S\subseteq D_f$ es $\Sigma$-p.r., entonces $f|_S$ es $\Sigma$-p.r. también
         - *Definición*: Dada una función $f$ y un conjunto $S\subseteq D_f$, usaremos $f|_S$ para denotar la restricción de $f$ al conjunto $S$, es decir, $f|_S=f\cap(S\times I_f)$. Notar que $D_{f|_S}=S$ y $f|_S(e)=f(e)\forall e\in S$.
     - Sean $O\in\{\omega,\Sigma^*\}$ y $n,m\in\omega$, si $f:D_f\subseteq\omega^n\times\Sigma^{*m}\to O$ es $\Sigma$-p.r., entonces existe una función $\Sigma$-p.r. $\bar{f}:\omega^n\times\Sigma^{*m}\to O$ tal que $f=\bar{f}|_{D_f}$

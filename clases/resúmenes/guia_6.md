@@ -1,4 +1,4 @@
-# Paradigma de Godel (Parte 2)
+# Guía 6: Paradigma de Godel (Parte 2)
 
 ## Continuación de $\Sigma$-p.r.
 

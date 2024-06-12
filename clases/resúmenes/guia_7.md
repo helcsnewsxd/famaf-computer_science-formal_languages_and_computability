@@ -1,4 +1,4 @@
-# El paradigma imperativo de Neumann: El lenguaje $\mathcal{S}^\Sigma$
+# Guía 7: El paradigma imperativo de Neumann: El lenguaje $\mathcal{S}^\Sigma$
 
 ## Sintaxis de $\mathcal{S}^\Sigma$
 
