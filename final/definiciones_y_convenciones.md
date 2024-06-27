@@ -12,6 +12,14 @@ Defina:
 
 ### Resolución
 
+1. Un conjunto $S\subseteq\omega^n\times\Sigma^{*m}$ es $\Sigma$-recursivo si su función característica $\chi_S^{\omega^n\times\Sigma^{*m}}$ es $\Sigma$-recursiva.
+2. Dada una infinitupla $(s_1,s_2,...)\in\omega^{[N]}$, se usa $\langle s_1,s_2,...\rangle$ para denotar al número $x=\prod_{i=1}^\infty pr(i)^{s_i}$
+3. Sea $\Sigma$ un alfabeto finito y sea $f$ una función, diremos que es $\Sigma$-mixta si $\exists n,m\geq 0:D_f\subseteq\omega^n\times\Sigma^{*m}$ e $I_f\subseteq O$ donde $O\in\{\omega,\Sigma^*\}$
+4. Dado un alfabeto $\Sigma$, una familia $\Sigma$-indexada de funciones es una función $\mathcal{G}$ tal que $D_\mathcal{G}=\Sigma$ y $\forall a\in D_\mathcal{G}$, $\mathcal{G}(a)$ es una función.
+5. La recursión primitiva para el caso de *variable alfabética* se define de forma distinta para los casos de *valores numéricos* o *alfabéticos*. Por ello, veamos cada uno:
+    - **Valores numéricos**: Sea $\Sigma$ un alfabeto finito, y sean $f$ una función y $\mathcal{G}$ una familia $\Sigma$-indexada de funciones tales que: $$\begin{aligned}f&:S_1\times ...\times S_n\times L_1\times ...\times L_m\to\omega\\ \\ \mathcal{G}_a&:\omega\times S_1\times ...\times S_n\times L_1\times ...\times L_m\times\Sigma^*\to\omega\end{aligned}$$ para cada $a\in\Sigma$, y con $S_i\subseteq\omega$ y $L_i\subseteq\Sigma^*$ conjuntos no vacíos, entonces definimos $$\begin{aligned} R(f,\mathcal{G})&:S_1\times ...\times S_n\times L_1\times ...\times L_m\times\Sigma^*\to\omega\\ \\ R(f,\mathcal{G})(\vec{x},\vec{\alpha},\varepsilon)&=f(\vec{x},\vec{\alpha})\\ \\ R(f,\mathcal{G})(\vec{x},\vec{\alpha},\alpha a)&=\mathcal{G}_a(R(f,\mathcal{G})(\vec{x},\vec{\alpha},\alpha),\vec{x},\vec{\alpha},\alpha) \end{aligned}$$ y decimos que $R(f,\mathcal{G})$ es obtenida por recursión primitiva a partir de $f$ y $\mathcal{G}$.
+    - **Valores alfabéticos**: Sea $\Sigma$ un alfabeto finito, y sean $f$ una función y $\mathcal{G}$ una familia $\Sigma$-indexada de funciones tales que: $$\begin{aligned}f&:S_1\times ...\times S_n\times L_1\times ...\times L_m\to\Sigma^*\\ \\ \mathcal{G}_a&:S_1\times ...\times S_n\times L_1\times ...\times L_m\times\Sigma^*\times\Sigma^*\to\Sigma^*\end{aligned}$$ para cada $a\in\Sigma$, y con $S_i\subseteq\omega$ y $L_i\subseteq\Sigma^*$ conjuntos no vacíos, entonces definimos $$\begin{aligned} R(f,\mathcal{G})&:S_1\times ...\times S_n\times L_1\times ...\times L_m\times\Sigma^*\to\Sigma^*\\ \\ R(f,\mathcal{G})(\vec{x},\vec{\alpha},\varepsilon)&=f(\vec{x},\vec{\alpha})\\ \\ R(f,\mathcal{G})(\vec{x},\vec{\alpha},\alpha a)&=\mathcal{G}_a(\vec{x},\vec{\alpha},\alpha,R(f,\mathcal{G})(\vec{x},\vec{\alpha},\alpha)) \end{aligned}$$ y decimos que $R(f,\mathcal{G})$ es obtenida por recursión primitiva a partir de $f$ y $\mathcal{G}$.
+
 ## Combo 2
 
 Defina:
