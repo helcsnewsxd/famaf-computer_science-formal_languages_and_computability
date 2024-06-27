@@ -220,6 +220,18 @@ Defina cuándo un conjunto $S\subseteq\omega^n\times\Sigma^{*m}$ es llamado $\Si
 
 ### Resolución
 
+- Un conjunto $S\subseteq\omega^n\times\Sigma^{*m}$ es $\Sigma$-computable si $\chi_S^{\omega^n\times\Sigma^{*m}}$ es $\Sigma$-computable. Es decir, es $\Sigma$-computable si y solo si hay un programa $\mathcal{P}\in Pro^\Sigma$ que computa a $\chi_S^{\omega^n\times\Sigma^{*m}}$:
+        - Si $(\vec{x}, \vec{\alpha})\in S$, entonces $\mathcal{P}$ se detiene partiendo de $||x_1, .., x_n, \alpha_1, .., \alpha_m||$ y la variable $N1$ queda con contenido igual a $1$
+        - Si $(\vec{x}, \vec{\alpha})\notin S$, entonces $\mathcal{P}$ se detiene partiendo de $||x_1, .., x_n, \alpha_1, .., \alpha_m||$ y la variable $N1$ queda con contenido igual a $0$
+    Decimos que $\mathcal{P}$ decide la pertenencia a $S$ respecto al conjunto $\omega^n\times\Sigma^{*m}$
+- Un conjunto $S\subseteq\omega^n\times\Sigma^{*m}$ es $\Sigma$-enumerable si es vacío o existe una función $F:\omega\to\omega^n\times\Sigma^{*m}$ tal que $I_F=S$ y $F_{(i)}$ sea una función $\Sigma$-computable para todo $i\in{1,..,n+m}$
+- Propiedad: Sea $S\subseteq\omega^n\times\Sigma^{*m}$ un conjunto no vacío, entonces son equivalentes:
+    - $S$ es $\Sigma$-enumerable
+    - Hay un programa $\mathcal{P}\in Pro^\Sigma$ tal que
+        - $\forall x\in\omega$, $\mathcal{P}$ se detiene partiendo de $||x||$ y llega a un estado de la forma $((x_1, .., x_n, y_1, ...) , (\alpha_1, .., \alpha_m, \beta_1, ..))$ con $(x_1, .., x_n, \alpha_1, .., \alpha_m)\in S$
+        - $\forall (x_1, .., x_n, \alpha_1, .., \alpha_m)\in S$, $\exists x\in\omega$ tal que $\mathcal{P}$ se detiene partiendo de $||x||$ y llega a un estado de la forma $((x_1, .., x_n, y_1, ...) , (\alpha_1, .., \alpha_m, \beta_1, ..))$
+    Decimos que $\mathcal{P}$ *enumera* a $S$
+
 ## Combo 13
 
 Defina:
