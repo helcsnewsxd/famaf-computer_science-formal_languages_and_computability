@@ -126,6 +126,11 @@ Defina:
 
 ### Resolución
 
+1. Este caso se trata de **minimización de variable numérica**. Sea $\Sigma$ un alfabeto finito y sea $P:D_P\subseteq\omega\times\omega^n\times\Sigma^{*m}\to\omega$ un predicado, dado $(\vec{x},\vec{\alpha})\in\omega^n\times\Sigma^{*m}$, cuando exista al menos un $t\in\omega:P(t,\vec{x},\vec{\alpha})=1$, usaremos $\min_t P(t,\vec{x},\vec{\alpha})$ para denotar al menor de tales $t$'s. Con ello, definimos $$M(P)=\lambda\vec{x}\vec{\alpha}\left[\min_t P(t,\vec{x},\vec{\alpha})\right]$$ El cual cumple que: $$\begin{aligned} D_{M(P)}&=\{(\vec{x},\vec{\alpha})\in\omega^n\times\Sigma^{*m}:(\exists t\in\omega) P(t,\vec{x},\vec{\alpha})\}\\ \\ M(P)(\vec{x},\vec{\alpha})&=\min_t P(t,\vec{x},\vec{\alpha}),\ \forall(\vec{x},\vec{\alpha})\in D_{M(P)}\end{aligned}$$ Y diremos que $M(P)$ se obtiene por *minimización de variable numérica* a partir de $P$.
+2. Definimos la función del *mayor factor primo* como $$\begin{aligned}Lt&:N\to\omega\\ \\ Lt(x)&=\begin{cases}\max\{i\in N:(x)_i\neq 0\} &\text{si }x\neq 1\\ 0 &\text{si }x=1\end{cases} \end{aligned}$$
+3. Sea $\Sigma$ un alfabeto finito, un conjunto $\Sigma$-mixto $S$ es llamado *rectangular* si es de la forma $S_1\times ...\times S_n\times L_1\times ...\times L_m$ con $S_i\subseteq\omega$ y $L_j\subseteq\Sigma^*$
+4. Dado un conjunto $\Sigma$-mixto $S$ y $n,m\in\omega:S\subseteq\omega^n\times\Sigma^{*m}$, entonces $S$ es de tipo $(n,m)$
+
 ## Combo 9
 
 Defina:
