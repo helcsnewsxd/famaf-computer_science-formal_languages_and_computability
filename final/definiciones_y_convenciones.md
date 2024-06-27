@@ -174,6 +174,29 @@ Defina, relativo al lenguaje $S^\Sigma$:
 
 ### Resolución
 
+1. Un estado es un par $(\vec{s},\vec{\sigma})=((s_1,s_2,...),(\sigma_1,\sigma_2,...))\in\omega^{[N]}\times\Sigma^{*[N]}$ y, si $i\geq 1$, entonces diremos que $s_i$ es el contenido o valor de la variable $N\bar{i}$ en el estado $(\vec{s},\vec{\sigma})$ y $\sigma_i$ es el contenido o valor de la variable $P\bar{i}$ en el estado $(\vec{s},\vec{\sigma})$
+2. Una descripción instantánea es una terna $(i,\vec{s},\vec{\sigma})$ tal que $(\vec{s},\vec{\sigma})$ es un estado e $i\in\omega$. Intuitivamente, $(i,\vec{s},\vec{\sigma})$ nos dice que las variables están en el estado $(\vec{s},\vec{\sigma})$ y que la instrucción que debemos realizar es $I_i^\mathcal{P}$
+3. Dado un programa $\mathcal{P}$, definimos $S_\mathcal{P}:\omega\times\omega^{[N]}\times\Sigma^{*[N]}\to\omega\times\omega^{[N]}\times\Sigma^{*[N]}$ como la función que asignará a una descripción instantánea $(i,\vec{s},\vec{\sigma})$ la descripción instantánea sucesora de $(i,\vec{s},\vec{\sigma})$ con respecto a $\mathcal{P}$. Es decir, hay varios casos posibles:
+    -  Si $i\notin\{1,..,n(\mathcal{P})\}$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i,\vec{s},\vec{\sigma})$
+    - Si $Bas(I_i^\mathcal{P})=N\bar{k}\leftarrow N\bar{k}\dot{-}1$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,(s_1,..,s_{k-1},s_k\dot{-}1,s_{k+1},..),\vec{\sigma})$
+    - Si $Bas(I_i^\mathcal{P})=N\bar{k}\leftarrow N\bar{k}+1$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,(s_1,..,s_{k-1},s_k+1,s_{k+1},..),\vec{\sigma})$
+    - Si $Bas(I_i^\mathcal{P})=N\bar{k}\leftarrow N\bar{n}$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,(s_1,..,s_{k-1},s_n,s_{k+1},..),\vec{\sigma})$
+    - Si $Bas(I_i^\mathcal{P})=N\bar{k}\leftarrow 0$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,(s_1,..,s_{k-1},0,s_{k+1},..),\vec{\sigma})$
+    - Si $Bas(I_i^\mathcal{P})=\text{IF }N\bar{k}\neq 0\text{ GOTO }L\bar{m}$, entonces hay dos posibilidades:
+        - Si el valor de $N\bar{k}$ es $0$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},\vec{\sigma})$
+        - Si el valor de $N\bar{k}$ es no nulo, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(\min\{l:I_l^\mathcal{P}\text{ tiene label }L\bar{m}\},\vec{s},\vec{\sigma})$
+    - Si $Bas(I_i^\mathcal{P})=P\bar{k}\leftarrow\ ^\curvearrowright P\bar{k}$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},(\sigma_1,..,\sigma_{k-1},\ ^\curvearrowright\sigma_k,\sigma_{k+1},..))$
+    - Si $Bas(I_i^\mathcal{P})=P\bar{k}\leftarrow P\bar{k}.a$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},(\sigma_1,..,\sigma_{k-1},\sigma_k a,\sigma_{k+1},..))$
+    - Si $Bas(I_i^\mathcal{P})=P\bar{k}\leftarrow P\bar{n}$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},(\sigma_1,..,\sigma_{k-1},\sigma_n,\sigma_{k+1},..))$
+    - Si $Bas(I_i^\mathcal{P})=P\bar{k}\leftarrow\varepsilon$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},(\sigma_1,..,\sigma_{k-1},\varepsilon,\sigma_{k+1},..))$
+    - Si $Bas(I_i^\mathcal{P})=\text{IF }P\bar{k}\text{ BEGINS }a\text{ GOTO }L\bar{m}$, entonces hay dos posibilidades:
+        - Si el valor de $P\bar{k}$ comienza con $a$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(\min\{l:I_l^\mathcal{P}\text{ tiene label }L\bar{m}\},\vec{s},\vec{\sigma})$
+        - Si el valor de $P\bar{k}$ no comienza con $a$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},\vec{\sigma})$
+    - Si $Bas(I_i^\mathcal{P})=\text{GOTO }L\bar{m}$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(\min\{l:I_l^\mathcal{P}\text{ tiene label }L\bar{m}\},\vec{s},\vec{\sigma})$
+    - Si $Bas(I_i^\mathcal{P})=\text{SKIP}$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},\vec{\sigma})$
+4. Diremos que $S_\mathcal{P}(S_\mathcal{P}(...(S_\mathcal{P}(1,\vec{s},\vec{\sigma}))...))=(j,\vec{u},\vec{\eta})$ con $S_\mathcal{P}$ aplicado $t$ veces, es la *descripción instantánea obtenida luego de $t$ pasos partiendo del estado $(\vec{s},\vec{\sigma})$*, y $(\vec{u},\vec{\eta})$ es el estado obtenido luego de $t$ pasos partiendo del estado $(\vec{s},\vec{\sigma})$
+5. Cuando la primer coordenada de $S_\mathcal{P}(S_\mathcal{P}(...(S_\mathcal{P}(1,\vec{s},\vec{\sigma}))...))$ (con $S_\mathcal{P}$ aplicado $t$ veces) es $n(\mathcal{P})+1$, diremos que $\mathcal{P}$ se detiene (luego de $t$ pasos), partiendo desde el estado $(\vec{s},\vec{\sigma})$
+
 ## Combo 11
 
 Defina:
