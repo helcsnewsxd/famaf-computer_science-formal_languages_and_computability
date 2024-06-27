@@ -33,6 +33,16 @@ Defina:
 
 ### Resolución
 
+1. Para $d,d'\in Des,n\geq 0$, escribiremos $d\overset{n}{\vdash}d'$ si $\exists d_1,...,d_{n+1}$ tales que $d=d_1,d'=d_{n+1}$ y $d_i\vdash d_{i+1}\forall i=1,...,n$.
+    - *Notar que $d\overset{0}{\vdash}d'\Leftrightarrow d=d'$*
+2. Diremos que una palabra $\alpha\in\Sigma^*$ es aceptada por $M$ por *alcance de estado final* cuando $\lfloor q_0B\alpha\rfloor\overset{*}{\vdash}d$, con $d:St(d)\in F$. Luego, el *lenguaje aceptado por $M$ por alcance de estado final* se define como $L(M)=\{\alpha\in\Sigma^*:\alpha\text{ es aceptada por }M\text{ por alcance de estado final}\}$
+3. Diremos que una palabra $\alpha\in\Sigma^*$ es aceptada por $M$ por *detención* cuando $M$ se detiene partiendo de $\lfloor q_0B\alpha\rfloor$. Luego, el *lenguaje aceptado por $M$ por detención* se define como $H(M)=\{\alpha\in\Sigma^*:\alpha\text{ es aceptada por }M\text{ por detención}\}$
+4. Si $f$ es una función $\Sigma$-mixta y $n,m\in\omega:D_f\subseteq\omega^n\times\Sigma^{*m}$,
+    - Si $I_f\subseteq\omega$, decimos que $f$ es de tipo $(n,m,\#)$
+    - Si $I_f\subseteq\Sigma^*$, decimos que $f$ es de tipo $(n,m,*)$
+4. Dado $x\in N$, usaremos $(x)$ para denotar a la única infinitupla $(s_1,s_2,...)\in\omega^{[N]}$ tal que $x=\langle s_1,s_2,...\rangle=\prod_{i=1}^\infty pr(i)^{s_i}$
+5. Para cada $i\in N$, usaremos $(x)_i$ para denotar a $s_i$ de la anterior infinitupla. Es decir, $(x)_i$ es el exponente de $pr(i)$ en la única factorización prima de $x$
+
 ## Combo 3
 
 Defina:
