@@ -94,6 +94,15 @@ Defina cuándo un conjunto $S\subseteq\omega^n\times\Sigma^{*m}$ es llamado $\Si
 
 ### Resolución
 
+Un conjunto $S\subseteq\omega^n\times\Sigma^{*m}$ es $\Sigma$-efectivamente enumerable si es vacío o $\exists F:\omega\to\omega^n\times\Sigma^{*m}$ tal que $I_F=S$ y $F_{(i)}$ es $\Sigma$-efectivamente computable $\forall i\in\{1,...,n+m\}$.
+
+Es decir, $S\neq\emptyset$ es $\Sigma$-efectivamente enumerable si existe un procedimiento efectivo $\mathbb{P}$ tal que:
+- El conjunto de datos de entrada de $\mathbb{P}$ es $\omega$
+- $\mathbb{P}$ se detiene para cada $x\in\omega$
+- El conjunto de datos de salida de $\mathbb{P}$ es igual a $S$
+
+En este caso, decimos que el procedimiento efectivo $\mathbb{P}$ enumera a $S$.
+
 ## Combo 7
 
 Defina cuándo una función $f:D_f\subseteq\omega^n\times\Sigma^{*m}\to\omega$ es llamada $\Sigma$-Turing computable y defina "la máquina de Turing $M$ computa a la función $f$".
