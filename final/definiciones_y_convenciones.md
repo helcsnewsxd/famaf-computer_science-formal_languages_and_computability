@@ -208,6 +208,12 @@ Defina:
 
 ### Resolución
 
+1. Dado $\mathcal{P}\in Pro^\Sigma$, definimos $\Psi_\mathcal{P}^{n,m,\#}$ como: $$\begin{aligned}D_{\Psi_\mathcal{P}^{n,m,\#}} &= \{(\vec{x}, \vec{\alpha})\in\omega^n\times\Sigma^{*m}:\mathcal{P}\text{ termina partiendo de }||\vec{x}, \vec{\alpha}||\}\\ \\ \Psi_\mathcal{P}^{n,m,\#}(\vec{x}, \vec{\alpha}) &= \text{valor de N1 cuando }\mathcal{P}\text{ termina partiendo de }||\vec{x}, \vec{\alpha}||\end{aligned}$$
+2. Una función $\Sigma$-mixta $f:S\subseteq\omega^n\times\Sigma^{*m}\to\omega$ es $\Sigma$-computable si existe un programa $\mathcal{P}\in \mathcal{S}^\Sigma$ tal que $f=\Psi_\mathcal{P}^{n,m,\#}$
+    - Se define de forma análoga para funciones $\Sigma$-mixtas $f:S\subseteq\omega^n\times\Sigma^{*m}\to\Sigma^*$ con $f=\Psi_\mathcal{P}^{n,m,*}$
+3. En el caso anterior, decimos que $f$ es *computada* por $\mathcal{P}$
+4. Sea $\Sigma\neq\emptyset$ un alfabeto con $\leq$ un orden total sobre este, y sea $P:D_P\subseteq\omega^n\times\Sigma^{*m}\times\Sigma^*\to\omega$ un predicado, dado $(\vec{x},\vec{\alpha})\in\omega^n\times\Sigma^{*m}$, cuando exista al menos un $\alpha\in\Sigma^*$ tal que $P(\vec{x},\vec{\alpha},\alpha)=1$, usaremos $\min_\alpha^\leq P(\vec{x},\vec{\alpha},\alpha)$ para denotar al menor de tales $\alpha$'s. Con ello, definimos: $$M^\leq(P)=\lambda\vec{x}\vec{\alpha}[min_\alpha^\leq P(\vec{x},\vec{\alpha},\alpha)]$$ El cual cumple que: $$\begin{aligned} D_{M^\leq(P)}&=\{(\vec{x},\vec{\alpha})\in\omega^n\times\Sigma^{*m}:(\exists\alpha\in\Sigma^*) P(\vec{x},\vec{\alpha},\alpha)=1\}\\ \\ M^\leq(P)(\vec{x},\vec{\alpha})&=min_\alpha^\leq P(\vec{x},\vec{\alpha},\alpha), \forall(\vec{x},\vec{\alpha})\in D_{M^\leq(P)}\end{aligned}$$ Y diremos que $M^\leq(P)$ se obtiene por *minimización de variable alfabética* a partir de $P$.
+
 ## Combo 12
 
 Defina cuándo un conjunto $S\subseteq\omega^n\times\Sigma^{*m}$ es llamado $\Sigma$-computable, cuándo es llamado $\Sigma$-enumerable y defina "el programa $\mathcal{P}$ enumera a $S$".
