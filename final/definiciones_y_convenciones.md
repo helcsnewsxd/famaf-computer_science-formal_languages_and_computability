@@ -248,6 +248,17 @@ Defina:
 
 ### Resolución
 
+- Sean $n,m\in\omega$, definimos las siguientes funciones: $$\begin{aligned} i^{n,m} &: \omega\times\omega^n\times\Sigma^{*m}\times Pro^\Sigma\to\omega\\ E^{n,m}_\# &: \omega\times\omega^n\times\Sigma^{*m}\times Pro^\Sigma\to\omega^{[N]}\\ E^{n,m}_* &: \omega\times\omega^n\times\Sigma^{*m}\times Pro^\Sigma\to\Sigma^{[N]}\\ \end{aligned}$$ de modo que $(i^{n,m}(t, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_\#(t, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_*(t, \vec{x}, \vec{\alpha}, \mathcal{P}))$ es la descripción instantánea que se obtiene luego de correr $\mathcal{P}$ una cantidad $t$ de pasos partiendo del estado $||x_1, .., x_n, \alpha_1, .., \alpha_m||$.
+- Definimos también las funciones $$\begin{aligned} E^{n,m}_{\#j}: \omega\times\omega^n\times\Sigma^{*m}\times Pro^\Sigma\to\omega\\ E^{n,m}_{*j}:\omega\times\omega^n\times\Sigma^{*m}\times Pro^\Sigma\to\Sigma^*\end{aligned}$$ que marcan el valor de la $j$-ésima componente de $E^{n,m}_\#$ y $E^{n,m}_*$, respectivamente.
+- Dados $n,m\in\omega$, definimos $Halt^{n,m}=\lambda t\vec{x}\vec{\alpha}\mathcal{P} [i^{n,m}(t, \vec{x}, \vec{\alpha}, \mathcal{P}) = n(\mathcal{P}) + 1]$
+    - Básicamente, $Halt^{n,m}$ es un predicado que dice si $\mathcal{P}$ se detiene luego de $t$ pasos partiendo del estado $||x_1, .., x_n, \alpha_1, .., \alpha_m||$.
+- Definimos $T^{n,m}=M(Halt^{n,m})$
+    - $D_{T^{n,m}}=\{(\vec{x}, \vec{\alpha}, \mathcal{P}): \mathcal{P}\text{ se detiene partiendo de }||x_1, .., x_n, \alpha_1, .., \alpha_m||\}$
+    - Para $(\vec{x}, \vec{\alpha}, \mathcal{P})\in D_{T^{n,m}}$, $T^{n,m}(\vec{x}, \vec{\alpha}, \mathcal{P})$ indica la cantidad de pasos necesarios para que $\mathcal{P}$ se detenga partiendo de $||x_1, .., x_n, \alpha_1, .., \alpha_m||$.
+- Cuando $\Sigma\supseteq\Sigma_p$, podemos definir $AutoHalt^\Sigma=\lambda\mathcal{P}[(\exists t\in\omega) Halt^{0,1}(t,\mathcal{P},\mathcal{P})]$
+    - Notar que $D_{AutoHalt^\Sigma}=Pro^\Sigma$ y que $\forall\mathcal{P}\in Pro^\Sigma, AutoHalt^\Sigma(\mathcal{P})=1$ sii $\mathcal{P}$ se detiene partiendo del estado $||\mathcal{P}||$.
+- Supongamos $\Sigma\supseteq\Sigma_p$. Entonces $A=\{\mathcal{P}\in Pro^\Sigma: AutoHalt^\Sigma(\mathcal{P})=1\}$ y $N=\{\mathcal{P}\in Pro^\Sigma: AutoHalt^\Sigma(\mathcal{P})=0\}$.
+
 ## Combo 14
 
 Explique en forma detallada la notación lambda.
