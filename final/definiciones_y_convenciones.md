@@ -109,6 +109,12 @@ Defina cuándo una función $f:D_f\subseteq\omega^n\times\Sigma^{*m}\to\omega$ e
 
 ### Resolución
 
+Diremos que $f:D_f\subseteq\omega^n\times\Sigma^{*m}\to\omega$ es $\Sigma$-Turing computable si existe una máquina de Turing con *unit* $M=(Q,\Sigma,\Gamma,\delta,q_0,B,\shortmid,F)$ tal que:
+- Si $(\vec{x},\vec{\alpha})\in D_f$, entonces $\exists p\in Q:\lfloor q_0B\shortmid^{x_1}B...B\shortmid^{x_n}B\alpha_1B...B\alpha_m\rfloor\overset{*}{\vdash}\lfloor pB\shortmid^{f(\vec{x},\vec{\alpha})}\rfloor$ y $\lfloor pB\shortmid^{f(\vec{x},\vec{\alpha})}\rfloor\not\vdash d\forall d\in Des$
+- Si $(\vec{x},\vec{\alpha})\in (\omega^n\times\Sigma^{*m})-D_f$, entonces $M$ **no** se detiene partiendo de $\lfloor q_0B\shortmid^{x_1}B...B\shortmid^{x_n}B\alpha_1B...B\alpha_m\rfloor$
+
+En este caso, diremos que la máquina de Turing $M$ computa a la función $f$.
+
 ## Combo 8
 
 Defina:
