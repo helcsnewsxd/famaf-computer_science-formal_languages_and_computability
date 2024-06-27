@@ -142,6 +142,26 @@ Defina:
 
 ### Resolución
 
+1. Una *instrucción de $\mathcal{S}^\Sigma$* es ya sea una instrucción básica de $\mathcal{S}^\Sigma$, o una palabra de la forma $\alpha I$, donde $\alpha\in\{L\bar{n}:n\in N\}$ e $I$ es una instrucción básica de $\mathcal{S}^\Sigma$.
+    - Cuando $I$ es de la forma $L\bar{n}J$ con $J$ una instrucción básica, diremos que $L\bar{n}$ es la *label de $I$*
+    - Una *instrucción básica de $\mathcal{S}^\Sigma$* es una palabra $(\Sigma\cup\Sigma_P)^*$ la cual es de alguna de las siguientes formas (donde $a\in\Sigma;\ k,n\in N$):
+        - $N\bar{k}\leftarrow N\bar{k}+1$
+        - $N\bar{k}\leftarrow N\bar{k}\dot{-}1$
+        - $N\bar{k}\leftarrow N\bar{n}$
+        - $N\bar{k}\leftarrow 0$
+        - $P\bar{k}\leftarrow P\bar{k}.a$
+        - $P\bar{k}\leftarrow\ ^\curvearrowright P\bar{k}$
+        - $P\bar{k}\leftarrow P\bar{n}$
+        - $P\bar{k}\leftarrow\varepsilon$
+        - IF $N\bar{k}\neq 0$ GOTO $L\bar{n}$
+        - IF $P\bar{k}$ BEGINS $a$ GOTO $L\bar{n}$
+        - GOTO $L\bar{n}$
+        - SKIP
+2. Un *programa* de $\mathcal{S}^\Sigma$ es una palabra de la forma $I_1I_2..I_n$ donde $n\geq 1,I_1,..,I_n\in Ins^\Sigma$ y además se cumple la *ley de los GOTO*: $\forall i\in\{1,..,n\}$, si GOTO$L\bar{m}$ es un tramo final de $I_i$, entonces $\exists j\in\{1,..,n\}$ tal que $I_j$ tiene label $L\bar{m}$
+3. Definimos $I_i^\mathcal{P}$ como la $i$-ésima instrucción de $\mathcal{P}$ y, además, $I_i^\mathcal{P}=\varepsilon$ cuando $i=0$ o $i\gt n(\mathcal{P})$
+4. Definimos $n(\mathcal{P})$ como la cantidad de instrucciones de $\mathcal{P}$
+5. Definimos $Bas:Ins^\Sigma\to(\Sigma\cup\Sigma_p)^*$ dada por $$Bas(I)=\begin{cases} J & \text{si }I\text{ es de la forma }L\bar{k}J\text{ con }J\in Ins^\Sigma\\ I & \text{en otro caso} \end{cases}$$
+
 ## Combo 10
 
 Defina, relativo al lenguaje $S^\Sigma$:
