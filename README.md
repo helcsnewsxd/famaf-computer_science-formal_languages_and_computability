@@ -12,6 +12,8 @@ Repositorio que contiene todo el material correspondiente a la materia de Lengua
 
 ## Material de Estudio
 
+### Guías y Resúmenes
+
 | Unidad | Tema | Material | Resumen |
 |--------|------|----------| ------- |
 | 1 | Notación + Conceptos básicos + Funciones/Conjuntos $\Sigma$-mixtos + Notación $\lambda$ | [Guía 1](https://github.com/helcsnewsxd/famaf-computer_science-formal_languages_and_computability/blob/main/clases/material/guia_1.pdf) | [MD](https://github.com/helcsnewsxd/famaf-computer_science-formal_languages_and_computability/blob/main/clases/resúmenes/guia_1.md) y [PDF](https://github.com/helcsnewsxd/famaf-computer_science-formal_languages_and_computability/blob/main/clases/resúmenes/guia_1.pdf) |
@@ -23,3 +25,10 @@ Repositorio que contiene todo el material correspondiente a la materia de Lengua
 | 7 | Paradigma imperativo de Neumann: El lenguaje $S^{\Sigma}$ (Funciones/Conjuntos $\Sigma$-computables + Conjuntos $\Sigma$-enumerables + Macros) | [Guía 7](https://github.com/helcsnewsxd/famaf-computer_science-formal_languages_and_computability/blob/main/clases/material/guia_7.pdf) | [MD](https://github.com/helcsnewsxd/famaf-computer_science-formal_languages_and_computability/blob/main/clases/resúmenes/guia_7.md) y [PDF](https://github.com/helcsnewsxd/famaf-computer_science-formal_languages_and_computability/blob/main/clases/resúmenes/guia_7.pdf) |
 | 8 | Comparación entre paradigmas + Tesis de Church | [Guía 8](https://github.com/helcsnewsxd/famaf-computer_science-formal_languages_and_computability/blob/main/clases/material/guia_8.pdf) | [MD](https://github.com/helcsnewsxd/famaf-computer_science-formal_languages_and_computability/blob/main/clases/resúmenes/guia_8.md) y [PDF](https://github.com/helcsnewsxd/famaf-computer_science-formal_languages_and_computability/blob/main/clases/resúmenes/guia_8.pdf) |
 | 9 | Resultados básicos de computabilidad | [Guía 9](https://github.com/helcsnewsxd/famaf-computer_science-formal_languages_and_computability/blob/main/clases/material/guia_9.pdf) | [MD](https://github.com/helcsnewsxd/famaf-computer_science-formal_languages_and_computability/blob/main/clases/resúmenes/guia_9.md) y [PDF](https://github.com/helcsnewsxd/famaf-computer_science-formal_languages_and_computability/blob/main/clases/resúmenes/guia_9.pdf) |
+
+### Lista de Combos (Examen Final - Parte Teórica)
+
+| Tipo | Material |
+|------|----------|
+| Definiciones y convenciones notacionales | [MD](./final/definiciones_y_convenciones.md) |
+| Teoremas | [MD](./final/teoremas.md) |
