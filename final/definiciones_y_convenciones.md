@@ -140,6 +140,7 @@ Defina:
 ## Combo 9
 
 Defina:
+
 1. "$I$ es una instrucción de $S^\Sigma$"
 2. "$\mathcal{P}$ es un programa de $S^\Sigma$"
 3. $I_i^\mathcal{P}$
@@ -164,7 +165,7 @@ Defina:
         - GOTO $L\bar{n}$
         - SKIP
 2. Un *programa* de $\mathcal{S}^\Sigma$ es una palabra de la forma $I_1I_2..I_n$ donde $n\geq 1,I_1,..,I_n\in Ins^\Sigma$ y además se cumple la *ley de los GOTO*: $\forall i\in\{1,..,n\}$, si GOTO$L\bar{m}$ es un tramo final de $I_i$, entonces $\exists j\in\{1,..,n\}$ tal que $I_j$ tiene label $L\bar{m}$
-3. Definimos $I_i^\mathcal{P}$ como la $i$-ésima instrucción de $\mathcal{P}$ y, además, $I_i^\mathcal{P}=\varepsilon$ cuando $i=0$ o $i\gt n(\mathcal{P})$
+3. Definimos $I_i^\mathcal{P}$ como la $i$-ésima instrucción de $\mathcal{P}$ y, además, $I_i^\mathcal{P}=\varepsilon$ cuando $i=0$ o $i>n(\mathcal{P})$
 4. Definimos $n(\mathcal{P})$ como la cantidad de instrucciones de $\mathcal{P}$
 5. Definimos $Bas:Ins^\Sigma\to(\Sigma\cup\Sigma_p)^*$ dada por $$Bas(I)=\begin{cases} J & \text{si }I\text{ es de la forma }L\bar{k}J\text{ con }J\in Ins^\Sigma\\ I & \text{en otro caso} \end{cases}$$
 
