@@ -275,6 +275,17 @@ Explique en forma detallada la notación lambda.
 
 ### Resolución
 
+- Una expresión es *lambdificable* con respecto a $\Sigma$ si cumple las siguientes características:
+    - Involucra variables numéricas (que se valuaran en números de $\omega$), y variables alfabéticas (que se valuaran en palabras del alfabeto previamente fijado)
+        - En cuanto a notación, las numéricas son con letras latinas minúsculas ($x,y,z$) y las alfabéticas con letras griegas minúsculas ($\alpha,\beta,\gamma$)
+    - Para ciertas valuaciones de sus variables la expresión puede *no* estar definida (por ejemplo, $Pred(|\alpha|)$ para $\alpha=\varepsilon$)
+    - Sea $E$ la expresión, los valores que asuma cuando hayan sido asignados los valores de $\omega$ a sus variables numéricas y valores de $\Sigma^*$ a sus variables alfabéticas, deberán ser *siempre* elementos de $O\in\{\omega,\Sigma^*\}$ (es decir, no puede tomar valores mixtos)
+    - La expresión puede involucrar lenguaje coloquial castellano (i.e., no únicamente operaciones matemáticas). Por ejemplo, "el menor número primo que es mayor que $x$"
+    - A las *expresiones booleanas* (como $x=0$), se les considerará que asumen valores de $\{0,1\}\subseteq\omega$
+- *Definición*: sea $\Sigma$ un alfabeto finito fijo, $E$ una expresión lambdificable respecto a $\Sigma$ y $x_1,..,x_n,\alpha_1,..,\alpha_m$ variables distintas tales que las numéricas que ocurren en $E$ están en $\{x_1,..,x_n\}$ y las alfabéticas en $\{\alpha_1,..,\alpha_m\}$, entonces $\lambda x_1..x_n\alpha_1..\alpha_m [E]$ denota la función definida por:
+    - $D_{\lambda x_1..x_n\alpha_1..\alpha_m [E]}=\{(k_1,..,k_n,\beta_1,..,\beta_m)\in\omega^n\times\Sigma^{*m}:E$ está definida cuando asignamos a cada $x_i$ el valor $k_i$, y a cada $\alpha_i$, el valor $\beta_i \}$
+    - $\lambda x_1..x_n\alpha_1..\alpha_m [E](k_1,..,k_n,\beta_1,..,\beta_m)=$ valor que asume o representa $E$ cuando asignamos a cada $x_i$ el valor $k_i$, y a cada $\alpha_i$, el valor $\beta_i$
+
 ## Combo 15
 
 Dada una función $f:D_f\subseteq\omega^n\times\Sigma^{*m}\to\omega$, describa qué tipo de objeto es y qué propiedades debe tener el macro: $$[V2\leftarrow f(V1,W1)]$$
