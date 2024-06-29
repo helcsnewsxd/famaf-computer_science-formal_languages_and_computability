@@ -57,6 +57,7 @@ Defina:
 1. Diremos que un conjunto $S\subseteq\omega^n\times\Sigma^{*m}$ es $\Sigma$-recursivamente enumerable cuando sea vacío o haya una función $F:\omega\to\omega^n\times\Sigma^{*m}$ tal que $I_F=S$ y $F_{(i)}$ sea $\Sigma$-recursiva $\forall i\in\{1,...,n+m\}$
 
 Los siguientes puntos se definen en base a $\Sigma$ alfabeto no vacío y $\leq$ orden total sobre $\Sigma$, siendo $\Sigma=\{a_1,...,a_n\}$ con $a_1\lt a_2\lt ...\lt a_n$. Luego:
+
 2. La función *siguiente* se define como $$\begin{aligned}s^\leq&:\Sigma^*\to\Sigma^*\\ \\ s^\leq((a_n)^m)&=(a_1)^{m+1}\ \forall m\geq 0\\ \\ s^\leq(\alpha a_i(a_n)^m)&=\alpha a_{i+1} (a_1)^m\ \forall\alpha\in\Sigma^*,\ i\in\{1,...,n-1\},\ m\geq 0\end{aligned}$$
 3. Función que asigna a cada $n\in\omega$ la $n+1$-ésima palabra de la lista: $$\begin{aligned}*^\leq&:\omega\to\Sigma^*\\ \\ *^\leq(0)&=\varepsilon\\ \\ *^\leq(n+1)&=s^\leq(*^\leq(n))\end{aligned}$$
 4. Inversa de la anterior: $$\begin{aligned}\#^\leq&:\Sigma^*\to\omega\\ \\ \#^\leq(\varepsilon)&=0\\ \\ \#^\leq(a_{i_k}...a_{i_0})&=\sum_{j=0}^k i_jn^j\end{aligned}$$
