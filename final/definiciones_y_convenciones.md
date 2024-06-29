@@ -292,6 +292,22 @@ Dada una función $f:D_f\subseteq\omega^n\times\Sigma^{*m}\to\omega$, describa q
 
 ### Resolución
 
+Dada la función $f:D_f\subseteq\omega\times\Sigma^*\to\omega$, el macro $[V2\leftarrow f(V1,W1)]$ es un objeto de tipo **PALABRA**.
+
+Para que el macro $[V2\leftarrow f(V1,W1)]$ sea válido (i.e., exista en el lenguaje $S^\Sigma$), debe cumplir las siguientes propiedades:
+    - Las variables oficiales de $M$ son $V1,V2,W1$
+    - $M$ no tiene labels oficiales
+    - Si reemplazamos:
+        - las variables oficiales de $M$ por variables concretas $N\overline{k_1},N\overline{k_2},P\overline{j_1}$,
+        - las variables auxiliares de $M$ por variables concretas distintas de a dos y NO pertececientes a $\{N\overline{k_1},N\overline{k_2},P\overline{j_1}\}$,
+        - los labels auxiliares de $M$ por labels concretos distintos de a dos,
+      entonces la palabra obtenida es un programa de $\mathcal{S}^\Sigma$ que denotaremos con $[N\overline{k_{2}}\leftarrow f(N\overline{k_1},P\overline{j_1})]$ y tiene la siguiente propiedad:
+          - Si corremos $[N\overline{k_{2}}\leftarrow f(N\overline{k_1},P\overline{j_1})]$ partiendo de un estado $e$ que asigne a $N\overline{k_1}, P\overline{j_1}$ los valores $x_1, \alpha_1$ respectivamente, entonces independientemente de los valores que les asigne $e$ a las demás variables, se dará que:
+              - Si $(x_1, \alpha_1)\notin D_f$, entonces $[N\overline{k_{2}}\leftarrow f(N\overline{k_1},P\overline{j_1})]$ **no** se detiene partiendo de $e$
+              - Si $(x_1, \alpha_1)\in D_f$, entonces $[N\overline{k_{2}}\leftarrow f(N\overline{k_1},P\overline{j_1})]$ se detiene partiendo de $e$ y llega a un estado $e'$ que cumple que:
+                  - $e'$ le asigna a $N\overline{k_{2}}$ el valor $f(x_1, \alpha_1)$
+                  - $e'$ solo puede diferir de $e$ en los valores que le asigna a $N\overline{k_{2}}$ o a las variables que fueron a reemplazar a las variables auxiliares de $M$        
+
 ## Combo 16
 
 Dado un predicado $P:D_P\subseteq\omega^n\times\Sigma^{*m}\to\omega$, describa qué tipo de objeto es y qué propiedades debe tener el macro: $$[\text{IF }P(V1,W1)\text{ GOTO }A1]$$
