@@ -258,7 +258,7 @@ Defina:
 ### Resolución
 
 - Sean $n,m\in\omega$, definimos las siguientes funciones: $$\begin{aligned} i^{n,m} &: \omega\times\omega^n\times\Sigma^{*m}\times Pro^\Sigma\to\omega\\ E^{n,m}_\# &: \omega\times\omega^n\times\Sigma^{*m}\times Pro^\Sigma\to\omega^{[N]}\\ E^{n,m}_* &: \omega\times\omega^n\times\Sigma^{*m}\times Pro^\Sigma\to\Sigma^{[N]}\\ \end{aligned}$$ de modo que $(i^{n,m}(t, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_\#(t, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_*(t, \vec{x}, \vec{\alpha}, \mathcal{P}))$ es la descripción instantánea que se obtiene luego de correr $\mathcal{P}$ una cantidad $t$ de pasos partiendo del estado $||x_1, .., x_n, \alpha_1, .., \alpha_m||$.
-  Si las definimos formalmente, podemos hacerlo de forma recursiva: $$\begin{aligned} (i^{n,m}(0, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_\#(0, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_*(0, \vec{x}, \vec{\alpha}, \mathcal{P})) &= (1,(x_1, .., x_n,0,...),(\alpha_1, .., \alpha_m,\varepsilon,...))\\ \\ (i^{n,m}(t+1, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_\#(t+1, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_*(t+1, \vec{x}, \vec{\alpha}, \mathcal{P})) &= S_\mathcal{P}(i^{n,m}(t, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_\#(t, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_*(t, \vec{x}, \vec{\alpha}, \mathcal{P}))\end{aligned}$$
+  Si las definimos formalmente, podemos hacerlo de forma recursiva: $$\begin{aligned} (i^{n,m}(0, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_\#(0, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_*(0, \vec{x}, \vec{\alpha}, \mathcal{P})) &= \\(1,(x_1, .., x_n,0,...),(\alpha_1, .., \alpha_m,\varepsilon,...))\\ \\ (i^{n,m}(t+1, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_\#(t+1, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_*(t+1, \vec{x}, \vec{\alpha}, \mathcal{P})) &= \\ S_\mathcal{P}(i^{n,m}(t, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_\#(t, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_*(t, \vec{x}, \vec{\alpha}, \mathcal{P}))\end{aligned}$$
 - Definimos también las funciones $$\begin{aligned} E^{n,m}_{\#j}: \omega\times\omega^n\times\Sigma^{*m}\times Pro^\Sigma\to\omega\\ E^{n,m}_{*j}:\omega\times\omega^n\times\Sigma^{*m}\times Pro^\Sigma\to\Sigma^*\end{aligned}$$ que marcan el valor de la $j$-ésima componente de $E^{n,m}_\#$ y $E^{n,m}_*$, respectivamente. Es decir: $$\begin{aligned}E^{n,m}_{\#j} = p^{n,m}_j\circ E^{n,m}_\#\\ \\ E^{n,m}_{*j} = p^{n,m}_j\circ E^{n,m}_*\end{aligned}$$
 - Dados $n,m\in\omega$, definimos $Halt^{n,m}=\lambda t\vec{x}\vec{\alpha}\mathcal{P} [i^{n,m}(t, \vec{x}, \vec{\alpha}, \mathcal{P}) = n(\mathcal{P}) + 1]$
     - Básicamente, $Halt^{n,m}$ es un predicado que dice si $\mathcal{P}$ se detiene luego de $t$ pasos partiendo del estado $||x_1, .., x_n, \alpha_1, .., \alpha_m||$.
@@ -295,18 +295,19 @@ Dada una función $f:D_f\subseteq\omega^n\times\Sigma^{*m}\to\omega$, describa q
 Dada la función $f:D_f\subseteq\omega\times\Sigma^*\to\omega$, el macro $[V2\leftarrow f(V1,W1)]$ es un objeto de tipo **PALABRA**.
 
 Para que el macro $[V2\leftarrow f(V1,W1)]$ sea válido (i.e., exista en el lenguaje $S^\Sigma$), debe cumplir las siguientes propiedades:
-  - Las variables oficiales de $M$ son $V1,V2,W1$
-  - $M$ no tiene labels oficiales
-  - Si reemplazamos:
-      - las variables oficiales de $M$ por variables concretas $N\overline{k_1},N\overline{k_2},P\overline{j_1}$,
-      - las variables auxiliares de $M$ por variables concretas distintas de a dos y NO pertececientes a $\{N\overline{k_1},N\overline{k_2},P\overline{j_1}\}$,
-      - los labels auxiliares de $M$ por labels concretos distintos de a dos,
-    entonces la palabra obtenida es un programa de $\mathcal{S}^\Sigma$ que denotaremos con $[N\overline{k_{2}}\leftarrow f(N\overline{k_1},P\overline{j_1})]$ y tiene la siguiente propiedad:
-      - Si corremos $[N\overline{k_{2}}\leftarrow f(N\overline{k_1},P\overline{j_1})]$ partiendo de un estado $e$ que asigne a $N\overline{k_1}, P\overline{j_1}$ los valores $x_1, \alpha_1$ respectivamente, entonces independientemente de los valores que les asigne $e$ a las demás variables, se dará que:
-          - Si $(x_1, \alpha_1)\notin D_f$, entonces $[N\overline{k_{2}}\leftarrow f(N\overline{k_1},P\overline{j_1})]$ **no** se detiene partiendo de $e$
-          - Si $(x_1, \alpha_1)\in D_f$, entonces $[N\overline{k_{2}}\leftarrow f(N\overline{k_1},P\overline{j_1})]$ se detiene partiendo de $e$ y llega a un estado $e'$ que cumple que:
-              - $e'$ le asigna a $N\overline{k_{2}}$ el valor $f(x_1, \alpha_1)$
-              - $e'$ solo puede diferir de $e$ en los valores que le asigna a $N\overline{k_{2}}$ o a las variables que fueron a reemplazar a las variables auxiliares de $M$        
+
+- Las variables oficiales de $M$ son $V1,V2,W1$
+- $M$ no tiene labels oficiales
+- Si reemplazamos:
+    - las variables oficiales de $M$ por variables concretas $N\overline{k_1},N\overline{k_2},P\overline{j_1}$,
+    - las variables auxiliares de $M$ por variables concretas distintas de a dos y NO pertececientes a $\{N\overline{k_1},N\overline{k_2},P\overline{j_1}\}$,
+    - los labels auxiliares de $M$ por labels concretos distintos de a dos,
+  entonces la palabra obtenida es un programa de $\mathcal{S}^\Sigma$ que denotaremos con $[N\overline{k_{2}}\leftarrow f(N\overline{k_1},P\overline{j_1})]$ y tiene la siguiente propiedad:
+    - Si corremos $[N\overline{k_{2}}\leftarrow f(N\overline{k_1},P\overline{j_1})]$ partiendo de un estado $e$ que asigne a $N\overline{k_1}, P\overline{j_1}$ los valores $x_1, \alpha_1$ respectivamente, entonces independientemente de los valores que les asigne $e$ a las demás variables, se dará que:
+        - Si $(x_1, \alpha_1)\notin D_f$, entonces $[N\overline{k_{2}}\leftarrow f(N\overline{k_1},P\overline{j_1})]$ **no** se detiene partiendo de $e$
+        - Si $(x_1, \alpha_1)\in D_f$, entonces $[N\overline{k_{2}}\leftarrow f(N\overline{k_1},P\overline{j_1})]$ se detiene partiendo de $e$ y llega a un estado $e'$ que cumple que:
+            - $e'$ le asigna a $N\overline{k_{2}}$ el valor $f(x_1, \alpha_1)$
+            - $e'$ solo puede diferir de $e$ en los valores que le asigna a $N\overline{k_{2}}$ o a las variables que fueron a reemplazar a las variables auxiliares de $M$        
 
 ## Combo 16
 
@@ -317,15 +318,16 @@ Dado un predicado $P:D_P\subseteq\omega^n\times\Sigma^{*m}\to\omega$, describa q
 Dado el predicado $P:D_P\subseteq\omega\times\Sigma^*\to\omega$, el macro $[\text{IF }P(V1,W1)\text{ GOTO }A1]$ es un objeto de tipo **PALABRA**.
 
 Para que el macro $[\text{IF }P(V1,W1)\text{ GOTO }A1]$ sea válido (i.e., exista en el lenguaje $S^\Sigma$), debe cumplir las siguientes propiedades:
-  - Las variables oficiales de $M$ son $V1,W1$
-  - $A1$ es el único label oficial de $M$
-  - Si reemplazamos:
-      - las variables oficiales de $M$ por variables concretas $N\overline{k_1},P\overline{j_1}$,
-      - el label oficial $A1$ por el label concreto $L\bar{k}$,
-      - las variables auxiliares de $M$ por variables concretas distintas de a dos y NO pertececientes a $\{N\overline{k_1},P\overline{j_1}\}$,
-      - los labels auxiliares de $M$ por labels concretos distintos de a dos y ninguno de ellos igual a $L\bar{k}$,
-    entonces la palabra obtenida es un programa de $\mathcal{S}^\Sigma$ que denotaremos con $[\text{IF }P(N\overline{k_1},P\overline{j_1})\text{ GOTO }L\bar{k}]$ y tiene la siguiente propiedad:
-      - Si corremos $[\text{IF }P(N\overline{k_1},P\overline{j_1})\text{ GOTO }L\bar{k}]$ partiendo de un estado $e$ que asigne a $N\overline{k_1}, P\overline{j_1}$ los valores $x_1, \alpha_1$ respectivamente, entonces independientemente de los valores que les asigne $e$ a las demás variables, se dará que:
-          - Si $(x_1, \alpha_1)\notin D_P$, entonces $[\text{IF }P(N\overline{k_1},P\overline{j_1})\text{ GOTO }L\bar{k}]$ **no** se detiene partiendo de $e$
-          - Si $(x_1, \alpha_1)\in D_P$ y $P(x_1, \alpha_1)=1$, entonces, luego de una cantidad finita de pasos, $[\text{IF }P(N\overline{k_1},P\overline{j_1})\text{ GOTO }L\bar{k}]$ direcciona al label $L\bar{k}$ quedando en un estado $e'$ que solo puede diferir de $e$ en los valores que le asigna a las variables que fueron a reemplazar a las variables auxiliares de $M$
-          - Si $(x_1, \alpha_1)\in D_P$ y $P(x_1, \alpha_1)=0$, entonces, luego de una cantidad finita de pasos, $[\text{IF }P(N\overline{k_1},P\overline{j_1})\text{ GOTO }L\bar{k}]$ se detiene partiendo de $e$ quedando en un estado $e'$ que solo puede diferir de $e$ en los valores que le asigna a las variables que fueron a reemplazar a las variables auxiliares de $M$
+
+- Las variables oficiales de $M$ son $V1,W1$
+- $A1$ es el único label oficial de $M$
+- Si reemplazamos:
+    - las variables oficiales de $M$ por variables concretas $N\overline{k_1},P\overline{j_1}$,
+    - el label oficial $A1$ por el label concreto $L\bar{k}$,
+    - las variables auxiliares de $M$ por variables concretas distintas de a dos y NO pertececientes a $\{N\overline{k_1},P\overline{j_1}\}$,
+    - los labels auxiliares de $M$ por labels concretos distintos de a dos y ninguno de ellos igual a $L\bar{k}$,
+  entonces la palabra obtenida es un programa de $\mathcal{S}^\Sigma$ que denotaremos con $[\text{IF }P(N\overline{k_1},P\overline{j_1})\text{ GOTO }L\bar{k}]$ y tiene la siguiente propiedad:
+    - Si corremos $[\text{IF }P(N\overline{k_1},P\overline{j_1})\text{ GOTO }L\bar{k}]$ partiendo de un estado $e$ que asigne a $N\overline{k_1}, P\overline{j_1}$ los valores $x_1, \alpha_1$ respectivamente, entonces independientemente de los valores que les asigne $e$ a las demás variables, se dará que:
+        - Si $(x_1, \alpha_1)\notin D_P$, entonces $[\text{IF }P(N\overline{k_1},P\overline{j_1})\text{ GOTO }L\bar{k}]$ **no** se detiene partiendo de $e$
+        - Si $(x_1, \alpha_1)\in D_P$ y $P(x_1, \alpha_1)=1$, entonces, luego de una cantidad finita de pasos, $[\text{IF }P(N\overline{k_1},P\overline{j_1})\text{ GOTO }L\bar{k}]$ direcciona al label $L\bar{k}$ quedando en un estado $e'$ que solo puede diferir de $e$ en los valores que le asigna a las variables que fueron a reemplazar a las variables auxiliares de $M$
+        - Si $(x_1, \alpha_1)\in D_P$ y $P(x_1, \alpha_1)=0$, entonces, luego de una cantidad finita de pasos, $[\text{IF }P(N\overline{k_1},P\overline{j_1})\text{ GOTO }L\bar{k}]$ se detiene partiendo de $e$ quedando en un estado $e'$ que solo puede diferir de $e$ en los valores que le asigna a las variables que fueron a reemplazar a las variables auxiliares de $M$
