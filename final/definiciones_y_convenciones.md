@@ -313,3 +313,19 @@ Para que el macro $[V2\leftarrow f(V1,W1)]$ sea válido (i.e., exista en el leng
 Dado un predicado $P:D_P\subseteq\omega^n\times\Sigma^{*m}\to\omega$, describa qué tipo de objeto es y qué propiedades debe tener el macro: $$[\text{IF }P(V1,W1)\text{ GOTO }A1]$$
 
 ### Resolución
+
+Dado el predicado $P:D_P\subseteq\omega\times\Sigma^*\to\omega$, el macro $[\text{IF }P(V1,W1)\text{ GOTO }A1]$ es un objeto de tipo **PALABRA**.
+
+Para que el macro $[\text{IF }P(V1,W1)\text{ GOTO }A1]$ sea válido (i.e., exista en el lenguaje $S^\Sigma$), debe cumplir las siguientes propiedades:
+  - Las variables oficiales de $M$ son $V1,W1$
+  - $A1$ es el único label oficial de $M$
+  - Si reemplazamos:
+      - las variables oficiales de $M$ por variables concretas $N\overline{k_1},P\overline{j_1}$,
+      - el label oficial $A1$ por el label concreto $L\bar{k}$,
+      - las variables auxiliares de $M$ por variables concretas distintas de a dos y NO pertececientes a $\{N\overline{k_1},P\overline{j_1}\}$,
+      - los labels auxiliares de $M$ por labels concretos distintos de a dos y ninguno de ellos igual a $L\bar{k}$,
+    entonces la palabra obtenida es un programa de $\mathcal{S}^\Sigma$ que denotaremos con $[\text{IF }P(N\overline{k_1},P\overline{j_1})\text{ GOTO }L\bar{k}]$ y tiene la siguiente propiedad:
+      - Si corremos $[\text{IF }P(N\overline{k_1},P\overline{j_1})\text{ GOTO }L\bar{k}]$ partiendo de un estado $e$ que asigne a $N\overline{k_1}, P\overline{j_1}$ los valores $x_1, \alpha_1$ respectivamente, entonces independientemente de los valores que les asigne $e$ a las demás variables, se dará que:
+          - Si $(x_1, \alpha_1)\notin D_P$, entonces $[\text{IF }P(N\overline{k_1},P\overline{j_1})\text{ GOTO }L\bar{k}]$ **no** se detiene partiendo de $e$
+          - Si $(x_1, \alpha_1)\in D_P$ y $P(x_1, \alpha_1)=1$, entonces, luego de una cantidad finita de pasos, $[\text{IF }P(N\overline{k_1},P\overline{j_1})\text{ GOTO }L\bar{k}]$ direcciona al label $L\bar{k}$ quedando en un estado $e'$ que solo puede diferir de $e$ en los valores que le asigna a las variables que fueron a reemplazar a las variables auxiliares de $M$
+          - Si $(x_1, \alpha_1)\in D_P$ y $P(x_1, \alpha_1)=0$, entonces, luego de una cantidad finita de pasos, $[\text{IF }P(N\overline{k_1},P\overline{j_1})\text{ GOTO }L\bar{k}]$ se detiene partiendo de $e$ quedando en un estado $e'$ que solo puede diferir de $e$ en los valores que le asigna a las variables que fueron a reemplazar a las variables auxiliares de $M$
