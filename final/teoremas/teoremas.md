@@ -2,12 +2,38 @@
 
 ## Combo 1
 
-- **Proposición 1 (Caracterización de conjuntos p.r.)** Un conjunto $S$ es $\Sigma$-p.r. sii $S$ es el dominio de alguna función $\Sigma$-p.r.
-    - *Nota: en la inducción de la prueba, hacer solo el caso de la composición*
-- **Teorema 2 (Neumann vence a Godel)** Si $h$ es $\Sigma$-recursiva, entonces $h$ es $\Sigma$-computable
-    - *Nota: en la inducción de la prueba, hacer solo el caso $h=R(f,\mathcal{G})$*
+### Proposición 1 (Caracterización de conjuntos p.r.)
 
-### Resolución
+Un conjunto $S$ es $\Sigma$-p.r. sii $S$ es el dominio de alguna función $\Sigma$-p.r.
+- *Nota: en la inducción de la prueba, hacer solo el caso de la composición*
+
+#### Demostración
+
+Supongamos que $S\subseteq\omega^n\times\Sigma^{*m}$ con $n,m\in\omega$ y veamos los dos casos:
+- **(Caso $\Rightarrow$)**: Como $S$ es $\Sigma$-p.r., entonces $\chi_S^{\omega^n\times\Sigma^{*m}}$ es $\Sigma$-p.r. por definición. Luego, por definición de $PR^\Sigma$, $Pred\circ\chi_S^{\omega^n\times\Sigma^{*m}}$ es $\Sigma$-p.r., por lo que se demuestra dado que $S=D_{Pred\circ\chi_S^{\omega^n\times\Sigma^{*m}}}$ $\blacksquare$
+- **(Caso $\Leftarrow$)**: Se probará por inducción en $k$ que $D_F$ es $\Sigma$-p.r. $\forall F\in PR_k^\Sigma$.
+    - *Caso base ($k=0$)*: Trivial.
+    - *HI ($k$)*: Supongamos que $D_F$ es $\Sigma$-p.r. $\forall F\in PR_k^\Sigma$.
+    - *Paso inductivo $(k+1)$*: Supongamos $F\in PR_{k+1}^\Sigma$ y veremos que $F$ es $\Sigma$-p.r. Hay varios casos según cómo se define $PR_{k+1}$ (composición, recursión con variable alfabética o recursión con variable numérica), pero solo vamos a considerar el de *composición*.
+      Entonces, veamos que $F=g\circ[g_1,...,g_r]$ con $g,g_1,...,g_r\in PR_k^\Sigma$.
+        - Si $F=\emptyset$, es trivial ver que $D_F$ es $\Sigma$-p.r..
+        - Si $F\neq\emptyset$, entonces tenemos que (sean $O\in\{\omega,\Sigma^*\}\text{ y }p,q\in\omega$): $$\begin{aligned} r&=n+m\\ g&:D_g\subseteq\omega^n\times\Sigma^{*m}\to O\\ g_i&:D_{g_i}\subseteq\omega^p\times\Sigma^{*q}\to\omega\forall i=1,...,n\\ g_i&:D_{g_i}\subseteq\omega^p\times\Sigma^{*q}\to\Sigma^*\forall i=n+1,...,r \end{aligned}$$ Ahora, por lemas sabemos que:
+            - $\exists\bar{g_1},...,\bar{g_r}$ $\Sigma$-p.r. y $\Sigma$-totales tales que $g_i=\bar{g_i}|_{D_{g_i}}\forall i=1,...,r$
+            - $S=\cap_{i=1}^r D_{g_i}$ es $\Sigma$-p.r.
+          Entonces, como $\chi_{D_F}^{\omega^p\times\Sigma^{*q}}=\chi_S^{\omega^p\times\Sigma^{*q}}\wedge\left(\chi_{D_g}^{\omega^n\times\Sigma^{*m}}\circ\left[\bar{g_1},...,\bar{g_r}\right]\right)$, notar que:
+            - $S,D_g$ son $\Sigma$-p.r. $\Rightarrow$ Por def., $\chi_S^{\omega^p\times\Sigma^{*q}}$ y $\chi_{D_g}^{\omega^n\times\Sigma^{*m}}$ son $\Sigma$-p.r.
+            - Sean $P,Q$ dos predicados $\Sigma$-p.r. con igual dominio, entonces $P\wedge Q$ es $\Sigma$-p.r. (por *lema*)
+          por lo que $\chi_{D_F}^{\omega^p\times\Sigma^{*q}}$ es $\Sigma$-p.r.. Luego, por def., llegamos a que $D_F$ es $\Sigma$-p.r.
+  Finalmente, se demuestra por inducción. $\blacksquare$
+
+### Teorema 2 (Neumann vence a Godel)
+
+Si $h$ es $\Sigma$-recursiva, entonces $h$ es $\Sigma$-computable
+- *Nota: en la inducción de la prueba, hacer solo el caso $h=R(f,\mathcal{G})$*
+
+#### Demostración
+
+
 
 ## Combo 2
 
