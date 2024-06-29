@@ -190,15 +190,15 @@ Defina, relativo al lenguaje $S^\Sigma$:
     - Si $Bas(I_i^\mathcal{P})=N\bar{k}\leftarrow N\bar{n}$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,(s_1,..,s_{k-1},s_n,s_{k+1},..),\vec{\sigma})$
     - Si $Bas(I_i^\mathcal{P})=N\bar{k}\leftarrow 0$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,(s_1,..,s_{k-1},0,s_{k+1},..),\vec{\sigma})$
     - Si $Bas(I_i^\mathcal{P})=\text{IF }N\bar{k}\neq 0\text{ GOTO }L\bar{m}$, entonces hay dos posibilidades:
-        - Si el valor de $N\bar{k}$ es $0$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},\vec{\sigma})$
-        - Si el valor de $N\bar{k}$ es no nulo, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(\min\{l:I_l^\mathcal{P}\text{ tiene label }L\bar{m}\},\vec{s},\vec{\sigma})$
+        - Si el valor contenido en $N\bar{k}$ es $0$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},\vec{\sigma})$
+        - Si el valor contenido en $N\bar{k}$ es no nulo, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(\min\{l:I_l^\mathcal{P}\text{ tiene label }L\bar{m}\},\vec{s},\vec{\sigma})$
     - Si $Bas(I_i^\mathcal{P})=P\bar{k}\leftarrow\ ^\curvearrowright P\bar{k}$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},(\sigma_1,..,\sigma_{k-1},\ ^\curvearrowright\sigma_k,\sigma_{k+1},..))$
     - Si $Bas(I_i^\mathcal{P})=P\bar{k}\leftarrow P\bar{k}.a$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},(\sigma_1,..,\sigma_{k-1},\sigma_k a,\sigma_{k+1},..))$
     - Si $Bas(I_i^\mathcal{P})=P\bar{k}\leftarrow P\bar{n}$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},(\sigma_1,..,\sigma_{k-1},\sigma_n,\sigma_{k+1},..))$
     - Si $Bas(I_i^\mathcal{P})=P\bar{k}\leftarrow\varepsilon$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},(\sigma_1,..,\sigma_{k-1},\varepsilon,\sigma_{k+1},..))$
     - Si $Bas(I_i^\mathcal{P})=\text{IF }P\bar{k}\text{ BEGINS }a\text{ GOTO }L\bar{m}$, entonces hay dos posibilidades:
-        - Si el valor de $P\bar{k}$ comienza con $a$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(\min\{l:I_l^\mathcal{P}\text{ tiene label }L\bar{m}\},\vec{s},\vec{\sigma})$
-        - Si el valor de $P\bar{k}$ no comienza con $a$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},\vec{\sigma})$
+        - Si la palabra contenida en $P\bar{k}$ comienza con $a$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(\min\{l:I_l^\mathcal{P}\text{ tiene label }L\bar{m}\},\vec{s},\vec{\sigma})$
+        - Si la palabra contenida en $P\bar{k}$ no comienza con $a$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},\vec{\sigma})$
     - Si $Bas(I_i^\mathcal{P})=\text{GOTO }L\bar{m}$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(\min\{l:I_l^\mathcal{P}\text{ tiene label }L\bar{m}\},\vec{s},\vec{\sigma})$
     - Si $Bas(I_i^\mathcal{P})=\text{SKIP}$, entonces $S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},\vec{\sigma})$
 4. Diremos que $S_\mathcal{P}(S_\mathcal{P}(...(S_\mathcal{P}(1,\vec{s},\vec{\sigma}))...))=(j,\vec{u},\vec{\eta})$ con $S_\mathcal{P}$ aplicado $t$ veces, es la *descripción instantánea obtenida luego de $t$ pasos partiendo del estado $(\vec{s},\vec{\sigma})$*, y $(\vec{u},\vec{\eta})$ es el estado obtenido luego de $t$ pasos partiendo del estado $(\vec{s},\vec{\sigma})$
