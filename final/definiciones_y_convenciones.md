@@ -69,10 +69,12 @@ Defina cuándo una función $f:D_f\subseteq\omega^n\times\Sigma^{*m}\to\omega$ e
 ### Resolución
 
 Una función $\Sigma$-mixta $f:D_f\subseteq\omega^n\times\Sigma^{*m}\to O$ (para $O\in\{\omega,\Sigma^*\}$) es $\Sigma$-efectivamente computable si hay un procedimiento $\mathbb{P}$ tal que:
+
 - El conjunto de datos de entrada de $\mathbb{P}$ es $\omega^n\times\Sigma^{*m}$
 - El conjunto de datos de salida está contenido en $O$
 - Si $(\vec{x},\vec{\alpha})\in D_f$, entonces $\mathbb{P}$ se detiene partiendo de $(\vec{x},\vec{\alpha})$ y da como salida $f(\vec{x},\vec{\alpha})$
 - Si $(\vec{x},\vec{\alpha})\notin D_f$, entonces $\mathbb{P}$ no se detiene partiendo de $(\vec{x},\vec{\alpha})$
+
 En estos casos, diremos que este $\mathbb{P}$ computa a la función $f$.
 
 ## Combo 5
