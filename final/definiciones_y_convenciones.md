@@ -238,7 +238,7 @@ Defina cuándo un conjunto $S\subseteq\omega^n\times\Sigma^{*m}$ es llamado $\Si
     - Hay un programa $\mathcal{P}\in Pro^\Sigma$ tal que
         - $\forall x\in\omega$, $\mathcal{P}$ se detiene partiendo de $||x||$ y llega a un estado de la forma $((x_1, .., x_n, y_1, ...) , (\alpha_1, .., \alpha_m, \beta_1, ..))$ con $(x_1, .., x_n, \alpha_1, .., \alpha_m)\in S$
         - $\forall (x_1, .., x_n, \alpha_1, .., \alpha_m)\in S$, $\exists x\in\omega$ tal que $\mathcal{P}$ se detiene partiendo de $||x||$ y llega a un estado de la forma $((x_1, .., x_n, y_1, ...) , (\alpha_1, .., \alpha_m, \beta_1, ..))$
-        
+
     Decimos que $\mathcal{P}$ *enumera* a $S$
 
 ## Combo 13
@@ -258,7 +258,8 @@ Defina:
 ### Resolución
 
 - Sean $n,m\in\omega$, definimos las siguientes funciones: $$\begin{aligned} i^{n,m} &: \omega\times\omega^n\times\Sigma^{*m}\times Pro^\Sigma\to\omega\\ E^{n,m}_\# &: \omega\times\omega^n\times\Sigma^{*m}\times Pro^\Sigma\to\omega^{[N]}\\ E^{n,m}_* &: \omega\times\omega^n\times\Sigma^{*m}\times Pro^\Sigma\to\Sigma^{[N]}\\ \end{aligned}$$ de modo que $(i^{n,m}(t, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_\#(t, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_*(t, \vec{x}, \vec{\alpha}, \mathcal{P}))$ es la descripción instantánea que se obtiene luego de correr $\mathcal{P}$ una cantidad $t$ de pasos partiendo del estado $||x_1, .., x_n, \alpha_1, .., \alpha_m||$.
-- Definimos también las funciones $$\begin{aligned} E^{n,m}_{\#j}: \omega\times\omega^n\times\Sigma^{*m}\times Pro^\Sigma\to\omega\\ E^{n,m}_{*j}:\omega\times\omega^n\times\Sigma^{*m}\times Pro^\Sigma\to\Sigma^*\end{aligned}$$ que marcan el valor de la $j$-ésima componente de $E^{n,m}_\#$ y $E^{n,m}_*$, respectivamente.
+  Si las definimos formalmente, podemos hacerlo de forma recursiva: $$\begin{aligned} (i^{n,m}(0, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_\#(0, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_*(0, \vec{x}, \vec{\alpha}, \mathcal{P})) &= (1,(x_1, .., x_n,0,...),(\alpha_1, .., \alpha_m,\varepsilon,...))\\ \\ (i^{n,m}(t+1, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_\#(t+1, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_*(t+1, \vec{x}, \vec{\alpha}, \mathcal{P})) &= S_\mathcal{P}(i^{n,m}(t, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_\#(t, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_*(t, \vec{x}, \vec{\alpha}, \mathcal{P}))\end{aligned}$$
+- Definimos también las funciones $$\begin{aligned} E^{n,m}_{\#j}: \omega\times\omega^n\times\Sigma^{*m}\times Pro^\Sigma\to\omega\\ E^{n,m}_{*j}:\omega\times\omega^n\times\Sigma^{*m}\times Pro^\Sigma\to\Sigma^*\end{aligned}$$ que marcan el valor de la $j$-ésima componente de $E^{n,m}_\#$ y $E^{n,m}_*$, respectivamente. Es decir: $$\begin{aligned}E^{n,m}_{\#j} = p^{n,m}_j\circ E^{n,m}_\#\\ \\ E^{n,m}_{*j} = p^{n,m}_j\circ E^{n,m}_*\end{aligned}$$
 - Dados $n,m\in\omega$, definimos $Halt^{n,m}=\lambda t\vec{x}\vec{\alpha}\mathcal{P} [i^{n,m}(t, \vec{x}, \vec{\alpha}, \mathcal{P}) = n(\mathcal{P}) + 1]$
     - Básicamente, $Halt^{n,m}$ es un predicado que dice si $\mathcal{P}$ se detiene luego de $t$ pasos partiendo del estado $||x_1, .., x_n, \alpha_1, .., \alpha_m||$.
 - Definimos $T^{n,m}=M(Halt^{n,m})$
