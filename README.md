@@ -28,7 +28,6 @@ Repositorio que contiene todo el material correspondiente a la materia de Lengua
 
 ### Lista de Combos (Examen Final - Parte Teórica)
 
-| Tipo | Material |
-|------|----------|
-| Definiciones y convenciones notacionales | [MD](./final/definiciones_y_convenciones.md) |
-| Teoremas | [MD](./final/teoremas.md) |
+| Tipo | Material en Markdown | Material en Látex |
+|------|----------------------|------------------|
+| Definiciones y convenciones notacionales | [MD](./final/definiciones_y_convenciones/definiciones_y_convenciones.md) y [PDF](./final/definiciones_y_convenciones/definiciones_y_convenciones-markdown.pdf) | [TEX](./final/definiciones_y_convenciones/definiciones_y_convenciones.tex) y [PDF](./final/definiciones_y_convenciones/definiciones_y_convenciones-latex.pdf) |
