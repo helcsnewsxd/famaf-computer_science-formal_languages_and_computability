@@ -86,6 +86,7 @@ Defina cuándo un conjunto $S\subseteq\omega^n\times\Sigma^{*m}$ es llamado $\Si
 Un conjunto $S\subseteq\omega^n\times\Sigma^{*m}$ es $\Sigma$-efectivamente computable cuando la función $\chi_S^{\omega^n\times\Sigma^{*m}}$ es $\Sigma$-efectivamente computable.
 
 Es decir, $S$ es $\Sigma$-efectivamente computable si existe un procedimiento $\mathbb{P}$ tal que:
+
 - El conjunto de datos de entrada de $\mathbb{P}$ es $\omega^n\times\Sigma^{*m}$, siempre termina y da como dato de salida un elemento de $\{0,1\}$
 - Dado $(\vec{x},\vec{\alpha})\in\omega^n\times\Sigma^{*m}$, $\mathbb{P}$ se detiene partiendo de $(\vec{x}, \vec{\alpha})$ y da como salida $1$ si $(\vec{x},\vec{\alpha})\in S$ y $0$ en caso contrario.
 
