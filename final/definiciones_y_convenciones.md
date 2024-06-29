@@ -101,6 +101,7 @@ Defina cuándo un conjunto $S\subseteq\omega^n\times\Sigma^{*m}$ es llamado $\Si
 Un conjunto $S\subseteq\omega^n\times\Sigma^{*m}$ es $\Sigma$-efectivamente enumerable si es vacío o $\exists F:\omega\to\omega^n\times\Sigma^{*m}$ tal que $I_F=S$ y $F_{(i)}$ es $\Sigma$-efectivamente computable $\forall i\in\{1,...,n+m\}$.
 
 Es decir, $S\neq\emptyset$ es $\Sigma$-efectivamente enumerable si existe un procedimiento efectivo $\mathbb{P}$ tal que:
+
 - El conjunto de datos de entrada de $\mathbb{P}$ es $\omega$
 - $\mathbb{P}$ se detiene para cada $x\in\omega$
 - El conjunto de datos de salida de $\mathbb{P}$ es igual a $S$
