@@ -1,0 +1,1078 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Definiciones y convenciones
+notacionales}\label{definiciones-y-convenciones-notacionales}
+
+\subsection{Combo 1}\label{combo-1}
+
+Defina:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Cuándo un conjunto \(S\subseteq\omega^n\times\Sigma^{*m}\) es llamado
+  \(\Sigma\)-recursivo (no hace falta que defina ``función
+  \(\Sigma\)-recursiva'')
+\item
+  \(\langle s_1,s_2,...\rangle\)
+\item
+  ``\(f\) es una función \(\Sigma\)-mixta''
+\item
+  ``familia \(\Sigma\)-indexada de funciones''
+\item
+  \(R(f,\mathcal{G})\)
+\end{enumerate}
+
+\subsubsection{Resolución}\label{resoluciuxf3n}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Un conjunto \(S\subseteq\omega^n\times\Sigma^{*m}\) es
+  \(\Sigma\)-recursivo si su función característica
+  \(\chi_S^{\omega^n\times\Sigma^{*m}}\) es \(\Sigma\)-recursiva.
+\item
+  Dada una infinitupla \((s_1,s_2,...)\in\omega^{[N]}\), se usa
+  \(\langle s_1,s_2,...\rangle\) para denotar al número
+  \(x=\prod_{i=1}^\infty pr(i)^{s_i}\)
+\item
+  Sea \(\Sigma\) un alfabeto finito y sea \(f\) una función, diremos que
+  es \(\Sigma\)-mixta si
+  \(\exists n,m\geq 0:D_f\subseteq\omega^n\times\Sigma^{*m}\) e
+  \(I_f\subseteq O\) donde \(O\in\{\omega,\Sigma^*\}\)
+\item
+  Dado un alfabeto \(\Sigma\), una familia \(\Sigma\)-indexada de
+  funciones es una función \(\mathcal{G}\) tal que
+  \(D_\mathcal{G}=\Sigma\) y \(\forall a\in D_\mathcal{G}\),
+  \(\mathcal{G}(a)\) es una función.
+\item
+  La recursión primitiva para el caso de \emph{variable alfabética} se
+  define de forma distinta para los casos de \emph{valores numéricos} o
+  \emph{alfabéticos}. Por ello, veamos cada uno:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Valores numéricos}: Sea \(\Sigma\) un alfabeto finito, y
+    sean \(f\) una función y \(\mathcal{G}\) una familia
+    \(\Sigma\)-indexada de funciones tales que:
+    \[\begin{aligned}f&:S_1\times ...\times S_n\times L_1\times ...\times L_m\to\omega\\ \\ \mathcal{G}_a&:\omega\times S_1\times ...\times S_n\times L_1\times ...\times L_m\times\Sigma^*\to\omega\end{aligned}\]
+    para cada \(a\in\Sigma\), y con \(S_i\subseteq\omega\) y
+    \(L_i\subseteq\Sigma^*\) conjuntos no vacíos, entonces definimos
+    \[\begin{aligned} R(f,\mathcal{G})&:S_1\times ...\times S_n\times L_1\times ...\times L_m\times\Sigma^*\to\omega\\ \\ R(f,\mathcal{G})(\vec{x},\vec{\alpha},\varepsilon)&=f(\vec{x},\vec{\alpha})\\ \\ R(f,\mathcal{G})(\vec{x},\vec{\alpha},\alpha a)&=\mathcal{G}_a(R(f,\mathcal{G})(\vec{x},\vec{\alpha},\alpha),\vec{x},\vec{\alpha},\alpha) \end{aligned}\]
+    y decimos que \(R(f,\mathcal{G})\) es obtenida por recursión
+    primitiva a partir de \(f\) y \(\mathcal{G}\).
+  \item
+    \textbf{Valores alfabéticos}: Sea \(\Sigma\) un alfabeto finito, y
+    sean \(f\) una función y \(\mathcal{G}\) una familia
+    \(\Sigma\)-indexada de funciones tales que:
+    \[\begin{aligned}f&:S_1\times ...\times S_n\times L_1\times ...\times L_m\to\Sigma^*\\ \\ \mathcal{G}_a&:S_1\times ...\times S_n\times L_1\times ...\times L_m\times\Sigma^*\times\Sigma^*\to\Sigma^*\end{aligned}\]
+    para cada \(a\in\Sigma\), y con \(S_i\subseteq\omega\) y
+    \(L_i\subseteq\Sigma^*\) conjuntos no vacíos, entonces definimos
+    \[\begin{aligned} R(f,\mathcal{G})&:S_1\times ...\times S_n\times L_1\times ...\times L_m\times\Sigma^*\to\Sigma^*\\ \\ R(f,\mathcal{G})(\vec{x},\vec{\alpha},\varepsilon)&=f(\vec{x},\vec{\alpha})\\ \\ R(f,\mathcal{G})(\vec{x},\vec{\alpha},\alpha a)&=\mathcal{G}_a(\vec{x},\vec{\alpha},\alpha,R(f,\mathcal{G})(\vec{x},\vec{\alpha},\alpha)) \end{aligned}\]
+    y decimos que \(R(f,\mathcal{G})\) es obtenida por recursión
+    primitiva a partir de \(f\) y \(\mathcal{G}\).
+  \end{itemize}
+\end{enumerate}
+
+\subsection{Combo 2}\label{combo-2}
+
+Defina:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(d\overset{n}{\vdash}d'\) (no hace falta que defina \(\vdash\))
+\item
+  \(L(M)\)
+\item
+  \(H(M)\)
+\item
+  ``\(f\) es una función de tipo \((n,m,s)\)''
+\item
+  \((x)\)
+\item
+  \((x)_i\)
+\end{enumerate}
+
+\subsubsection{Resolución}\label{resoluciuxf3n-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Para \(d,d'\in Des,n\geq 0\), escribiremos \(d\overset{n}{\vdash}d'\)
+  si \(\exists d_1,...,d_{n+1}\) tales que \(d=d_1,d'=d_{n+1}\) y
+  \(d_i\vdash d_{i+1}\forall i=1,...,n\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{Notar que \(d\overset{0}{\vdash}d'\Leftrightarrow d=d'\)}
+  \end{itemize}
+\item
+  Diremos que una palabra \(\alpha\in\Sigma^*\) es aceptada por \(M\)
+  por \emph{alcance de estado final} cuando
+  \(\lfloor q_0B\alpha\rfloor\overset{*}{\vdash}d\), con
+  \(d:St(d)\in F\). Luego, el \emph{lenguaje aceptado por \(M\) por
+  alcance de estado final} se define como
+  \(L(M)=\{\alpha\in\Sigma^*:\alpha\text{ es aceptada por }M\text{ por alcance de estado final}\}\)
+\item
+  Diremos que una palabra \(\alpha\in\Sigma^*\) es aceptada por \(M\)
+  por \emph{detención} cuando \(M\) se detiene partiendo de
+  \(\lfloor q_0B\alpha\rfloor\). Luego, el \emph{lenguaje aceptado por
+  \(M\) por detención} se define como
+  \(H(M)=\{\alpha\in\Sigma^*:\alpha\text{ es aceptada por }M\text{ por detención}\}\)
+\item
+  Si \(f\) es una función \(\Sigma\)-mixta y
+  \(n,m\in\omega:D_f\subseteq\omega^n\times\Sigma^{*m}\),
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Si \(I_f\subseteq\omega\), decimos que \(f\) es de tipo \((n,m,\#)\)
+  \item
+    Si \(I_f\subseteq\Sigma^*\), decimos que \(f\) es de tipo
+    \((n,m,*)\)
+  \end{itemize}
+\item
+  Dado \(x\in N\), usaremos \((x)\) para denotar a la única infinitupla
+  \((s_1,s_2,...)\in\omega^{[N]}\) tal que
+  \(x=\langle s_1,s_2,...\rangle=\prod_{i=1}^\infty pr(i)^{s_i}\)
+\item
+  Para cada \(i\in N\), usaremos \((x)_i\) para denotar a \(s_i\) de la
+  anterior infinitupla. Es decir, \((x)_i\) es el exponente de \(pr(i)\)
+  en la única factorización prima de \(x\)
+\end{enumerate}
+
+\subsection{Combo 3}\label{combo-3}
+
+Defina:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Cuándo un conjunto \(S\subseteq\omega^n\times\Sigma^{*m}\) es llamado
+  \(\Sigma\)-recursivamente enumerable (no hace falta que defina
+  ``función \(\Sigma\)-recursiva'')
+\item
+  \(s^\leq\)
+\item
+  \(*^\leq\)
+\item
+  \(\#^\leq\)
+\end{enumerate}
+
+\subsubsection{Resolución}\label{resoluciuxf3n-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Diremos que un conjunto \(S\subseteq\omega^n\times\Sigma^{*m}\) es
+  \(\Sigma\)-recursivamente enumerable cuando sea vacío o haya una
+  función \(F:\omega\to\omega^n\times\Sigma^{*m}\) tal que \(I_F=S\) y
+  \(F_{(i)}\) sea \(\Sigma\)-recursiva \(\forall i\in\{1,...,n+m\}\)
+\end{enumerate}
+
+Los siguientes puntos se definen en base a \(\Sigma\) alfabeto no vacío
+y \(\leq\) orden total sobre \(\Sigma\), siendo
+\(\Sigma=\{a_1,...,a_n\}\) con \(a_1<a_2<...<a_n\). Luego:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  La función \emph{siguiente} se define como
+  \[\begin{aligned}s^\leq&:\Sigma^*\to\Sigma^*\\ \\ s^\leq((a_n)^m)&=(a_1)^{m+1}\ \forall m\geq 0\\ \\ s^\leq(\alpha a_i(a_n)^m)&=\alpha a_{i+1} (a_1)^m\ \forall\alpha\in\Sigma^*,\ i\in\{1,...,n-1\},\ m\geq 0\end{aligned}\]
+\item
+  Función que asigna a cada \(n\in\omega\) la \(n+1\)-ésima palabra de
+  la lista:
+  \[\begin{aligned}*^\leq&:\omega\to\Sigma^*\\ \\ *^\leq(0)&=\varepsilon\\ \\ *^\leq(n+1)&=s^\leq(*^\leq(n))\end{aligned}\]
+\item
+  Inversa de la anterior:
+  \[\begin{aligned}\#^\leq&:\Sigma^*\to\omega\\ \\ \#^\leq(\varepsilon)&=0\\ \\ \#^\leq(a_{i_k}...a_{i_0})&=\sum_{j=0}^k i_jn^j\end{aligned}\]
+\end{enumerate}
+
+\subsection{Combo 4}\label{combo-4}
+
+Defina cuándo una función
+\(f:D_f\subseteq\omega^n\times\Sigma^{*m}\to\omega\) es llamada
+\(\Sigma\)-efectivamente computable y defina ``el procedimiento
+\(\mathbb{P}\) computa a la función \(f\)''.
+
+\subsubsection{Resolución}\label{resoluciuxf3n-3}
+
+Una función \(\Sigma\)-mixta
+\(f:D_f\subseteq\omega^n\times\Sigma^{*m}\to O\) (para
+\(O\in\{\omega,\Sigma^*\}\)) es \(\Sigma\)-efectivamente computable si
+hay un procedimiento \(\mathbb{P}\) tal que:
+
+\begin{itemize}
+\tightlist
+\item
+  El conjunto de datos de entrada de \(\mathbb{P}\) es
+  \(\omega^n\times\Sigma^{*m}\)
+\item
+  El conjunto de datos de salida está contenido en \(O\)
+\item
+  Si \((\vec{x},\vec{\alpha})\in D_f\), entonces \(\mathbb{P}\) se
+  detiene partiendo de \((\vec{x},\vec{\alpha})\) y da como salida
+  \(f(\vec{x},\vec{\alpha})\)
+\item
+  Si \((\vec{x},\vec{\alpha})\notin D_f\), entonces \(\mathbb{P}\) no se
+  detiene partiendo de \((\vec{x},\vec{\alpha})\)
+\end{itemize}
+
+En estos casos, diremos que este \(\mathbb{P}\) computa a la función
+\(f\).
+
+\subsection{Combo 5}\label{combo-5}
+
+Defina cuándo un conjunto \(S\subseteq\omega^n\times\Sigma^{*m}\) es
+llamado \(\Sigma\)-efectivamente computable y defina ``el procedimiento
+efectivo \(\mathbb{P}\) decide la pertenencia a \(S\)''.
+
+\subsubsection{Resolución}\label{resoluciuxf3n-4}
+
+Un conjunto \(S\subseteq\omega^n\times\Sigma^{*m}\) es
+\(\Sigma\)-efectivamente computable cuando la función
+\(\chi_S^{\omega^n\times\Sigma^{*m}}\) es \(\Sigma\)-efectivamente
+computable.
+
+Es decir, \(S\) es \(\Sigma\)-efectivamente computable si existe un
+procedimiento \(\mathbb{P}\) tal que:
+
+\begin{itemize}
+\tightlist
+\item
+  El conjunto de datos de entrada de \(\mathbb{P}\) es
+  \(\omega^n\times\Sigma^{*m}\), siempre termina y da como dato de
+  salida un elemento de \(\{0,1\}\)
+\item
+  Dado \((\vec{x},\vec{\alpha})\in\omega^n\times\Sigma^{*m}\),
+  \(\mathbb{P}\) se detiene partiendo de \((\vec{x}, \vec{\alpha})\) y
+  da como salida \(1\) si \((\vec{x},\vec{\alpha})\in S\) y \(0\) en
+  caso contrario.
+\end{itemize}
+
+En este caso, decimos que el procedimiento efectivo \(\mathbb{P}\)
+decide la pertenencia a \(S\).
+
+\subsection{Combo 6}\label{combo-6}
+
+Defina cuándo un conjunto \(S\subseteq\omega^n\times\Sigma^{*m}\) es
+llamado \(\Sigma\)-recursivamente enumerable y defina ``el procedimiento
+efectivo \(\mathbb{P}\) enumera a \(S\)''.
+
+\subsubsection{Resolución}\label{resoluciuxf3n-5}
+
+Un conjunto \(S\subseteq\omega^n\times\Sigma^{*m}\) es
+\(\Sigma\)-efectivamente enumerable si es vacío o
+\(\exists F:\omega\to\omega^n\times\Sigma^{*m}\) tal que \(I_F=S\) y
+\(F_{(i)}\) es \(\Sigma\)-efectivamente computable
+\(\forall i\in\{1,...,n+m\}\).
+
+Es decir, \(S\neq\emptyset\) es \(\Sigma\)-efectivamente enumerable si
+existe un procedimiento efectivo \(\mathbb{P}\) tal que:
+
+\begin{itemize}
+\tightlist
+\item
+  El conjunto de datos de entrada de \(\mathbb{P}\) es \(\omega\)
+\item
+  \(\mathbb{P}\) se detiene para cada \(x\in\omega\)
+\item
+  El conjunto de datos de salida de \(\mathbb{P}\) es igual a \(S\)
+\end{itemize}
+
+En este caso, decimos que el procedimiento efectivo \(\mathbb{P}\)
+enumera a \(S\).
+
+\subsection{Combo 7}\label{combo-7}
+
+Defina cuándo una función
+\(f:D_f\subseteq\omega^n\times\Sigma^{*m}\to\omega\) es llamada
+\(\Sigma\)-Turing computable y defina ``la máquina de Turing \(M\)
+computa a la función \(f\)''.
+
+\subsubsection{Resolución}\label{resoluciuxf3n-6}
+
+Diremos que \(f:D_f\subseteq\omega^n\times\Sigma^{*m}\to\omega\) es
+\(\Sigma\)-Turing computable si existe una máquina de Turing con
+\emph{unit} \(M=(Q,\Sigma,\Gamma,\delta,q_0,B,\shortmid,F)\) tal que:
+
+\begin{itemize}
+\tightlist
+\item
+  Si \((\vec{x},\vec{\alpha})\in D_f\), entonces
+  \(\exists p\in Q:\lfloor q_0B\shortmid^{x_1}B...B\shortmid^{x_n}B\alpha_1B...B\alpha_m\rfloor\overset{*}{\vdash}\lfloor pB\shortmid^{f(\vec{x},\vec{\alpha})}\rfloor\)
+  y
+  \(\lfloor pB\shortmid^{f(\vec{x},\vec{\alpha})}\rfloor\not\vdash d\forall d\in Des\)
+\item
+  Si \((\vec{x},\vec{\alpha})\in (\omega^n\times\Sigma^{*m})-D_f\),
+  entonces \(M\) \textbf{no} se detiene partiendo de
+  \(\lfloor q_0B\shortmid^{x_1}B...B\shortmid^{x_n}B\alpha_1B...B\alpha_m\rfloor\)
+\end{itemize}
+
+En este caso, diremos que la máquina de Turing \(M\) computa a la
+función \(f\).
+
+\subsection{Combo 8}\label{combo-8}
+
+Defina:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(M(P)\)
+\item
+  \(Lt\)
+\item
+  Conjunto rectangular
+\item
+  ``\(S\) es un conjunto de tipo \((n,m)\)''
+\end{enumerate}
+
+\subsubsection{Resolución}\label{resoluciuxf3n-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Este caso se trata de \textbf{minimización de variable numérica}. Sea
+  \(\Sigma\) un alfabeto finito y sea
+  \(P:D_P\subseteq\omega\times\omega^n\times\Sigma^{*m}\to\omega\) un
+  predicado, dado
+  \((\vec{x},\vec{\alpha})\in\omega^n\times\Sigma^{*m}\), cuando exista
+  al menos un \(t\in\omega:P(t,\vec{x},\vec{\alpha})=1\), usaremos
+  \(\min_t P(t,\vec{x},\vec{\alpha})\) para denotar al menor de tales
+  \(t\)'s. Con ello, definimos
+  \[M(P)=\lambda\vec{x}\vec{\alpha}\left[\min_t P(t,\vec{x},\vec{\alpha})\right]\]
+  El cual cumple que:
+  \[\begin{aligned} D_{M(P)}&=\{(\vec{x},\vec{\alpha})\in\omega^n\times\Sigma^{*m}:(\exists t\in\omega) P(t,\vec{x},\vec{\alpha})\}\\ \\ M(P)(\vec{x},\vec{\alpha})&=\min_t P(t,\vec{x},\vec{\alpha}),\ \forall(\vec{x},\vec{\alpha})\in D_{M(P)}\end{aligned}\]
+  Y diremos que \(M(P)\) se obtiene por \emph{minimización de variable
+  numérica} a partir de \(P\).
+\item
+  Definimos la función del \emph{mayor factor primo} como
+  \[\begin{aligned}Lt&:N\to\omega\\ \\ Lt(x)&=\begin{cases}\max\{i\in N:(x)_i\neq 0\} &\text{si }x\neq 1\\ 0 &\text{si }x=1\end{cases} \end{aligned}\]
+\item
+  Sea \(\Sigma\) un alfabeto finito, un conjunto \(\Sigma\)-mixto \(S\)
+  es llamado \emph{rectangular} si es de la forma
+  \(S_1\times ...\times S_n\times L_1\times ...\times L_m\) con
+  \(S_i\subseteq\omega\) y \(L_j\subseteq\Sigma^*\)
+\item
+  Dado un conjunto \(\Sigma\)-mixto \(S\) y
+  \(n,m\in\omega:S\subseteq\omega^n\times\Sigma^{*m}\), entonces \(S\)
+  es de tipo \((n,m)\)
+\end{enumerate}
+
+\subsection{Combo 9}\label{combo-9}
+
+Defina:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  ``\(I\) es una instrucción de \(S^\Sigma\)''
+\item
+  ``\(\mathcal{P}\) es un programa de \(S^\Sigma\)''
+\item
+  \(I_i^\mathcal{P}\)
+\item
+  \(n(\mathcal{P})\)
+\item
+  \(Bas\)
+\end{enumerate}
+
+\subsubsection{Resolución}\label{resoluciuxf3n-8}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Una \emph{instrucción de \(\mathcal{S}^\Sigma\)} es ya sea una
+  instrucción básica de \(\mathcal{S}^\Sigma\), o una palabra de la
+  forma \(\alpha I\), donde \(\alpha\in\{L\bar{n}:n\in N\}\) e \(I\) es
+  una instrucción básica de \(\mathcal{S}^\Sigma\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Cuando \(I\) es de la forma \(L\bar{n}J\) con \(J\) una instrucción
+    básica, diremos que \(L\bar{n}\) es la \emph{label de \(I\)}
+  \item
+    Una \emph{instrucción básica de \(\mathcal{S}^\Sigma\)} es una
+    palabra \((\Sigma\cup\Sigma_P)^*\) la cual es de alguna de las
+    siguientes formas (donde \(a\in\Sigma;\ k,n\in N\)):
+
+    \begin{itemize}
+    \tightlist
+    \item
+      \(N\bar{k}\leftarrow N\bar{k}+1\)
+    \item
+      \(N\bar{k}\leftarrow N\bar{k}\dot{-}1\)
+    \item
+      \(N\bar{k}\leftarrow N\bar{n}\)
+    \item
+      \(N\bar{k}\leftarrow 0\)
+    \item
+      \(P\bar{k}\leftarrow P\bar{k}.a\)
+    \item
+      \(P\bar{k}\leftarrow\ ^\curvearrowright P\bar{k}\)
+    \item
+      \(P\bar{k}\leftarrow P\bar{n}\)
+    \item
+      \(P\bar{k}\leftarrow\varepsilon\)
+    \item
+      IF \(N\bar{k}\neq 0\) GOTO \(L\bar{n}\)
+    \item
+      IF \(P\bar{k}\) BEGINS \(a\) GOTO \(L\bar{n}\)
+    \item
+      GOTO \(L\bar{n}\)
+    \item
+      SKIP
+    \end{itemize}
+  \end{itemize}
+\item
+  Un \emph{programa} de \(\mathcal{S}^\Sigma\) es una palabra de la
+  forma \(I_1I_2..I_n\) donde \(n\geq 1,I_1,..,I_n\in Ins^\Sigma\) y
+  además se cumple la \emph{ley de los GOTO}:
+  \(\forall i\in\{1,..,n\}\), si GOTO\(L\bar{m}\) es un tramo final de
+  \(I_i\), entonces \(\exists j\in\{1,..,n\}\) tal que \(I_j\) tiene
+  label \(L\bar{m}\)
+\item
+  Definimos \(I_i^\mathcal{P}\) como la \(i\)-ésima instrucción de
+  \(\mathcal{P}\) y, además, \(I_i^\mathcal{P}=\varepsilon\) cuando
+  \(i=0\) o \(i>n(\mathcal{P})\)
+\item
+  Definimos \(n(\mathcal{P})\) como la cantidad de instrucciones de
+  \(\mathcal{P}\)
+\item
+  Definimos \(Bas:Ins^\Sigma\to(\Sigma\cup\Sigma_p)^*\) dada por
+  \[Bas(I)=\begin{cases} J & \text{si }I\text{ es de la forma }L\bar{k}J\text{ con }J\in Ins^\Sigma\\ I & \text{en otro caso} \end{cases}\]
+\end{enumerate}
+
+\subsection{Combo 10}\label{combo-10}
+
+Defina, relativo al lenguaje \(S^\Sigma\):
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  ``Estado''
+\item
+  ``Descripción instantánea''
+\item
+  \(S_\mathcal{P}\)
+\item
+  ``Estado obtenido luego de \(t\) pasos, partiendo del estado
+  \((\vec{s},\vec{\sigma})\)''
+\item
+  ``\(\mathcal{P}\) se detiene (luego de \(t\) pasos), partiendo del
+  estado \((\vec{s},\vec{\sigma})\)''
+\end{enumerate}
+
+\subsubsection{Resolución}\label{resoluciuxf3n-9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Un estado es un par
+  \((\vec{s},\vec{\sigma})=((s_1,s_2,...),(\sigma_1,\sigma_2,...))\in\omega^{[N]}\times\Sigma^{*[N]}\)
+  y, si \(i\geq 1\), entonces diremos que \(s_i\) es el contenido o
+  valor de la variable \(N\bar{i}\) en el estado
+  \((\vec{s},\vec{\sigma})\) y \(\sigma_i\) es el contenido o valor de
+  la variable \(P\bar{i}\) en el estado \((\vec{s},\vec{\sigma})\)
+\item
+  Una descripción instantánea es una terna \((i,\vec{s},\vec{\sigma})\)
+  tal que \((\vec{s},\vec{\sigma})\) es un estado e \(i\in\omega\).
+  Intuitivamente, \((i,\vec{s},\vec{\sigma})\) nos dice que las
+  variables están en el estado \((\vec{s},\vec{\sigma})\) y que la
+  instrucción que debemos realizar es \(I_i^\mathcal{P}\)
+\item
+  Dado un programa \(\mathcal{P}\), definimos
+  \(S_\mathcal{P}:\omega\times\omega^{[N]}\times\Sigma^{*[N]}\to\omega\times\omega^{[N]}\times\Sigma^{*[N]}\)
+  como la función que asignará a una descripción instantánea
+  \((i,\vec{s},\vec{\sigma})\) la descripción instantánea sucesora de
+  \((i,\vec{s},\vec{\sigma})\) con respecto a \(\mathcal{P}\). Es decir,
+  hay varios casos posibles:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Si \(i\notin\{1,..,n(\mathcal{P})\}\), entonces
+    \(S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i,\vec{s},\vec{\sigma})\)
+  \item
+    Si \(Bas(I_i^\mathcal{P})=N\bar{k}\leftarrow N\bar{k}\dot{-}1\),
+    entonces
+    \(S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,(s_1,..,s_{k-1},s_k\dot{-}1,s_{k+1},..),\vec{\sigma})\)
+  \item
+    Si \(Bas(I_i^\mathcal{P})=N\bar{k}\leftarrow N\bar{k}+1\), entonces
+    \(S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,(s_1,..,s_{k-1},s_k+1,s_{k+1},..),\vec{\sigma})\)
+  \item
+    Si \(Bas(I_i^\mathcal{P})=N\bar{k}\leftarrow N\bar{n}\), entonces
+    \(S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,(s_1,..,s_{k-1},s_n,s_{k+1},..),\vec{\sigma})\)
+  \item
+    Si \(Bas(I_i^\mathcal{P})=N\bar{k}\leftarrow 0\), entonces
+    \(S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,(s_1,..,s_{k-1},0,s_{k+1},..),\vec{\sigma})\)
+  \item
+    Si
+    \(Bas(I_i^\mathcal{P})=\text{IF }N\bar{k}\neq 0\text{ GOTO }L\bar{m}\),
+    entonces hay dos posibilidades:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Si el valor contenido en \(N\bar{k}\) es \(0\), entonces
+      \(S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},\vec{\sigma})\)
+    \item
+      Si el valor contenido en \(N\bar{k}\) es no nulo, entonces
+      \(S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(\min\{l:I_l^\mathcal{P}\text{ tiene label }L\bar{m}\},\vec{s},\vec{\sigma})\)
+    \end{itemize}
+  \item
+    Si
+    \(Bas(I_i^\mathcal{P})=P\bar{k}\leftarrow\ ^\curvearrowright P\bar{k}\),
+    entonces
+    \(S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},(\sigma_1,..,\sigma_{k-1},\ ^\curvearrowright\sigma_k,\sigma_{k+1},..))\)
+  \item
+    Si \(Bas(I_i^\mathcal{P})=P\bar{k}\leftarrow P\bar{k}.a\), entonces
+    \(S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},(\sigma_1,..,\sigma_{k-1},\sigma_k a,\sigma_{k+1},..))\)
+  \item
+    Si \(Bas(I_i^\mathcal{P})=P\bar{k}\leftarrow P\bar{n}\), entonces
+    \(S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},(\sigma_1,..,\sigma_{k-1},\sigma_n,\sigma_{k+1},..))\)
+  \item
+    Si \(Bas(I_i^\mathcal{P})=P\bar{k}\leftarrow\varepsilon\), entonces
+    \(S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},(\sigma_1,..,\sigma_{k-1},\varepsilon,\sigma_{k+1},..))\)
+  \item
+    Si
+    \(Bas(I_i^\mathcal{P})=\text{IF }P\bar{k}\text{ BEGINS }a\text{ GOTO }L\bar{m}\),
+    entonces hay dos posibilidades:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Si la palabra contenida en \(P\bar{k}\) comienza con \(a\),
+      entonces
+      \(S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(\min\{l:I_l^\mathcal{P}\text{ tiene label }L\bar{m}\},\vec{s},\vec{\sigma})\)
+    \item
+      Si la palabra contenida en \(P\bar{k}\) no comienza con \(a\),
+      entonces
+      \(S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},\vec{\sigma})\)
+    \end{itemize}
+  \item
+    Si \(Bas(I_i^\mathcal{P})=\text{GOTO }L\bar{m}\), entonces
+    \(S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(\min\{l:I_l^\mathcal{P}\text{ tiene label }L\bar{m}\},\vec{s},\vec{\sigma})\)
+  \item
+    Si \(Bas(I_i^\mathcal{P})=\text{SKIP}\), entonces
+    \(S_\mathcal{P}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},\vec{\sigma})\)
+  \end{itemize}
+\item
+  Diremos que
+  \(S_\mathcal{P}(S_\mathcal{P}(...(S_\mathcal{P}(1,\vec{s},\vec{\sigma}))...))=(j,\vec{u},\vec{\eta})\)
+  con \(S_\mathcal{P}\) aplicado \(t\) veces, es la \emph{descripción
+  instantánea obtenida luego de \(t\) pasos partiendo del estado
+  \((\vec{s},\vec{\sigma})\)}, y \((\vec{u},\vec{\eta})\) es el estado
+  obtenido luego de \(t\) pasos partiendo del estado
+  \((\vec{s},\vec{\sigma})\)
+\item
+  Cuando la primer coordenada de
+  \(S_\mathcal{P}(S_\mathcal{P}(...(S_\mathcal{P}(1,\vec{s},\vec{\sigma}))...))\)
+  (con \(S_\mathcal{P}\) aplicado \(t\) veces) es \(n(\mathcal{P})+1\),
+  diremos que \(\mathcal{P}\) se detiene (luego de \(t\) pasos),
+  partiendo desde el estado \((\vec{s},\vec{\sigma})\)
+\end{enumerate}
+
+\subsection{Combo 11}\label{combo-11}
+
+Defina:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\Psi_\mathcal{P}^{n,m,\#}\)
+\item
+  ``\(f\) es \(\Sigma\)-computable''
+\item
+  ``\(\mathcal{P}\) computa a \(f\)''
+\item
+  \(M^\leq(P)\)
+\end{enumerate}
+
+\subsubsection{Resolución}\label{resoluciuxf3n-10}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Dado \(\mathcal{P}\in Pro^\Sigma\), definimos
+  \(\Psi_\mathcal{P}^{n,m,\#}\) como:
+  \[\begin{aligned}D_{\Psi_\mathcal{P}^{n,m,\#}} &= \{(\vec{x}, \vec{\alpha})\in\omega^n\times\Sigma^{*m}:\mathcal{P}\text{ termina partiendo de }||\vec{x}, \vec{\alpha}||\}\\ \\ \Psi_\mathcal{P}^{n,m,\#}(\vec{x}, \vec{\alpha}) &= \text{valor de N1 cuando }\mathcal{P}\text{ termina partiendo de }||\vec{x}, \vec{\alpha}||\end{aligned}\]
+\item
+  Una función \(\Sigma\)-mixta
+  \(f:S\subseteq\omega^n\times\Sigma^{*m}\to\omega\) es
+  \(\Sigma\)-computable si existe un programa
+  \(\mathcal{P}\in \mathcal{S}^\Sigma\) tal que
+  \(f=\Psi_\mathcal{P}^{n,m,\#}\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Se define de forma análoga para funciones \(\Sigma\)-mixtas
+    \(f:S\subseteq\omega^n\times\Sigma^{*m}\to\Sigma^*\) con
+    \(f=\Psi_\mathcal{P}^{n,m,*}\)
+  \end{itemize}
+\item
+  En el caso anterior, decimos que \(f\) es \emph{computada} por
+  \(\mathcal{P}\)
+\item
+  Sea \(\Sigma\neq\emptyset\) un alfabeto con \(\leq\) un orden total
+  sobre este, y sea
+  \(P:D_P\subseteq\omega^n\times\Sigma^{*m}\times\Sigma^*\to\omega\) un
+  predicado, dado
+  \((\vec{x},\vec{\alpha})\in\omega^n\times\Sigma^{*m}\), cuando exista
+  al menos un \(\alpha\in\Sigma^*\) tal que
+  \(P(\vec{x},\vec{\alpha},\alpha)=1\), usaremos
+  \(\min_\alpha^\leq P(\vec{x},\vec{\alpha},\alpha)\) para denotar al
+  menor de tales \(\alpha\)'s. Con ello, definimos:
+  \[M^\leq(P)=\lambda\vec{x}\vec{\alpha}[min_\alpha^\leq P(\vec{x},\vec{\alpha},\alpha)]\]
+  El cual cumple que:
+  \[\begin{aligned} D_{M^\leq(P)}&=\{(\vec{x},\vec{\alpha})\in\omega^n\times\Sigma^{*m}:(\exists\alpha\in\Sigma^*) P(\vec{x},\vec{\alpha},\alpha)=1\}\\ \\ M^\leq(P)(\vec{x},\vec{\alpha})&=min_\alpha^\leq P(\vec{x},\vec{\alpha},\alpha), \forall(\vec{x},\vec{\alpha})\in D_{M^\leq(P)}\end{aligned}\]
+  Y diremos que \(M^\leq(P)\) se obtiene por \emph{minimización de
+  variable alfabética} a partir de \(P\).
+\end{enumerate}
+
+\subsection{Combo 12}\label{combo-12}
+
+Defina cuándo un conjunto \(S\subseteq\omega^n\times\Sigma^{*m}\) es
+llamado \(\Sigma\)-computable, cuándo es llamado \(\Sigma\)-enumerable y
+defina ``el programa \(\mathcal{P}\) enumera a \(S\)''.
+
+\subsubsection{Resolución}\label{resoluciuxf3n-11}
+
+\begin{itemize}
+\tightlist
+\item
+  Un conjunto \(S\subseteq\omega^n\times\Sigma^{*m}\) es
+  \(\Sigma\)-computable si \(\chi_S^{\omega^n\times\Sigma^{*m}}\) es
+  \(\Sigma\)-computable. Es decir, es \(\Sigma\)-computable si y solo si
+  hay un programa \(\mathcal{P}\in Pro^\Sigma\) que computa a
+  \(\chi_S^{\omega^n\times\Sigma^{*m}}\):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Si \((\vec{x}, \vec{\alpha})\in S\), entonces \(\mathcal{P}\) se
+    detiene partiendo de \(||x_1, .., x_n, \alpha_1, .., \alpha_m||\) y
+    la variable \(N1\) queda con contenido igual a \(1\)
+  \item
+    Si \((\vec{x}, \vec{\alpha})\notin S\), entonces \(\mathcal{P}\) se
+    detiene partiendo de \(||x_1, .., x_n, \alpha_1, .., \alpha_m||\) y
+    la variable \(N1\) queda con contenido igual a \(0\)
+  \end{itemize}
+
+  Decimos que \(\mathcal{P}\) decide la pertenencia a \(S\) respecto al
+  conjunto \(\omega^n\times\Sigma^{*m}\)
+\item
+  Un conjunto \(S\subseteq\omega^n\times\Sigma^{*m}\) es
+  \(\Sigma\)-enumerable si es vacío o existe una función
+  \(F:\omega\to\omega^n\times\Sigma^{*m}\) tal que \(I_F=S\) y
+  \(F_{(i)}\) sea una función \(\Sigma\)-computable para todo
+  \(i\in{1,..,n+m}\)
+\item
+  Por \emph{propiedad}, sabemos que: Sea
+  \(S\subseteq\omega^n\times\Sigma^{*m}\) un conjunto no vacío, entonces
+  son equivalentes:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(S\) es \(\Sigma\)-enumerable
+  \item
+    Hay un programa \(\mathcal{P}\in Pro^\Sigma\) tal que
+
+    \begin{itemize}
+    \tightlist
+    \item
+      \(\forall x\in\omega\), \(\mathcal{P}\) se detiene partiendo de
+      \(||x||\) y llega a un estado de la forma
+      \(((x_1, .., x_n, y_1, ...) , (\alpha_1, .., \alpha_m, \beta_1, ..))\)
+      con \((x_1, .., x_n, \alpha_1, .., \alpha_m)\in S\)
+    \item
+      \(\forall (x_1, .., x_n, \alpha_1, .., \alpha_m)\in S\),
+      \(\exists x\in\omega\) tal que \(\mathcal{P}\) se detiene
+      partiendo de \(||x||\) y llega a un estado de la forma
+      \(((x_1, .., x_n, y_1, ...) , (\alpha_1, .., \alpha_m, \beta_1, ..))\)
+    \end{itemize}
+  \end{itemize}
+
+  Decimos que \(\mathcal{P}\) \emph{enumera} a \(S\)
+\end{itemize}
+
+\subsection{Combo 13}\label{combo-13}
+
+Defina:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(i^{n,m}\)
+\item
+  \(E_\#^{n,m}\)
+\item
+  \(E_*^{n,m}\)
+\item
+  \(E_{\#j}^{n,m}\)
+\item
+  \(E_{*j}^{n,m}\)
+\item
+  \(Halt^{n,m}\)
+\item
+  \(T^{n,m}\)
+\item
+  \(AutoHalt^\Sigma\)
+\item
+  Los conjuntos \(A\) y \(N\)
+\end{enumerate}
+
+\subsubsection{Resolución}\label{resoluciuxf3n-12}
+
+\begin{itemize}
+\tightlist
+\item
+  Sean \(n,m\in\omega\), definimos las siguientes funciones:
+  \[\begin{aligned} i^{n,m} &: \omega\times\omega^n\times\Sigma^{*m}\times Pro^\Sigma\to\omega\\ E^{n,m}_\# &: \omega\times\omega^n\times\Sigma^{*m}\times Pro^\Sigma\to\omega^{[N]}\\ E^{n,m}_* &: \omega\times\omega^n\times\Sigma^{*m}\times Pro^\Sigma\to\Sigma^{[N]}\\ \end{aligned}\]
+  de modo que
+  \((i^{n,m}(t, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_\#(t, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_*(t, \vec{x}, \vec{\alpha}, \mathcal{P}))\)
+  es la descripción instantánea que se obtiene luego de correr
+  \(\mathcal{P}\) una cantidad \(t\) de pasos partiendo del estado
+  \(||x_1, .., x_n, \alpha_1, .., \alpha_m||\). Si las definimos
+  formalmente, podemos hacerlo de forma recursiva:
+  \[\begin{aligned} (i^{n,m}(0, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_\#(0, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_*(0, \vec{x}, \vec{\alpha}, \mathcal{P})) &= \\(1,(x_1, .., x_n,0,...),(\alpha_1, .., \alpha_m,\varepsilon,...))\\ \\ (i^{n,m}(t+1, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_\#(t+1, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_*(t+1, \vec{x}, \vec{\alpha}, \mathcal{P})) &= \\ S_\mathcal{P}(i^{n,m}(t, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_\#(t, \vec{x}, \vec{\alpha}, \mathcal{P}), E^{n,m}_*(t, \vec{x}, \vec{\alpha}, \mathcal{P}))\end{aligned}\]
+\item
+  Definimos también las funciones
+  \[\begin{aligned} E^{n,m}_{\#j}: \omega\times\omega^n\times\Sigma^{*m}\times Pro^\Sigma\to\omega\\ E^{n,m}_{*j}:\omega\times\omega^n\times\Sigma^{*m}\times Pro^\Sigma\to\Sigma^*\end{aligned}\]
+  que marcan el valor de la \(j\)-ésima componente de \(E^{n,m}_\#\) y
+  \(E^{n,m}_*\), respectivamente. Es decir:
+  \[\begin{aligned}E^{n,m}_{\#j} = p^{n,m}_j\circ E^{n,m}_\#\\ \\ E^{n,m}_{*j} = p^{n,m}_j\circ E^{n,m}_*\end{aligned}\]
+\item
+  Dados \(n,m\in\omega\), definimos
+  \(Halt^{n,m}=\lambda t\vec{x}\vec{\alpha}\mathcal{P} [i^{n,m}(t, \vec{x}, \vec{\alpha}, \mathcal{P}) = n(\mathcal{P}) + 1]\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Básicamente, \(Halt^{n,m}\) es un predicado que dice si
+    \(\mathcal{P}\) se detiene luego de \(t\) pasos partiendo del estado
+    \(||x_1, .., x_n, \alpha_1, .., \alpha_m||\).
+  \end{itemize}
+\item
+  Definimos \(T^{n,m}=M(Halt^{n,m})\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(D_{T^{n,m}}=\{(\vec{x}, \vec{\alpha}, \mathcal{P}): \mathcal{P}\text{ se detiene partiendo de }||x_1, .., x_n, \alpha_1, .., \alpha_m||\}\)
+  \item
+    Para \((\vec{x}, \vec{\alpha}, \mathcal{P})\in D_{T^{n,m}}\),
+    \(T^{n,m}(\vec{x}, \vec{\alpha}, \mathcal{P})\) indica la cantidad
+    de pasos necesarios para que \(\mathcal{P}\) se detenga partiendo de
+    \(||x_1, .., x_n, \alpha_1, .., \alpha_m||\).
+  \end{itemize}
+\item
+  Cuando \(\Sigma\supseteq\Sigma_p\), podemos definir
+  \(AutoHalt^\Sigma=\lambda\mathcal{P}[(\exists t\in\omega) Halt^{0,1}(t,\mathcal{P},\mathcal{P})]\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Notar que \(D_{AutoHalt^\Sigma}=Pro^\Sigma\) y que
+    \(\forall\mathcal{P}\in Pro^\Sigma, AutoHalt^\Sigma(\mathcal{P})=1\)
+    sii \(\mathcal{P}\) se detiene partiendo del estado
+    \(||\mathcal{P}||\).
+  \end{itemize}
+\item
+  Supongamos \(\Sigma\supseteq\Sigma_p\). Entonces
+  \(A=\{\mathcal{P}\in Pro^\Sigma: AutoHalt^\Sigma(\mathcal{P})=1\}\) y
+  \(N=\{\mathcal{P}\in Pro^\Sigma: AutoHalt^\Sigma(\mathcal{P})=0\}\).
+\end{itemize}
+
+\subsection{Combo 14}\label{combo-14}
+
+Explique en forma detallada la notación lambda.
+
+\subsubsection{Resolución}\label{resoluciuxf3n-13}
+
+\begin{itemize}
+\tightlist
+\item
+  Una expresión es \emph{lambdificable} con respecto a \(\Sigma\) si
+  cumple las siguientes características:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Involucra variables numéricas (que se valuaran en números de
+    \(\omega\)), y variables alfabéticas (que se valuaran en palabras
+    del alfabeto previamente fijado)
+
+    \begin{itemize}
+    \tightlist
+    \item
+      En cuanto a notación, las numéricas son con letras latinas
+      minúsculas (\(x,y,z\)) y las alfabéticas con letras griegas
+      minúsculas (\(\alpha,\beta,\gamma\))
+    \end{itemize}
+  \item
+    Para ciertas valuaciones de sus variables la expresión puede
+    \emph{no} estar definida (por ejemplo, \(Pred(|\alpha|)\) para
+    \(\alpha=\varepsilon\))
+  \item
+    Sea \(E\) la expresión, los valores que asuma cuando hayan sido
+    asignados los valores de \(\omega\) a sus variables numéricas y
+    valores de \(\Sigma^*\) a sus variables alfabéticas, deberán ser
+    \emph{siempre} elementos de \(O\in\{\omega,\Sigma^*\}\) (es decir,
+    no puede tomar valores mixtos)
+  \item
+    La expresión puede involucrar lenguaje coloquial castellano (i.e.,
+    no únicamente operaciones matemáticas). Por ejemplo, ``el menor
+    número primo que es mayor que \(x\)''
+  \item
+    A las \emph{expresiones booleanas} (como \(x=0\)), se les
+    considerará que asumen valores de \(\{0,1\}\subseteq\omega\)
+  \end{itemize}
+\item
+  \emph{Definición}: sea \(\Sigma\) un alfabeto finito fijo, \(E\) una
+  expresión lambdificable respecto a \(\Sigma\) y
+  \(x_1,..,x_n,\alpha_1,..,\alpha_m\) variables distintas tales que las
+  numéricas que ocurren en \(E\) están en \(\{x_1,..,x_n\}\) y las
+  alfabéticas en \(\{\alpha_1,..,\alpha_m\}\), entonces
+  \(\lambda x_1..x_n\alpha_1..\alpha_m [E]\) denota la función definida
+  por:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(D_{\lambda x_1..x_n\alpha_1..\alpha_m [E]}=\{(k_1,..,k_n,\beta_1,..,\beta_m)\in\omega^n\times\Sigma^{*m}:E\)
+    está definida cuando asignamos a cada \(x_i\) el valor \(k_i\), y a
+    cada \(\alpha_i\), el valor \(\beta_i \}\)
+  \item
+    \(\lambda x_1..x_n\alpha_1..\alpha_m [E](k_1,..,k_n,\beta_1,..,\beta_m)=\)
+    valor que asume o representa \(E\) cuando asignamos a cada \(x_i\)
+    el valor \(k_i\), y a cada \(\alpha_i\), el valor \(\beta_i\)
+  \end{itemize}
+\end{itemize}
+
+\subsection{Combo 15}\label{combo-15}
+
+Dada una función \(f:D_f\subseteq\omega^n\times\Sigma^{*m}\to\omega\),
+describa qué tipo de objeto es y qué propiedades debe tener el macro:
+\[[V2\leftarrow f(V1,W1)]\]
+
+\subsubsection{Resolución}\label{resoluciuxf3n-14}
+
+Dada la función \(f:D_f\subseteq\omega\times\Sigma^*\to\omega\), el
+macro \([V2\leftarrow f(V1,W1)]\) es un objeto de tipo \textbf{PALABRA}.
+
+Para que el macro \([V2\leftarrow f(V1,W1)]\) sea válido (i.e., exista
+en el lenguaje \(S^\Sigma\)), debe cumplir las siguientes propiedades:
+
+\begin{itemize}
+\tightlist
+\item
+  Las variables oficiales de \(M\) son \(V1,V2,W1\)
+\item
+  \(M\) no tiene labels oficiales
+\item
+  Si reemplazamos:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    las variables oficiales de \(M\) por variables concretas
+    \(N\overline{k_1},N\overline{k_2},P\overline{j_1}\),
+  \item
+    las variables auxiliares de \(M\) por variables concretas distintas
+    de a dos y NO pertececientes a
+    \(\{N\overline{k_1},N\overline{k_2},P\overline{j_1}\}\),
+  \item
+    los labels auxiliares de \(M\) por labels concretos distintos de a
+    dos, entonces la palabra obtenida es un programa de
+    \(\mathcal{S}^\Sigma\) que denotaremos con
+    \([N\overline{k_{2}}\leftarrow f(N\overline{k_1},P\overline{j_1})]\)
+    y tiene la siguiente propiedad:
+  \item
+    Si corremos
+    \([N\overline{k_{2}}\leftarrow f(N\overline{k_1},P\overline{j_1})]\)
+    partiendo de un estado \(e\) que asigne a
+    \(N\overline{k_1}, P\overline{j_1}\) los valores \(x_1, \alpha_1\)
+    respectivamente, entonces independientemente de los valores que les
+    asigne \(e\) a las demás variables, se dará que:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Si \((x_1, \alpha_1)\notin D_f\), entonces
+      \([N\overline{k_{2}}\leftarrow f(N\overline{k_1},P\overline{j_1})]\)
+      \textbf{no} se detiene partiendo de \(e\)
+    \item
+      Si \((x_1, \alpha_1)\in D_f\), entonces
+      \([N\overline{k_{2}}\leftarrow f(N\overline{k_1},P\overline{j_1})]\)
+      se detiene partiendo de \(e\) y llega a un estado \(e'\) que
+      cumple que:
+
+      \begin{itemize}
+      \tightlist
+      \item
+        \(e'\) le asigna a \(N\overline{k_{2}}\) el valor
+        \(f(x_1, \alpha_1)\)
+      \item
+        \(e'\) solo puede diferir de \(e\) en los valores que le asigna
+        a \(N\overline{k_{2}}\) o a las variables que fueron a
+        reemplazar a las variables auxiliares de \(M\)
+      \end{itemize}
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\subsection{Combo 16}\label{combo-16}
+
+Dado un predicado \(P:D_P\subseteq\omega^n\times\Sigma^{*m}\to\omega\),
+describa qué tipo de objeto es y qué propiedades debe tener el macro:
+\[[\text{IF }P(V1,W1)\text{ GOTO }A1]\]
+
+\subsubsection{Resolución}\label{resoluciuxf3n-15}
+
+Dado el predicado \(P:D_P\subseteq\omega\times\Sigma^*\to\omega\), el
+macro \([\text{IF }P(V1,W1)\text{ GOTO }A1]\) es un objeto de tipo
+\textbf{PALABRA}.
+
+Para que el macro \([\text{IF }P(V1,W1)\text{ GOTO }A1]\) sea válido
+(i.e., exista en el lenguaje \(S^\Sigma\)), debe cumplir las siguientes
+propiedades:
+
+\begin{itemize}
+\tightlist
+\item
+  Las variables oficiales de \(M\) son \(V1,W1\)
+\item
+  \(A1\) es el único label oficial de \(M\)
+\item
+  Si reemplazamos:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    las variables oficiales de \(M\) por variables concretas
+    \(N\overline{k_1},P\overline{j_1}\),
+  \item
+    el label oficial \(A1\) por el label concreto \(L\bar{k}\),
+  \item
+    las variables auxiliares de \(M\) por variables concretas distintas
+    de a dos y NO pertececientes a
+    \(\{N\overline{k_1},P\overline{j_1}\}\),
+  \item
+    los labels auxiliares de \(M\) por labels concretos distintos de a
+    dos y ninguno de ellos igual a \(L\bar{k}\), entonces la palabra
+    obtenida es un programa de \(\mathcal{S}^\Sigma\) que denotaremos
+    con
+    \([\text{IF }P(N\overline{k_1},P\overline{j_1})\text{ GOTO }L\bar{k}]\)
+    y tiene la siguiente propiedad:
+  \item
+    Si corremos
+    \([\text{IF }P(N\overline{k_1},P\overline{j_1})\text{ GOTO }L\bar{k}]\)
+    partiendo de un estado \(e\) que asigne a
+    \(N\overline{k_1}, P\overline{j_1}\) los valores \(x_1, \alpha_1\)
+    respectivamente, entonces independientemente de los valores que les
+    asigne \(e\) a las demás variables, se dará que:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Si \((x_1, \alpha_1)\notin D_P\), entonces
+      \([\text{IF }P(N\overline{k_1},P\overline{j_1})\text{ GOTO }L\bar{k}]\)
+      \textbf{no} se detiene partiendo de \(e\)
+    \item
+      Si \((x_1, \alpha_1)\in D_P\) y \(P(x_1, \alpha_1)=1\), entonces,
+      luego de una cantidad finita de pasos,
+      \([\text{IF }P(N\overline{k_1},P\overline{j_1})\text{ GOTO }L\bar{k}]\)
+      direcciona al label \(L\bar{k}\) quedando en un estado \(e'\) que
+      solo puede diferir de \(e\) en los valores que le asigna a las
+      variables que fueron a reemplazar a las variables auxiliares de
+      \(M\)
+    \item
+      Si \((x_1, \alpha_1)\in D_P\) y \(P(x_1, \alpha_1)=0\), entonces,
+      luego de una cantidad finita de pasos,
+      \([\text{IF }P(N\overline{k_1},P\overline{j_1})\text{ GOTO }L\bar{k}]\)
+      se detiene partiendo de \(e\) quedando en un estado \(e'\) que
+      solo puede diferir de \(e\) en los valores que le asigna a las
+      variables que fueron a reemplazar a las variables auxiliares de
+      \(M\)
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\end{document}
