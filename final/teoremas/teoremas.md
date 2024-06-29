@@ -14,7 +14,7 @@ Supongamos que $S\subseteq\omega^n\times\Sigma^{*m}$ con $n,m\in\omega$ y veamos
 - **(Caso $\Leftarrow$)**: Se probará por inducción en $k$ que $D_F$ es $\Sigma$-p.r. $\forall F\in PR_k^\Sigma$.
     - *Caso base ($k=0$)*: Trivial.
     - *HI ($k$)*: Supongamos que $D_F$ es $\Sigma$-p.r. $\forall F\in PR_k^\Sigma$.
-    - *Paso inductivo $(k+1)$*: Supongamos $F\in PR_{k+1}^\Sigma$ y veremos que $F$ es $\Sigma$-p.r. Hay varios casos según cómo se define $PR_{k+1}$ (composición, recursión con variable alfabética o recursión con variable numérica), pero solo vamos a considerar el de *composición*.
+    - *Paso inductivo $(k+1)$*: Supongamos $F\in PR_{k+1}^\Sigma$ y veremos que $F$ es $\Sigma$-p.r. Hay varios casos según cómo se define $PR_{k+1}$ (composición, recursión con variable alfabética, recursión con variable numérica o función de $PR_k^\Sigma$), pero solo vamos a considerar el de *composición*.
       Entonces, veamos que $F=g\circ[g_1,...,g_r]$ con $g,g_1,...,g_r\in PR_k^\Sigma$.
         - Si $F=\emptyset$, es trivial ver que $D_F$ es $\Sigma$-p.r..
         - Si $F\neq\emptyset$, entonces tenemos que (sean $O\in\{\omega,\Sigma^*\}\text{ y }p,q\in\omega$): $$\begin{aligned} r&=n+m\\ g&:D_g\subseteq\omega^n\times\Sigma^{*m}\to O\\ g_i&:D_{g_i}\subseteq\omega^p\times\Sigma^{*q}\to\omega\forall i=1,...,n\\ g_i&:D_{g_i}\subseteq\omega^p\times\Sigma^{*q}\to\Sigma^*\forall i=n+1,...,r \end{aligned}$$ Ahora, por lemas sabemos que:
@@ -33,7 +33,26 @@ Si $h$ es $\Sigma$-recursiva, entonces $h$ es $\Sigma$-computable
 
 #### Demostración
 
+Se probará por inducción en $k$ que si $h\in R_k^\Sigma$, entonces $h$ es $\Sigma$-computable.
+- *Caso base ($k=0$)*: Trivial, dado que son funciones con las que siempre trabajamos ($Pred,Suc,C^{0,0}_0,C^{0,0}_\varepsilon,p^{n,m}_j,d_a$ con $n,m,j\in\omega,a\in\Sigma$ y $1\leq j\leq n+m$)
+- *HI ($k$)*: Supongamos que si $h\in R_k^\Sigma$, entonces $h$ es $\Sigma$-computable.
+- *Paso inductivo ($k+1$)*: Supongamos $h\in R_{k+1}^\Sigma$, entonces tenemos varios casos (composición, minimización, recursión con variable alfabética o numérica, o función de $R_k^\Sigma$). En esta demostración nos vamos a concentrar en la *recursión con variable alfabética*.
+  Como las demostraciones de los dos casos de valor numérico y alfabético son similares, vamos a considerar este último. Entonces, consideraremos $h=R(f,\mathcal{G})$ con $$\begin{aligned} f&:S_1\times ...\times S_n\times L_1\times ...\times L_m\to\Sigma^*\\ \mathcal{G}_a&:S_1\times ...\times S_n\times L_1\times ...\times L_m\times\Sigma^*\times\Sigma^*\to\Sigma^*\forall a\in\Sigma \end{aligned}$$ con $S_1,...,S_n\subseteq\omega$ y $L_1,...,L_m\subseteq\Sigma^*$, y tales que $f,\mathcal{G}_a\in R_k^\Sigma\forall a\in\Sigma$.
+  Sea $\Sigma={a_1,...,a_r}$ nuestro alfabeto, como por *HI* sabemos que $f,\mathcal{G}_a\forall a\in\Sigma$ son $\Sigma$-computables, entonces podemos considerar el siguiente programa $\mathcal{P}\in Pro^\Sigma$ (dado que las *macros* existen en $S^\Sigma$): $$\begin{aligned} & [P\overline{m+3}\leftarrow f(N1,...,N\bar{n},P1,...,P\bar{m})]\\ L\overline{r+1}\space\space\space\space & \text{IF }P\overline{m+1}\text{ BEGINS }a_1\text{ GOTO }L1\\ & ...\\ & \text{IF }P\overline{m+1}\text{ BEGINS }a_r\text{ GOTO }L\bar{r}\\ & \text{GOTO }L\overline{r+2}\\ L1\space\space\space\space & P\overline{m+1}\leftarrow\ ^\curvearrowright P\overline{m+1}\\ & [P\overline{m+3}\leftarrow\mathcal{G}_{a_1}(N1,...,N\bar{n},P1,...,P\bar{m},P\overline{m+2},P\overline{m+3})]\\ & P\overline{m+2}\leftarrow P\overline{m+2}.a_1\\ & \text{GOTO }L\overline{r+1}\\ & ...\\ L\bar{r}\space\space\space\space & P\overline{m+1}\leftarrow\ ^\curvearrowright P\overline{m+1}\\ & [P\overline{m+3}\leftarrow\mathcal{G}_{a_r}(N1,...,N\bar{n},P1,...,P\bar{m},P\overline{m+2},P\overline{m+3})]\\ & P\overline{m+2}\leftarrow P\overline{m+2}.a_r\\ & \text{GOTO }L\overline{r+1}\\ L\overline{r+2}\space\space\space\space & P1\leftarrow P\overline{m+3}\\ \end{aligned}$$ Luego, para ver que $h$ es $\Sigma$-computable, debemos demostrar que $\mathcal{P}$ computa $h$. Esto es fácil de chequear notando que, sea $R(f,\mathcal{G})(\vec{x},\vec{\alpha},\beta)$, entonces:
+    - $\mathcal{P}$ tiene un estado inicial de la forma $||(x_1,...,x_n,\alpha_1,...,\alpha_m)||$
+    - $P\overline{m+1}$ es la variable que contiene a $\beta$
+    - $P\overline{m+2}$ es la variable que contiene nuestro "paso actual de la recursión" (el $\beta$ construido de izquierda a derecha)
+    - $P\overline{m+3}$ es la variable que contiene el resultado de la recursión
+  Teniendo esto en cuenta, entonces:
+    - Si $\beta=\varepsilon$, entonces $\mathcal{P}$ se detiene con $f(\vec{x},\vec{\alpha})$ en $P1$
+    - Si $\beta=\alpha a_i$ con $a_i\in\Sigma$, entonces nos vamos a la instrucción con label $L\bar{i}$ y cada variable va a tener los siguientes valores:
+        - $P\overline{m+1}$ tiene $\alpha$
+        - $P\overline{m+2}$ tiene $\gamma$ tal que $\beta=\gamma\alpha$
+        - $P\overline{m+3}$ tiene $\mathcal{G}_{a_i}(\vec{x},\vec{\alpha},\gamma,R(f,\mathcal{G})(\vec{x},\vec{\alpha},\gamma))$
+      y se direcciona a $L\overline{r+1}$ para seguir con el próximo símbolo (o terminar si es $\varepsilon$)
+  Por lo que podemos ver que $\mathcal{P}$ computa $h$ y, por lo tanto, $h$ es $\Sigma$-computable.
 
+Finalmente, se demuestra por inducción. $\blacksquare$
 
 ## Combo 2
 
