@@ -1,0 +1,710 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Combo 8
+\end_layout
+
+\begin_layout Section
+Lema 15
+\end_layout
+
+\begin_layout Subsection
+Enunciado
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Supongamos 
+\begin_inset Formula $\Sigma\supseteq\Sigma_{p}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $AutoHalt^{\Sigma}$
+\end_inset
+
+ no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo.
+\end_layout
+
+\begin_layout Subsection
+Demostración
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Supongamos 
+\begin_inset Formula $AutoHalt^{\Sigma}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo y por lo tanto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable.
+ Por la proposicion de existencia de macros tenemos que hay un macro
+\begin_inset Formula 
+\[
+\left[\mathrm{IF}\;AutoHalt^{\Sigma}(\mathrm{W}1)\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\mathcal{P}_{0}$
+\end_inset
+
+ el siguiente programa de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathrm{L}1\;\left[\mathrm{IF}\;AutoHalt^{\Sigma}(\mathrm{P}1)\;\mathrm{GOTO}\;\mathrm{L}1\right]
+\]
+
+\end_inset
+
+Note que
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathcal{P}_{0}$
+\end_inset
+
+ termina partiendo desde 
+\begin_inset Formula $\left\Vert \mathcal{P}_{0}\right\Vert $
+\end_inset
+
+ sii 
+\begin_inset Formula $AutoHalt^{\Sigma}(\mathcal{P}_{0})=0$
+\end_inset
+
+,
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang english
+lo cual produce una contradiccion.
+\end_layout
+
+\begin_layout Section
+Teorema 16
+\end_layout
+
+\begin_layout Subsection
+Enunciado
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Supongamos 
+\begin_inset Formula $\Sigma\supseteq\Sigma_{p}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $AutoHalt^{\Sigma}$
+\end_inset
+
+ no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable.
+ Es decir no hay ningun procedimiento efectivo que decida si un programa de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ termina partiendo de si mismo.
+\end_layout
+
+\begin_layout Subsection
+Demostración
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Si 
+\begin_inset Formula $AutoHalt^{\Sigma}$
+\end_inset
+
+ fuera 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable,
+ la Tesis de Church nos diria que es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo,
+ contradiciendo el lema anterior.
+\end_layout
+
+\begin_layout Section
+Lema 17
+\end_layout
+
+\begin_layout Subsection
+Enunciado
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Supongamos que 
+\begin_inset Formula $\Sigma\supseteq\Sigma_{p}$
+\end_inset
+
+.
+ Entonces
+\begin_inset Formula 
+\[
+A=\left\{ \mathcal{P}\in\mathrm{Pro}^{\Sigma}:AutoHalt^{\Sigma}(\mathcal{P})=1\right\} 
+\]
+
+\end_inset
+
+es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e.
+ y no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo.
+ Mas aun el conjunto
+\begin_inset Formula 
+\[
+N=\left\{ \mathcal{P}\in\mathrm{Pro}^{\Sigma}:AutoHalt^{\Sigma}(\mathcal{P})=0\right\} 
+\]
+
+\end_inset
+
+no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e.
+\end_layout
+
+\begin_layout Subsection
+Demostración
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Sea 
+\begin_inset Formula $P=\lambda t\mathcal{P}\left[Halt^{0,1}(t,\mathcal{P},\mathcal{P})\right]$
+\end_inset
+
+.
+ Note que 
+\begin_inset Formula $P$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ por lo que 
+\begin_inset Formula $M(P)$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r..
+ Ademas note que 
+\begin_inset Formula $D_{M(P)}=A$
+\end_inset
+
+,
+ lo cual implica que 
+\begin_inset Formula $A$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e..
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Supongamos ahora que 
+\begin_inset Formula $N$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e..
+ Entonces la funcion 
+\begin_inset Formula $C_{0}^{0,1}|_{N}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva ya que 
+\begin_inset Formula $C_{0}^{0,1}$
+\end_inset
+
+ lo es.
+ Ademas ya que 
+\begin_inset Formula $A$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e.
+ tenemos que 
+\begin_inset Formula $C_{1}^{0,1}|_{A}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva.
+ Ya que
+\begin_inset Formula 
+\[
+AutoHalt^{\Sigma}=C_{1}^{0,1}|_{A}\cup C_{0}^{0,1}|_{N}
+\]
+
+\end_inset
+
+el lema de division por casos nos dice que 
+\begin_inset Formula $AutoHalt^{\Sigma}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo,
+ contradiciendo el primer lema de este combo.
+ Esto prueba que 
+\begin_inset Formula $N$
+\end_inset
+
+ no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e..
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Finalmente supongamos 
+\begin_inset Formula $A$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo.
+ Entonces el conjunto
+\begin_inset Formula 
+\[
+N=\left(\Sigma^{\ast}-A\right)\cap\mathrm{Pro}^{\Sigma}
+\]
+
+\end_inset
+
+deberia serlo,
+ lo cual es absurdo.
+ Hemos probado entonces que 
+\begin_inset Formula $A$
+\end_inset
+
+ no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo.
+\end_layout
+
+\begin_layout Section
+Teorema 18:
+ Neumann vence a Godel
+\end_layout
+
+\begin_layout Subsection
+Enunciado
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Si 
+\begin_inset Formula $h$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva,
+ entonces 
+\begin_inset Formula $h$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-
+\shape default
+computable.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Nota:
+ en la inducción de la prueba,
+ hacer solo el caso 
+\begin_inset Formula $h=M(P)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Demostración
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Probaremos por induccion en 
+\begin_inset Formula $k$
+\end_inset
+
+ que
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+(*)
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $h\in\mathrm{R}_{k}^{\Sigma}$
+\end_inset
+
+,
+ entonces 
+\begin_inset Formula $h$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-
+\shape default
+computable.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang english
+El caso 
+\begin_inset Formula $k=0$
+\end_inset
+
+ es trivial porque son funciones ya conocidas.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang english
+Supongamos (*) vale para 
+\begin_inset Formula $k$
+\end_inset
+
+,
+ veremos que vale para 
+\begin_inset Formula $k+1$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $h\in\mathrm{R}_{k+1}^{\Sigma}-\mathrm{R}_{k}^{\Sigma}$
+\end_inset
+
+.
+ Hay varios casos,
+ pero sólo nos concentraremos en esta demo en 
+\begin_inset Formula $h=M(P)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang english
+Supongamos 
+\begin_inset Formula $h=M(P)$
+\end_inset
+
+,
+ con 
+\begin_inset Formula $P:\omega\times\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+,
+ un predicado perteneciente a 
+\begin_inset Formula $\mathrm{R}_{k}^{\Sigma}$
+\end_inset
+
+.
+ Por hipotesis inductiva,
+ 
+\begin_inset Formula $P$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-
+\shape default
+computable y por lo tanto tenemos un macro
+\begin_inset Formula 
+\[
+\left[\mathrm{IF}\;P(\mathrm{V}1,...,\mathrm{V}\overline{n+1},\mathrm{W}1,...,\mathrm{W}\bar{m})\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+
+\end_inset
+
+lo cual nos permite realizar el siguiente programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{ll}
+\mathrm{L}2 & \left[\mathrm{IF}\;P(\mathrm{N}\overline{n+1},\mathrm{N}1,...,\mathrm{N}\bar{n},\mathrm{P}1,...,\mathrm{P}\bar{m})\;\mathrm{GOTO}\;\mathrm{L}1\right]\\
+ & \mathrm{N}\overline{n+1}\leftarrow\mathrm{N}\overline{n+1}+1\\
+ & \mathrm{GOTO}\;\mathrm{L}2\\
+\mathrm{L}1 & \mathrm{N}1\leftarrow\mathrm{N}\overline{n+1}
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang english
+Luego,
+ tenemos que comprobar que este programa computa 
+\begin_inset Formula $h$
+\end_inset
+
+.
+ Para ello,
+ tenemos que demostrar que 
+\begin_inset Formula $h=\Psi_{\mathcal{P}}^{n,m,\#}$
+\end_inset
+
+,
+ lo cual es sencillo de ver dado que 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ se detiene siempre y con el menor valor 
+\begin_inset Formula $x\in\omega$
+\end_inset
+
+ en N1 tal que 
+\begin_inset Formula $P(x,x_{1},...,x_{n},\alpha_{1},...,\alpha_{m})=1$
+\end_inset
+
+,
+ donde 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in h$
+\end_inset
+
+ y es la entrada para 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Finalmente,
+ se demuestra que 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ computa a 
+\begin_inset Formula $h$
+\end_inset
+
+,
+ por lo que 
+\begin_inset Formula $h$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable.
+\end_layout
+
+\end_body
+\end_document

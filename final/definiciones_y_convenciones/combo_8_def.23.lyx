@@ -1,0 +1,271 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Combo 8
+\end_layout
+
+\begin_layout Section
+Defina 
+\begin_inset Formula $M(P)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang english
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito y sea 
+\begin_inset Formula $P:D_{P}\subseteq\omega\times\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ un predicado.
+ Dado 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+,
+ cuando exista al menos un 
+\begin_inset Formula $t\in\omega$
+\end_inset
+
+ tal que 
+\begin_inset Formula $P(t,\vec{x},\vec{\alpha})=1$
+\end_inset
+
+,
+ usaremos 
+\begin_inset Formula $\min_{t}P(t,\vec{x},\vec{\alpha})$
+\end_inset
+
+ para denotar al menor de tales 
+\begin_inset Formula $t^{\prime}s$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Definamos
+\begin_inset Formula 
+\[
+M(P)=\lambda\vec{x}\vec{\alpha}\left[\min\nolimits_{t}P(t,\vec{x},\vec{\alpha})\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Defina 
+\begin_inset Formula $Lt$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Definamos la funcion 
+\begin_inset Formula $Lt:\mathbf{N}\rightarrow\omega$
+\end_inset
+
+ de la siguiente manera:
+\begin_inset Formula 
+\[
+Lt(x)=\left\{ \begin{array}{lll}
+\max_{i}\;(x)_{i}\neq0 &  & \text{si }x\neq1\\
+0 &  & \text{si }x=1
+\end{array}\right.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Defina conjunto rectangular
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito.
+ Un conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixto 
+\begin_inset Formula $S$
+\end_inset
+
+ es llamado 
+\shape italic
+rectangular 
+\shape default
+si es de la forma
+\begin_inset Formula 
+\[
+S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}
+\]
+
+\end_inset
+
+con cada 
+\begin_inset Formula $S_{i}\subseteq\omega$
+\end_inset
+
+ y cada 
+\begin_inset Formula $L_{i}\subseteq\Sigma^{\ast}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Defina 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ es un conjunto de tipo 
+\begin_inset Formula $(n,m)$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Dado un conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixto 
+\begin_inset Formula $S$
+\end_inset
+
+,
+ si 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+ son tales que 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+,
+ entonces diremos que 
+\begin_inset Formula $S$
+\end_inset
+
+ 
+\shape italic
+es un conjunto de tipo 
+\shape default
+
+\begin_inset Formula $(n,m)$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

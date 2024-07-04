@@ -1,0 +1,608 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Combo 9
+\end_layout
+
+\begin_layout Section
+Defina 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $I$
+\end_inset
+
+ es una instrucción de 
+\begin_inset Formula $S^{\Sigma}$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Una 
+\shape italic
+instruccion basica de 
+\shape default
+
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ es una palabra de 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})^{\ast}$
+\end_inset
+
+ la cual es de alguna de las siguientes formas
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{N}\bar{k}\leftarrow\mathrm{N}\bar{k}+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{N}\bar{k}\leftarrow\mathrm{N}\bar{k}\dot{-}1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{N}\bar{k}\leftarrow\mathrm{N}\bar{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{N}\bar{k}\leftarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{P}\bar{k}\leftarrow\mathrm{P}\bar{k}.a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{P}\bar{k}\leftarrow$
+\end_inset
+
+ 
+\begin_inset Formula $^{\curvearrowright}\mathrm{P}\bar{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{P}\bar{k}\leftarrow\mathrm{P}\bar{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{P}\bar{k}\leftarrow\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{IF}\;\mathrm{N}\bar{k}\neq0\;\mathrm{GOTO}\;\mathrm{L}\bar{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{IF}\;\mathrm{P}\bar{k}\;\mathrm{BEGINS}\;a\;\mathrm{GOTO}\;\mathrm{L}\bar{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{GOTO}\;\mathrm{L}\bar{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{SKIP}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang english
+donde 
+\begin_inset Formula $a\in\Sigma$
+\end_inset
+
+ y 
+\begin_inset Formula $k,n\in\mathbf{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Una 
+\shape italic
+instruccion de 
+\shape default
+
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ es ya sea una instruccion basica de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ o una palabra de la forma 
+\begin_inset Formula $\alpha I$
+\end_inset
+
+,
+ donde 
+\begin_inset Formula $\alpha\in\{\mathrm{L}\bar{n}:n\in\mathbf{N}\}$
+\end_inset
+
+ y 
+\begin_inset Formula $I$
+\end_inset
+
+ es una instruccion basica de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Defina 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ es un programa de 
+\begin_inset Formula $S^{\Sigma}$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Un 
+\shape italic
+programa de 
+\shape default
+
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ es una palabra de la forma
+\begin_inset Formula 
+\[
+I_{1}I_{2}...I_{n}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $I_{1},...,I_{n}\in\mathrm{Ins}^{\Sigma}$
+\end_inset
+
+ y ademas se cumple la siguiente propiedad,
+ llamada 
+\shape italic
+la ley de los GOTO
+\shape default
+,
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+(G)
+\end_layout
+
+\end_inset
+
+Para cada 
+\begin_inset Formula $i\in\{1,...,n\}$
+\end_inset
+
+,
+ si 
+\begin_inset Formula $\mathrm{GOTOL}\bar{m}$
+\end_inset
+
+ es un tramo final de 
+\begin_inset Formula $I_{i}$
+\end_inset
+
+,
+ entonces existe 
+\begin_inset Formula $j\in\{1,...,n\}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $I_{j}$
+\end_inset
+
+ tiene label 
+\begin_inset Formula $\mathrm{L}\bar{m}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+Defina 
+\begin_inset Formula $I_{i}^{\mathcal{P}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Definimos 
+\begin_inset Formula $I_{i}^{\mathcal{P}}\in Ins^{\Sigma}\cup\{\varepsilon\}$
+\end_inset
+
+como la 
+\begin_inset Formula $i$
+\end_inset
+
+-ésima instrucción de 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+.
+ En caso que 
+\lang english
+
+\begin_inset Formula $i=0$
+\end_inset
+
+ o 
+\begin_inset Formula $i>n(\mathcal{P})$
+\end_inset
+
+,
+ se define 
+\begin_inset Formula 
+\[
+I_{i}^{\mathcal{P}}=\varepsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Luego,
+ entonces,
+ 
+\begin_inset Formula $\mathcal{P}=I_{1}^{\mathcal{P}}...I_{n(\mathcal{P})}^{\mathcal{P}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Defina 
+\begin_inset Formula $n(\mathcal{P})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Definimos 
+\begin_inset Formula $n(\mathcal{P})\in\omega$
+\end_inset
+
+ como la cantidad de instrucciones del programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Defina 
+\begin_inset Formula $Bas$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+La funcion 
+\begin_inset Formula $Bas:\mathrm{Ins}^{\Sigma}\rightarrow(\Sigma\cup\Sigma_{p})^{\ast}$
+\end_inset
+
+,
+ está dada por
+\begin_inset Formula 
+\[
+Bas(I)=\left\{ \begin{array}{ccl}
+J &  & \text{si }I\text{ es de la forma }\mathrm{L}\bar{k}J\text{ con }J\in\mathrm{Ins}^{\Sigma}\\
+I &  & \text{caso contrario}
+\end{array}\right.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

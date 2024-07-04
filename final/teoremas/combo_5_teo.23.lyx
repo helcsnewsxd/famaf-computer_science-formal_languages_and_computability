@@ -1,0 +1,685 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Combo 5
+\end_layout
+
+\begin_layout Section
+Lema 9
+\end_layout
+
+\begin_layout Subsection
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $S_{1},S_{2}\subseteq\omega^{n}\times\Sigma^{*m}$
+\end_inset
+
+ conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerables.
+ Entonces 
+\begin_inset Formula $S_{1}\cap S_{2}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable.
+\end_layout
+
+\begin_layout Standard
+Nota:
+ es ejercicio de la guía 3 y en el apunte está probado.
+\end_layout
+
+\begin_layout Subsection
+Demostración
+\end_layout
+
+\begin_layout Standard
+El caso en el que alguno de los conjuntos es vacío es trivial,
+ al igual que 
+\begin_inset Formula $S_{1}\cap S_{2}=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Supongamos que ambos conjuntos y su intersección son no vacíos.
+ Sean 
+\begin_inset Formula $\mathbb{P}_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbb{P}_{2}$
+\end_inset
+
+ procedimientos que enumeran a 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+ respectivamente,
+ y 
+\begin_inset Formula $e_{0}\in S_{1}\cap S_{2}$
+\end_inset
+
+ un elemento fijo de la intersección.
+ Sea 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ un procedimiento que enumere a 
+\begin_inset Formula $\omega\times\omega$
+\end_inset
+
+,
+ consideraremos el siguiente procedimiento 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Description
+Etapa1 Realizar 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ con dato de entrada 
+\begin_inset Formula $x$
+\end_inset
+
+,
+ para obtener un par 
+\begin_inset Formula $(x_{1},x_{2})\in\omega\times\omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Etapa2 Realizar 
+\begin_inset Formula $\mathbb{P}_{1}$
+\end_inset
+
+ con dato de entrada 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ para obtener un elemento 
+\begin_inset Formula $e_{1}\in S_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Etapa3 Realizar 
+\begin_inset Formula $\mathbb{P}_{2}$
+\end_inset
+
+ con dato de entrada 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ para obtener un elemento 
+\begin_inset Formula $e_{2}\in S_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Etapa4 Si 
+\begin_inset Formula $e_{1}=e_{2}$
+\end_inset
+
+,
+ entonces dar como dato de salida 
+\begin_inset Formula $e_{1}$
+\end_inset
+
+.
+ En caso contrario,
+ dar como dato de salida 
+\begin_inset Formula $e_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Luego,
+ lo que tenemos que hacer es demostrar que 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ enumera a 
+\begin_inset Formula $S_{1}\cap S_{2}$
+\end_inset
+
+.
+ Para eso,
+ sabemos por lema que se debe cumplir que:
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+(1)
+\end_layout
+
+\end_inset
+
+El conjunto de datos de entrada de 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ es 
+\begin_inset Formula $\omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+(2)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ se detiene para cada 
+\begin_inset Formula $x\in\omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+(3)
+\end_layout
+
+\end_inset
+
+El conjunto de datos de salida de 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ es igual a 
+\begin_inset Formula $S_{1}\cap S_{2}$
+\end_inset
+
+.
+ (Es decir,
+ siempre que 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ se detiene,
+ da como salida un elemento de 
+\begin_inset Formula $S_{1}\cap S_{2}$
+\end_inset
+
+,
+ y para cada elemento 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in S_{1}\cap S_{2}$
+\end_inset
+
+,
+ hay un 
+\begin_inset Formula $x\in\omega$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ da como salida a 
+\begin_inset Formula $(\vec{x},\vec{\alpha})$
+\end_inset
+
+ cuando lo corremos con 
+\begin_inset Formula $x$
+\end_inset
+
+ como dato de entrada) 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Veamos cada uno de ellos:
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+(1)
+\end_layout
+
+\end_inset
+
+ Se cumple.
+ Es trivial.
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+(2)
+\end_layout
+
+\end_inset
+
+Se cumple.
+ Es trivial.
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+(3)
+\end_layout
+
+\end_inset
+
+Tenemos que ver las dos posibilidades:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\lang english
+Dado 
+\begin_inset Formula $x\in\omega$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ se detiene y da como salida un elemento de 
+\begin_inset Formula $S_{1}\cap S_{2}$
+\end_inset
+
+:
+ Esto se comprueba notando que en el caso que 
+\begin_inset Formula $e_{1}=e_{2}$
+\end_inset
+
+ entonces se devuelve 
+\begin_inset Formula $e_{1}$
+\end_inset
+
+,
+ el cual claramente cumple que 
+\begin_inset Formula $e_{1}\in S_{1}\cap S_{2}$
+\end_inset
+
+.
+ Sin embargo,
+ si la igualdad no se cumple,
+ se devuelve 
+\begin_inset Formula $e_{0}$
+\end_inset
+
+,
+ el cual está en la intersección por cómo lo definimos.
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+Dado 
+\begin_inset Formula $s\in S_{1}\cap S_{2},\exists x\in\omega$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ da como salida a 
+\begin_inset Formula $s$
+\end_inset
+
+ cuando lo corremos con 
+\begin_inset Formula $x$
+\end_inset
+
+ como dato de entrada:
+ Como por definición sabemos que 
+\begin_inset Formula $\mathbb{P}_{1},\mathbb{P}_{2}$
+\end_inset
+
+ son procedimientos que enumeran a 
+\begin_inset Formula $S_{1},S_{2}$
+\end_inset
+
+,
+ digamos que 
+\begin_inset Formula $y_{1},y_{2}$
+\end_inset
+
+ son los valores de entrada a estos procedimientos para obtener 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ Luego,
+ como 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ enumera a 
+\begin_inset Formula $\omega\times\omega$
+\end_inset
+
+,
+ digamos que 
+\begin_inset Formula $x$
+\end_inset
+
+ es el valor tal que 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ se detiene y da como salida 
+\begin_inset Formula $(y_{1},y_{2})$
+\end_inset
+
+.
+ Finalmente,
+ es sencillo notar que,
+ entonces,
+ 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ da como salida a 
+\begin_inset Formula $s$
+\end_inset
+
+ cuando se corre con 
+\begin_inset Formula $x$
+\end_inset
+
+ como dato de entrada.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\lang english
+Luego,
+ claramente demostramos que 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ enumera a 
+\begin_inset Formula $S_{1}\cap S_{2}$
+\end_inset
+
+.
+ Luego,
+ por Lema tenemos que esto significa que 
+\begin_inset Formula $S_{1}\cap S_{2}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable.
+ 
+\begin_inset Formula $\blacksquare$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Lema 10:
+ Lema de cuantificación acotada
+\end_layout
+
+\begin_layout Subsection
+Enunciado
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito.
+ Sea 
+\begin_inset Formula $P:S\times S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}\rightarrow\omega$
+\end_inset
+
+ un predicado 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.,
+ con 
+\begin_inset Formula $S,S_{1},...,S_{n}\subseteq\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $L_{1},...,L_{m}\subseteq\Sigma^{\ast}$
+\end_inset
+
+ no vacios.
+ Supongamos 
+\begin_inset Formula $\bar{S}\subseteq S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Entonces 
+\begin_inset Formula $\lambda x\vec{x}\vec{\alpha}\left[(\forall t\in\bar{S})_{t\leq x}\;P(t,\vec{x},\vec{\alpha})\right]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+\end_layout
+
+\begin_layout Subsection
+Demostración
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Sea
+\begin_inset Formula 
+\[
+\bar{P}=P|_{\bar{S}\times S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}}\cup C_{1}^{1+n,m}|_{(\omega-\bar{S})\times S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}}
+\]
+
+\end_inset
+
+Notese que 
+\begin_inset Formula $\bar{P}$
+\end_inset
+
+ tiene dominio 
+\begin_inset Formula $\omega\times S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}$
+\end_inset
+
+ y es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Ya que
+\begin_inset Formula 
+\begin{align*}
+\lambda x\vec{x}\vec{\alpha}\left[(\forall t\in\bar{S})_{t\leq x}P(t,\vec{x},\vec{\alpha})\right] & =\lambda x\vec{x}\vec{\alpha}\left[\prod\limits_{t=0}^{t=x}\bar{P}(t,\vec{x},\vec{\alpha})\right]\\
+ & =\lambda xy\vec{x}\vec{\alpha}\left[\prod\limits_{t=x}^{t=y}\bar{P}(t,\vec{x},\vec{\alpha})\right]\circ\left[C_{0}^{1+n,m},p_{1}^{1+n,m},...,p_{1+n+m}^{1+n,m}\right]
+\end{align*}
+
+\end_inset
+
+el Lema de que la productoria es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ implica que 
+\begin_inset Formula $\lambda x\vec{x}\vec{\alpha}\left[(\forall t\in\bar{S})_{t\leq x}\;P(t,\vec{x},\vec{\alpha})\right]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ 
+\begin_inset Formula $\blacksquare$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

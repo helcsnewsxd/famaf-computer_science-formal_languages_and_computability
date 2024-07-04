@@ -1,0 +1,400 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Combo 3
+\end_layout
+
+\begin_layout Section
+Teorema 5: Godel vence a Neumann
+\end_layout
+
+\begin_layout Subsection
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f:D_{f}\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\Sigma^{*}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable, entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva.
+\end_layout
+
+\begin_layout Subsection
+Demostración
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\mathcal{P}_{0}$
+\end_inset
+
+ un programa que compute a 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ Primero veremos que 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-recursiva.
+ Note que
+\begin_inset Formula 
+\[
+f=E_{\ast1}^{n,m}\circ\left[T^{n,m}\circ\left[p_{1}^{n,m},...,p_{n+m}^{n,m},C_{\mathcal{P}_{0}}^{n,m}\right],p_{1}^{n,m},...,p_{n+m}^{n,m},C_{\mathcal{P}_{0}}^{n,m}\right]
+\]
+
+\end_inset
+
+donde cabe destacar que 
+\begin_inset Formula $p_{1}^{n,m},...,p_{n+m}^{n,m}$
+\end_inset
+
+ son las proyecciones respecto del alfabeto 
+\begin_inset Formula $\Sigma\cup\Sigma_{p}$
+\end_inset
+
+, es decir que tienen dominio 
+\begin_inset Formula $\omega^{n}\times(\Sigma\cup\Sigma_{p})^{\ast m}$
+\end_inset
+
+.
+ Esto nos dice que 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-recursiva.
+ O sea que el Teorema de Independencia del Alfabeto nos dice que 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva ya que 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta y 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-mixta.
+\end_layout
+
+\begin_layout Section
+Teorema 6: Caracterización de conjuntos efectivamente computables
+\end_layout
+
+\begin_layout Subsection
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+.
+ Son equivalentes
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+(a)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(b)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ y 
+\begin_inset Formula $(\omega^{n}\times\Sigma^{\ast m})-S$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerables 
+\end_layout
+
+\begin_layout Standard
+Nota: haga solo 
+\begin_inset Formula $(b)\Rightarrow(a)$
+\end_inset
+
+.
+ La prueba de este resultado está al final de la Guía 3.
+\end_layout
+
+\begin_layout Subsection
+Demostración de 
+\begin_inset Formula $(b)\Rightarrow(a)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(b)\Rightarrow(a)$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $S=\emptyset$
+\end_inset
+
+ o 
+\begin_inset Formula $S=\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ es claro que se cumple (a).
+ O sea que podemos suponer que 
+\begin_inset Formula $S$
+\end_inset
+
+ no es ni 
+\begin_inset Formula $\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ ni el conjunto vacio.
+ Sea 
+\begin_inset Formula $\mathbb{P}_{1}$
+\end_inset
+
+ un procedimiento efectivo que enumere a 
+\begin_inset Formula $S$
+\end_inset
+
+ y sea 
+\begin_inset Formula $\mathbb{P}_{2}$
+\end_inset
+
+ un procedimiento efectivo que enumere a 
+\begin_inset Formula $(\omega^{n}\times\Sigma^{\ast m})-S$
+\end_inset
+
+ (como 
+\begin_inset Formula $S$
+\end_inset
+
+ y 
+\begin_inset Formula $\omega^{n}\times\Sigma^{*m}$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computables, entonces su diferencia lo es).
+ Es facil ver que el siguiente procedimiento computa el predicado 
+\begin_inset Formula $\chi_{S}^{\omega^{n}\times\Sigma^{\ast m}}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Description
+Etapa1 Darle a la variable 
+\begin_inset Formula $T$
+\end_inset
+
+ el valor 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Etapa2 Realizar 
+\begin_inset Formula $\mathbb{P}_{1}$
+\end_inset
+
+ con el valor de 
+\begin_inset Formula $T$
+\end_inset
+
+ como entrada para obtener de salida la upla 
+\begin_inset Formula $(\vec{y},\vec{\beta})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Etapa3 Realizar 
+\begin_inset Formula $\mathbb{P}_{2}$
+\end_inset
+
+ con el valor de 
+\begin_inset Formula $T$
+\end_inset
+
+ como entrada para obtener de salida la upla 
+\begin_inset Formula $(\vec{z},\vec{\gamma})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Etapa4 Si 
+\begin_inset Formula $(\vec{y},\vec{\beta})=(\vec{x},\vec{\alpha})$
+\end_inset
+
+, entonces detenerse y dar como dato de salida el valor 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $(\vec{z},\vec{\gamma})=(\vec{x},\vec{\alpha})$
+\end_inset
+
+, entonces detenerse y dar como dato de salida el valor 
+\begin_inset Formula $0.$
+\end_inset
+
+ Si no suceden ninguna de las dos posibilidades antes mencionadas, aumentar
+ en 
+\begin_inset Formula $1$
+\end_inset
+
+ el valor de la variable 
+\begin_inset Formula $T$
+\end_inset
+
+ y dirigirse a la Etapa 2.
+\end_layout
+
+\end_body
+\end_document

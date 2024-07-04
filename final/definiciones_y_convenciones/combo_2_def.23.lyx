@@ -1,0 +1,445 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Combo 2
+\end_layout
+
+\begin_layout Section
+Defina 
+\begin_inset Formula $d\overset{n}{\vdash}d'$
+\end_inset
+
+ (no hace falta definir 
+\begin_inset Formula $\vdash$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Para 
+\begin_inset Formula $d,d^{\prime}\in Des$
+\end_inset
+
+ y 
+\begin_inset Formula $n\geq0$
+\end_inset
+
+,
+ escribiremos 
+\begin_inset Formula $d\overset{n}{\vdash}d^{\prime}$
+\end_inset
+
+ si existen 
+\begin_inset Formula $d_{1},...,d_{n+1}\in Des$
+\end_inset
+
+ tales que
+\begin_inset Formula 
+\begin{align*}
+d & =d_{1}\\
+d^{\prime} & =d_{n+1}\\
+d_{i} & \vdash d_{i+1}\text{, para }i=1,...,n.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Defina 
+\begin_inset Formula $L(M)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Diremos que una palabra 
+\begin_inset Formula $\alpha\in\Sigma^{\ast}$
+\end_inset
+
+ es 
+\shape italic
+aceptada por 
+\shape default
+
+\begin_inset Formula $M$
+\end_inset
+
+ 
+\shape italic
+por alcance de estado final
+\shape default
+ cuando
+\begin_inset Formula 
+\[
+\left\lfloor q_{0}B\alpha\right\rfloor \overset{\ast}{\vdash}d\text{, con }d\text{ tal que }St(d)\in F.
+\]
+
+\end_inset
+
+El 
+\shape italic
+lenguage aceptado por 
+\shape default
+
+\begin_inset Formula $M$
+\end_inset
+
+ 
+\shape italic
+por alcance de estado final
+\shape default
+ se define de la siguiente manera
+\begin_inset Formula 
+\[
+L(M)=\{\alpha\in\Sigma^{\ast}:\alpha\text{ es aceptada por }M\text{ por alcance de estado final}\}\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Defina 
+\begin_inset Formula $H(M)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Diremos que una palabra 
+\begin_inset Formula $\alpha\in\Sigma^{\ast}$
+\end_inset
+
+ es 
+\shape italic
+aceptada por 
+\shape default
+
+\begin_inset Formula $M$
+\end_inset
+
+ 
+\shape italic
+por detencion
+\shape default
+ cuando 
+\begin_inset Formula $M$
+\end_inset
+
+ se detiene partiendo de 
+\begin_inset Formula $\left\lfloor q_{0}B\alpha\right\rfloor $
+\end_inset
+
+.
+ El 
+\shape italic
+lenguage aceptado por 
+\shape default
+
+\begin_inset Formula $M$
+\end_inset
+
+ 
+\shape italic
+por detencion
+\shape default
+ se define de la siguiente manera
+\begin_inset Formula 
+\[
+H(M)=\{\alpha\in\Sigma^{\ast}:\alpha\text{ es aceptada por }M\text{ por detencion}\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Defina 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $f$
+\end_inset
+
+ es una función de tipo 
+\begin_inset Formula $(n,m,s)$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Dada una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta 
+\begin_inset Formula $f$
+\end_inset
+
+,
+ si 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+ son tales que 
+\begin_inset Formula $D_{f}\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ y ademas 
+\begin_inset Formula $I_{f}\subseteq\omega$
+\end_inset
+
+,
+ entonces diremos que 
+\begin_inset Formula $f$
+\end_inset
+
+ 
+\shape italic
+es una funcion de tipo 
+\shape default
+
+\begin_inset Formula $(n,m,\#)$
+\end_inset
+
+.
+ Similarmente si 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+ son tales que 
+\begin_inset Formula $D_{f}\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ y ademas 
+\begin_inset Formula $I_{f}\subseteq\Sigma^{\ast}$
+\end_inset
+
+,
+ entonces diremos que 
+\begin_inset Formula $f$
+\end_inset
+
+ 
+\shape italic
+es una funcion de tipo 
+\shape default
+
+\begin_inset Formula $(n,m,\ast)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Defina 
+\begin_inset Formula $(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Dado 
+\begin_inset Formula $x\in\mathbf{N}$
+\end_inset
+
+,
+ usaremos 
+\begin_inset Formula $(x)$
+\end_inset
+
+ para denotar a la unica infinitupla 
+\begin_inset Formula $(s_{1},s_{2},...)\in\omega^{\left[\mathbf{N}\right]}$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+x=\left\langle s_{1},s_{2},...\right\rangle =\underset{i=1}{\overset{\infty}{\Pi}}pr(i)^{s_{i}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Defina 
+\begin_inset Formula $(x)_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Para 
+\begin_inset Formula $i\in\mathbf{N}$
+\end_inset
+
+,
+ usaremos 
+\begin_inset Formula $(x)_{i}$
+\end_inset
+
+ para denotar a 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ de dicha infinitupla (la del anterior punto).
+ Se le suele llamar la 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+bajada 
+\begin_inset Formula $i$
+\end_inset
+
+
+\shape italic
+-esima de 
+\shape default
+
+\begin_inset Formula $x$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ al numero 
+\begin_inset Formula $(x)_{i}$
+\end_inset
+
+.
+ La idea de este nombre es que para obtener 
+\begin_inset Formula $(x)_{i}$
+\end_inset
+
+ debemos bajar el exponente de 
+\begin_inset Formula $pr(i)$
+\end_inset
+
+ en la factorizacion de 
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

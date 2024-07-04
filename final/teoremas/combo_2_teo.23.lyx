@@ -1,0 +1,520 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Combo 2
+\end_layout
+
+\begin_layout Section
+Lema 3: Lema de división por casos para funciones p.r.
+\end_layout
+
+\begin_layout Subsection
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $O\in\{\omega,\Sigma^{\ast}\}$
+\end_inset
+
+ y 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+.
+ Supongamos 
+\begin_inset Formula $f_{i}:D_{f_{i}}\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\Sigma^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,...,k$
+\end_inset
+
+, son funciones 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ tales que 
+\begin_inset Formula $D_{f_{i}}\cap D_{f_{j}}=\emptyset$
+\end_inset
+
+ para 
+\begin_inset Formula $i\neq j.$
+\end_inset
+
+ Entonces 
+\begin_inset Formula $f_{1}\cup...\cup f_{k}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+\end_layout
+
+\begin_layout Subsection
+Demostración
+\end_layout
+
+\begin_layout Standard
+Supongamos 
+\begin_inset Formula $O=\Sigma^{\ast}$
+\end_inset
+
+ y 
+\begin_inset Formula $k=2$
+\end_inset
+
+.
+ Sean
+\begin_inset Formula 
+\[
+\bar{f}_{i}:\omega^{n}\times\Sigma^{\ast m}\rightarrow\Sigma^{\ast},i=1,2,
+\]
+
+\end_inset
+
+funciones 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ tales que 
+\begin_inset Formula $\bar{f}_{i}|_{D_{f_{i}}}=f_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+ (Lema de Extensión de Funciones)
+\begin_inset Formula $.$
+\end_inset
+
+ Por Lema sabemos que si 
+\begin_inset Formula $S$
+\end_inset
+
+ es dominio de una función 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-pr., entonces 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Luego, los conjuntos 
+\begin_inset Formula $D_{f_{1}}$
+\end_inset
+
+ y 
+\begin_inset Formula $D_{f_{2}}$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ y por lo tanto lo es 
+\begin_inset Formula $D_{f_{1}}\cup D_{f_{2}}$
+\end_inset
+
+.
+ Ya que
+\begin_inset Formula 
+\[
+f_{1}\cup f_{2}=\left(\lambda\alpha\beta\left[\alpha\beta\right]\circ\left[\lambda x\alpha\left[\alpha^{x}\right]\circ\left[\chi_{D_{f_{1}}}^{\omega^{n}\times\Sigma^{\ast m}},\bar{f}_{1}\right],\lambda x\alpha\left[\alpha^{x}\right]\circ\left[\chi_{D_{f_{2}}}^{\omega^{n}\times\Sigma^{\ast m}},\bar{f}_{2}\right]\right]\right)|_{D_{f_{1}}\cup D_{f_{2}}}
+\]
+
+\end_inset
+
+tenemos que 
+\begin_inset Formula $f_{1}\cup f_{2}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+\end_layout
+
+\begin_layout Standard
+El caso 
+\begin_inset Formula $k>2$
+\end_inset
+
+ puede probarse de forma totamente análoga por induccion ya que
+\begin_inset Formula 
+\[
+f_{1}\cup...\cup f_{k}=(f_{1}\cup...\cup f_{k-1})\cup f_{k}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+se puede considerar como unión de dos funciones y recaemos a la misma solución
+ anterior.
+\end_layout
+
+\begin_layout Section
+Proposición 4: Caracterización básica de conjuntos enumerables
+\end_layout
+
+\begin_layout Subsection
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ un conjunto no vacio.
+ Entonces son equivalentes:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(1)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-enumerable
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(2)
+\end_layout
+
+\end_inset
+
+Hay un programa 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ tal que:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Para cada 
+\begin_inset Formula $x\in\omega$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ se detiene partiendo desde el estado 
+\begin_inset Formula $\left\Vert x\right\Vert $
+\end_inset
+
+ y llega a un estado de la forma 
+\begin_inset Formula $((x_{1},...,x_{n},y_{1},...),(\alpha_{1},...,\alpha_{m},\beta_{1},...))$
+\end_inset
+
+, donde 
+\begin_inset Formula $(x_{1},...,x_{n},\alpha_{1},...,\alpha_{m})\in S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Para cada 
+\begin_inset Formula $(x_{1},...x_{n},\alpha_{1},...,\alpha_{m})\in S$
+\end_inset
+
+ hay un 
+\begin_inset Formula $x\in\omega$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ se detiene partiendo desde el estado 
+\begin_inset Formula $\left\Vert x\right\Vert $
+\end_inset
+
+ y llega a un estado de la forma 
+\begin_inset Formula $((x_{1},...,x_{n},y_{1},...),(\alpha_{1},...,\alpha_{m},\beta_{1},...))$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Nota: hacer el caso 
+\begin_inset Formula $n=2,m=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Demostración para el caso 
+\begin_inset Formula $n=2,m=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $(1)\Rightarrow(2)$
+\end_inset
+
+.
+ Ya que 
+\begin_inset Formula $S$
+\end_inset
+
+ es no vacio, por definicion tenemos que hay una 
+\begin_inset Formula $F:\omega\rightarrow\omega^{2}\times\Sigma^{\ast}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $I_{F}=S$
+\end_inset
+
+ y 
+\begin_inset Formula $F_{(i)}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable, para cada 
+\begin_inset Formula $i\in\{1,2,3\}$
+\end_inset
+
+.
+ Por la Proposicion de existencia de macros, tenemos que existen macros:
+\begin_inset Formula 
+\begin{align*}
+ & \left[\mathrm{V}2\leftarrow F_{(1)}(\mathrm{V}1)\right]\\
+ & \left[\mathrm{V}2\leftarrow F_{(2)}(\mathrm{V}1)\right]\\
+ & \left[\mathrm{W}1\leftarrow F_{(3)}(\mathrm{V}1)\right]
+\end{align*}
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ el siguiente programa:
+\begin_inset Formula 
+\begin{align*}
+ & \left[\mathrm{P}1\leftarrow F_{(3)}(\mathrm{N}1)\right]\\
+ & \left[\mathrm{N}2\leftarrow F_{(2)}(\mathrm{N}1)\right]\\
+ & \left[\mathrm{N}1\leftarrow F_{(1)}(\mathrm{N}1)\right]
+\end{align*}
+
+\end_inset
+
+donde se supone que las expansiones de los macros usados son hechas usando
+ variables auxiliares no pertenecientes a la lista 
+\begin_inset Formula $\mathrm{N}1,\mathrm{N}2,\mathrm{P}1$
+\end_inset
+
+ (por supuesto, dada la fortaleza de nuestros macros se puede usar una misma
+ variable auxiliar para dos distintas expansiones), y tambien se supone
+ que los labels auxiliares usados en dichas expansiones son todos distintos,
+ es decir no usamos el mismo label auxiliar en dos expansiones distintas.
+ Luego, tenemos que corroborar que 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ cumple las propiedades (a) y (b), lo cual es trivial de ver.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $(2)\Rightarrow(1)$
+\end_inset
+
+.
+ Supongamos 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ cumple a y b de (2).
+ Sean
+\begin_inset Formula 
+\begin{align*}
+\mathcal{P}_{1} & =\mathcal{P}\mathrm{N}1\leftarrow\mathrm{N}1\\
+\mathcal{P}_{2} & =\mathcal{P}\mathrm{N}1\leftarrow\mathrm{N}2\\
+\mathcal{P}_{3} & =\mathcal{P}\mathrm{P}1\leftarrow\mathrm{P}1
+\end{align*}
+
+\end_inset
+
+Definamos
+\begin_inset Formula 
+\begin{align*}
+F_{1} & =\Psi_{\mathcal{P}_{1}}^{1,0,\#}\\
+F_{2} & =\Psi_{\mathcal{P}_{2}}^{1,0,\#}\\
+F_{3} & =\Psi_{\mathcal{P}_{3}}^{1,0,\ast}
+\end{align*}
+
+\end_inset
+
+Notese que cada 
+\begin_inset Formula $F_{i}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable y tiene dominio igual a 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $F=[F_{1},F_{2},F_{3}]$
+\end_inset
+
+.
+ Tenemos por definicion que 
+\begin_inset Formula $D_{F}=\omega$
+\end_inset
+
+ y ya que 
+\begin_inset Formula $F_{(i)}=F_{i}$
+\end_inset
+
+, para cada 
+\begin_inset Formula $i=1,2,3$
+\end_inset
+
+ tenemos que cada 
+\begin_inset Formula $F_{(i)}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable.
+ Luego, solo queda verificar que 
+\begin_inset Formula $I_{F}=S$
+\end_inset
+
+, lo cual es trivial por cómo está definido 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

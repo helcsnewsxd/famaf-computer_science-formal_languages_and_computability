@@ -1,0 +1,744 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Combo 10
+\end_layout
+
+\begin_layout Section
+Defina, relativo al lenguaje 
+\begin_inset Formula $S^{\Sigma}$
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+estado
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un 
+\shape italic
+estado
+\shape default
+ es un par
+\begin_inset Formula 
+\[
+(\vec{s},\vec{\sigma})=((s_{1},s_{2},...),(\sigma_{1},\sigma_{2},...))\in\omega^{\left[\mathbf{N}\right]}\times\Sigma^{\ast\left[\mathbf{N}\right]}.
+\]
+
+\end_inset
+
+Si 
+\begin_inset Formula $i\geq1$
+\end_inset
+
+, entonces diremos que 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ es el 
+\shape italic
+contenido 
+\shape default
+o
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+valor 
+\shape default
+de la variable 
+\begin_inset Formula $\mathrm{N}\bar{\imath}$
+\end_inset
+
+ en el estado 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+ y 
+\begin_inset Formula $\sigma_{i}$
+\end_inset
+
+ es el 
+\shape italic
+contenido 
+\shape default
+o
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+valor 
+\shape default
+de la variable 
+\begin_inset Formula $\mathrm{P}\bar{\imath}$
+\end_inset
+
+ en el estado 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+.
+ Es decir, intuitivamente hablando, un estado es un par de infinituplas
+ que contiene la informacion de que valores tienen alojados las distintas
+ variables.
+\end_layout
+
+\begin_layout Section
+Defina, relativo al lenguaje 
+\begin_inset Formula $S^{\Sigma}$
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+descripción instantánea
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una 
+\shape italic
+descripcion instantanea
+\shape default
+ es una terna 
+\begin_inset Formula $(i,\vec{s},\vec{\sigma})$
+\end_inset
+
+ tal que 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+ es un estado e 
+\begin_inset Formula $i\in\omega$
+\end_inset
+
+.
+ Es decir que 
+\begin_inset Formula $\omega\times\omega^{\left[\mathbf{N}\right]}\times\Sigma^{\ast\left[\mathbf{N}\right]}$
+\end_inset
+
+ es el conjunto formado por todas las descripciones instantaneas.
+ Intuitivamente hablando, cuando 
+\begin_inset Formula $i\in\{1,...,n(\mathcal{P})\}$
+\end_inset
+
+, la descripcion instantanea 
+\begin_inset Formula $(i,\vec{s},\vec{\sigma})$
+\end_inset
+
+ nos dice que las variables estan en el estado 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+ y que la instruccion que 
+\shape italic
+debemos realizar
+\shape default
+ es 
+\begin_inset Formula $I_{i}^{\mathcal{P}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Defina, relativo al lenguaje 
+\begin_inset Formula $S^{\Sigma}$
+\end_inset
+
+, 
+\begin_inset Formula $S_{\mathcal{P}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dado un programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ definiremos a continuacion una funcion
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}:\omega\times\omega^{\left[\mathbf{N}\right]}\times\Sigma^{\ast\left[\mathbf{N}\right]}\rightarrow\omega\times\omega^{\left[\mathbf{N}\right]}\times\Sigma^{\ast\left[\mathbf{N}\right]}
+\]
+
+\end_inset
+
+la cual le asignara a una descripcion instantanea 
+\begin_inset Formula $(i,\vec{s},\vec{\sigma})$
+\end_inset
+
+ la 
+\shape italic
+descripcion instantanea sucesora de 
+\shape default
+
+\begin_inset Formula $(i,\vec{s},\vec{\sigma})$
+\end_inset
+
+ 
+\shape italic
+con respecto a 
+\shape default
+
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+.
+ Daremos la definicion matematica de 
+\begin_inset Formula $S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})$
+\end_inset
+
+, segun se den distintos casos posibles:
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $i\notin\{1,...,n(\mathcal{P})\}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i,\vec{s},\vec{\sigma})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{N}\bar{k}\leftarrow\mathrm{N}\bar{k}\dot{-}1.$
+\end_inset
+
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i+1,(s_{1},...,s_{k-1},s_{k}\dot{-}1,s_{k+1},...),\vec{\sigma})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{N}\bar{k}\leftarrow\mathrm{N}\bar{k}+1.$
+\end_inset
+
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i+1,(s_{1},...,s_{k-1},s_{k}+1,s_{k+1},...),\vec{\sigma})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{N}\bar{k}\leftarrow\mathrm{N}\bar{n}$
+\end_inset
+
+.
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i+1,(s_{1},...,s_{k-1},s_{n},s_{k+1},...),\vec{\sigma})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{N}\bar{k}\leftarrow0.$
+\end_inset
+
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i+1,(s_{1},...,s_{k-1},0,s_{k+1},...),\vec{\sigma})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{IF}$
+\end_inset
+
+ 
+\begin_inset Formula $\mathrm{N}\bar{k}$
+\end_inset
+
+ 
+\begin_inset Formula $\neq0$
+\end_inset
+
+ 
+\begin_inset Formula $\mathrm{GOTO}$
+\end_inset
+
+ 
+\begin_inset Formula $\mathrm{L}\bar{m}.$
+\end_inset
+
+ Entonces tenemos dos subcasos.
+\end_layout
+
+\begin_layout Standard
+Subcaso a.
+ El valor de 
+\begin_inset Formula $\mathrm{N}\bar{k}$
+\end_inset
+
+ en 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+ es 0.
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},\vec{\sigma})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Subcaso b.
+ El valor de 
+\begin_inset Formula $\mathrm{N}\bar{k}$
+\end_inset
+
+ en 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+ es no nulo.
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(\min\{l:I_{l}^{\mathcal{P}}\ \mathrm{tiene\ label\ L}\bar{m}\},\vec{s},\vec{\sigma})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{P}\bar{k}\leftarrow$
+\end_inset
+
+ 
+\begin_inset Formula $^{\curvearrowright}\mathrm{P}\bar{k}.$
+\end_inset
+
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},(\sigma_{1},...,\sigma_{k-1},^{\curvearrowright}\sigma_{k},\sigma_{k+1},...))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{P}\bar{k}\leftarrow\mathrm{P}\bar{k}.a$
+\end_inset
+
+.
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},(\sigma_{1},...,\sigma_{k-1},\sigma_{k}a,\sigma_{k+1},...))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{P}\bar{k}\leftarrow\mathrm{P}\bar{n}$
+\end_inset
+
+.
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},(\sigma_{1},...,\sigma_{k-1},\sigma_{n},\sigma_{k+1},...))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{P}\bar{k}\leftarrow\varepsilon.$
+\end_inset
+
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},(\sigma_{1},...,\sigma_{k-1},\varepsilon,\sigma_{k+1},...))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{IF}\;\mathrm{P}\bar{k}\;\mathrm{BEGINS}\;a\;\mathrm{GOTO}\;\mathrm{L}\bar{m}.$
+\end_inset
+
+ Entonces tenemos dos subcasos.
+\end_layout
+
+\begin_layout Standard
+Subcaso a.
+ El valor de 
+\begin_inset Formula $\mathrm{P}\bar{k}$
+\end_inset
+
+ en 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+ comiensa con 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(\min\{l:I_{l}^{\mathcal{P}}\ \mathrm{tiene\ label\ L}\bar{m}\},\vec{s},\vec{\sigma})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Subcaso b.
+ El valor de 
+\begin_inset Formula $\mathrm{P}\bar{k}$
+\end_inset
+
+ en 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+ no comiensa con 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},\vec{\sigma})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{GOTO}\;\mathrm{L}\bar{m}$
+\end_inset
+
+.
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(\min\{l:I_{l}^{\mathcal{P}}\ \mathrm{tiene\ label\ L}\bar{m}\},\vec{s},\vec{\sigma})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{SKIP}$
+\end_inset
+
+.
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},\vec{\sigma})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Defina, relativo al lenguaje 
+\begin_inset Formula $S^{\Sigma}$
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+estado obtenido luego de 
+\begin_inset Formula $t$
+\end_inset
+
+ pasos, partiendo del estado 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Diremos que
+\begin_inset Formula 
+\[
+\overset{t\text{ veces}}{\overbrace{S_{\mathcal{P}}(...S_{\mathcal{P}}(S_{\mathcal{P}}(}}1,\vec{s},\vec{\sigma}))...)
+\]
+
+\end_inset
+
+es la 
+\shape italic
+descripcion instantanea obtenida luego de 
+\shape default
+
+\begin_inset Formula $t$
+\end_inset
+
+ 
+\shape italic
+pasos, partiendo del estado 
+\shape default
+
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+.
+ Si
+\begin_inset Formula 
+\[
+\overset{t\text{ veces}}{\overbrace{S_{\mathcal{P}}(...S_{\mathcal{P}}(S_{\mathcal{P}}(}}1,\vec{s},\vec{\sigma}))...)=(j,\vec{u},\vec{\eta})
+\]
+
+\end_inset
+
+diremos que 
+\begin_inset Formula $(\vec{u},\vec{\eta})$
+\end_inset
+
+ es el 
+\shape italic
+estado obtenido luego de 
+\shape default
+
+\begin_inset Formula $t$
+\end_inset
+
+ 
+\shape italic
+pasos, partiendo del estado 
+\shape default
+
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Defina, relativo al lenguaje 
+\begin_inset Formula $S^{\Sigma}$
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ se detiene (luego de 
+\begin_inset Formula $t$
+\end_inset
+
+ pasos), partiendo del estado 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cuando la primer coordenada de
+\begin_inset Formula 
+\[
+\overset{t\text{ veces}}{\overbrace{S_{\mathcal{P}}(...S_{\mathcal{P}}(S_{\mathcal{P}}(}}1,\vec{s},\vec{\sigma}))...)
+\]
+
+\end_inset
+
+sea igual a 
+\begin_inset Formula $n(\mathcal{P})+1$
+\end_inset
+
+, diremos que 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ 
+\shape italic
+se detiene (luego de 
+\shape default
+
+\begin_inset Formula $t$
+\end_inset
+
+
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+pasos), partiendo desde el estado 
+\shape default
+
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

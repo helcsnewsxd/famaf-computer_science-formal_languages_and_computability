@@ -1,0 +1,445 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Combo 16
+\end_layout
+
+\begin_layout Section
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Dado un predicado 
+\begin_inset Formula $P:D_{P}\subseteq\omega\times\Sigma^{*}\to\omega$
+\end_inset
+
+, describa qué tipo de objeto es y qué propiedades debe tener el macro:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[\mathrm{IF}\;P(\mathrm{V}1,\mathrm{W}1)\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Resolución
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Dado un predicado 
+\begin_inset Formula $P:D_{P}\subseteq\omega\times\Sigma^{*}\rightarrow\omega$
+\end_inset
+
+, usaremos
+\begin_inset Formula 
+\[
+\left[\mathrm{IF}\;P(\mathrm{V}1,\mathrm{W}1)\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+
+\end_inset
+
+para denotar un macro 
+\begin_inset Formula $M$
+\end_inset
+
+ el cual cumpla las siguientes propiedades.
+ Cabe destacar que no siempre existira dicho macro, es decir solo para ciertos
+ predicados 
+\begin_inset Formula $P:D_{P}\subseteq\omega\times\Sigma^{*}\rightarrow\omega$
+\end_inset
+
+ habra un tal macro.
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+(1)
+\end_layout
+
+\end_inset
+
+Las variables oficiales de 
+\begin_inset Formula $M$
+\end_inset
+
+ son 
+\begin_inset Formula $\mathrm{V}1,\mathrm{W}1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+(2)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{A}1$
+\end_inset
+
+ es el único label oficial de 
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+(3)
+\end_layout
+
+\end_inset
+
+Si reemplazamos:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\lang english
+las variables oficiales de 
+\begin_inset Formula $M$
+\end_inset
+
+ (i.e.
+ 
+\begin_inset Formula $\mathrm{V}1,\mathrm{W}1$
+\end_inset
+
+) por variables concretas
+\begin_inset Formula 
+\[
+\mathrm{N}\overline{k_{1}},\mathrm{P}\overline{j_{1}}
+\]
+
+\end_inset
+
+(elegidas libremente, es decir los números 
+\begin_inset Formula $k_{1},j_{1}$
+\end_inset
+
+ son cualesquiera)
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+el label oficial 
+\begin_inset Formula $\mathrm{A}1$
+\end_inset
+
+ por el label concreto 
+\begin_inset Formula $\mathrm{L}\bar{k}$
+\end_inset
+
+ (elegido libremente, es decir 
+\begin_inset Formula $k$
+\end_inset
+
+ es cualquier elemento de 
+\begin_inset Formula $\mathbf{N}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+las variables auxiliares de 
+\begin_inset Formula $M$
+\end_inset
+
+ por variables concretas (distintas de a dos) y NO pertenecientes a la lista
+ 
+\begin_inset Formula $\mathrm{N}\overline{k_{1}},\mathrm{P}\overline{j_{1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+los labels auxiliares de 
+\begin_inset Formula $M$
+\end_inset
+
+ por labels concretos (distintos de a dos) y ninguno igual a 
+\begin_inset Formula $\mathrm{L}\bar{k}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang english
+Entonces la palabra asi obtenida es un programa de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+(por lo tanto, el TIPO de objeto es PALABRA), salvo por la ley de los GOTO
+ respecto de 
+\begin_inset Formula $\mathrm{L}\bar{k}$
+\end_inset
+
+, que denotaremos con
+\begin_inset Formula 
+\[
+\left[\mathrm{IF\ }P(\mathrm{N}\overline{k_{1}},\mathrm{P}\overline{j_{1}})\ \mathrm{GOTO\ L}\bar{k}\right]
+\]
+
+\end_inset
+
+el cual debe tener la siguiente propiedad:
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+-
+\end_layout
+
+\end_inset
+
+Si hacemos correr 
+\begin_inset Formula $\left[\mathrm{IF\ }P(\mathrm{N}\overline{k_{1}},\mathrm{P}\overline{j_{1}})\ \mathrm{GOTO\ L}\bar{k}\right]$
+\end_inset
+
+ partiendo de un estado 
+\begin_inset Formula $e$
+\end_inset
+
+ que le asigne a las variables 
+\begin_inset Formula $\mathrm{N}\overline{k_{1}},\mathrm{P}\overline{j_{1}}$
+\end_inset
+
+ valores 
+\begin_inset Formula $x_{1},\alpha_{1}$
+\end_inset
+
+, entonces independientemente de los valores que les asigne 
+\begin_inset Formula $e$
+\end_inset
+
+ al resto de las variables (incluidas las que fueron a reemplazar a las
+ variables auxiliares de 
+\begin_inset Formula $M$
+\end_inset
+
+) se dará que
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\lang english
+si 
+\begin_inset Formula $(x_{1},\alpha_{1})\notin D_{P}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\left[\mathrm{IF\ }P(\mathrm{N}\overline{k_{1}},\mathrm{P}\overline{j_{1}})\ \mathrm{GOTO\ L}\bar{k}\right]$
+\end_inset
+
+ no se detiene
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+si 
+\begin_inset Formula $(x_{1},\alpha_{1})\in D_{P}$
+\end_inset
+
+ y 
+\begin_inset Formula $P(x_{1},\alpha_{1})=1$
+\end_inset
+
+, entonces luego de una cantidad finita de pasos, 
+\begin_inset Formula $\left[\mathrm{IF\ }P(\mathrm{N}\overline{k_{1}},\mathrm{P}\overline{j_{1}})\ \mathrm{GOTO\ L}\bar{k}\right]$
+\end_inset
+
+ direcciona al label 
+\begin_inset Formula $\mathrm{L}\bar{k}$
+\end_inset
+
+ quedando en un estado 
+\begin_inset Formula $e^{\prime}$
+\end_inset
+
+ el cual solo puede diferir de 
+\begin_inset Formula $e$
+\end_inset
+
+ en los valores que le asigna a las variables que fueron a reemplazar a
+ las variables auxiliares de 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Al resto de las variables, incluidas 
+\begin_inset Formula $\mathrm{N}\overline{k_{1}},\mathrm{P}\overline{j_{1}}$
+\end_inset
+
+ no las modifica
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+si 
+\begin_inset Formula $(x_{1},\alpha_{1})\in D_{P}$
+\end_inset
+
+ y 
+\begin_inset Formula $P(x_{1},\alpha_{1})=0$
+\end_inset
+
+, entonces luego de una cantidad finita de pasos, 
+\begin_inset Formula $\left[\mathrm{IF\ }P(\mathrm{N}\overline{k_{1}},\mathrm{P}\overline{j_{1}})\ \mathrm{GOTO\ L}\bar{k}\right]$
+\end_inset
+
+ se detiene (i.e.
+ intenta realizar la siguiente a su última instrucción) quedando en un estado
+ 
+\begin_inset Formula $e^{\prime}$
+\end_inset
+
+ el cual solo puede diferir de 
+\begin_inset Formula $e$
+\end_inset
+
+ en los valores que le asigna a las variables que fueron a reemplazar a
+ las variables auxiliares de 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Al resto de las variables, incluidas 
+\begin_inset Formula $\mathrm{N}\overline{k_{1}},\mathrm{P}\overline{j_{1}}$
+\end_inset
+
+ no las modifica 
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_body
+\end_document

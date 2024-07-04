@@ -1,0 +1,568 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Combo 1
+\end_layout
+
+\begin_layout Section
+Proposición 1: Caracterización de conjuntos p.r.
+\end_layout
+
+\begin_layout Subsection
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Un conjunto 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ sii 
+\begin_inset Formula $S$
+\end_inset
+
+ es el dominio de alguna funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+\begin_inset Formula $.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nota: en la inducción de la prueba hacer solo el caso de la composición.
+\end_layout
+
+\begin_layout Subsection
+Demostración
+\end_layout
+
+\begin_layout Standard
+Supongamos que 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+) Note que 
+\begin_inset Formula $S=D_{Pred\circ\chi_{S}^{\omega^{n}\times\Sigma^{\ast m}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset Formula $\Leftarrow$
+\end_inset
+
+) Probaremos por induccion en 
+\begin_inset Formula $k$
+\end_inset
+
+ que 
+\begin_inset Formula $D_{F}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r., para cada 
+\begin_inset Formula $F\in\mathrm{PR}_{k}^{\Sigma}.$
+\end_inset
+
+ El caso 
+\begin_inset Formula $k=0$
+\end_inset
+
+ es facil
+\begin_inset Formula $.$
+\end_inset
+
+ Supongamos el resultado vale para un 
+\begin_inset Formula $k$
+\end_inset
+
+ fijo y supongamos 
+\begin_inset Formula $F\in\mathrm{PR}_{k+1}^{\Sigma}.$
+\end_inset
+
+ Veremos entonces que 
+\begin_inset Formula $D_{F}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Hay varios, pero sólo consideraremos el de la composición.
+\end_layout
+
+\begin_layout Standard
+Supongamos ahora que 
+\begin_inset Formula $F=g\circ[g_{1},...,g_{r}]$
+\end_inset
+
+ con 
+\begin_inset Formula $g,g_{1},...,g_{r}\in\mathrm{PR}_{k}^{\Sigma}$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $F=\emptyset$
+\end_inset
+
+, entonces es claro que 
+\begin_inset Formula $D_{F}=\emptyset$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Supongamos entonces que 
+\begin_inset Formula $F$
+\end_inset
+
+ no es la funcion 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+.
+ Tenemos entonces que 
+\begin_inset Formula $r$
+\end_inset
+
+ es de la forma 
+\begin_inset Formula $n+m$
+\end_inset
+
+ y
+\begin_inset Formula 
+\begin{align*}
+g & :D_{g}\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow O\\
+g_{i} & :D_{g_{i}}\subseteq\omega^{k}\times\Sigma^{\ast l}\rightarrow\omega\text{, }i=1,...,n\\
+g_{i} & :D_{g_{i}}\subseteq\omega^{k}\times\Sigma^{\ast l}\rightarrow\Sigma^{\ast},i=n+1,...,n+m
+\end{align*}
+
+\end_inset
+
+con 
+\begin_inset Formula $O\in\{\omega,\Sigma^{\ast}\}$
+\end_inset
+
+ y 
+\begin_inset Formula $k,l\in\omega$
+\end_inset
+
+.
+ Por Lema de Extensión, sabemos que hay funciones 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ 
+\begin_inset Formula $\bar{g}_{1},...,\bar{g}_{n+m}$
+\end_inset
+
+ las cuales son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-totales y cumplen
+\begin_inset Formula 
+\[
+g_{i}=\bar{g}_{i}|_{D_{g_{i}}}\text{, para }i=1,...,n+m.
+\]
+
+\end_inset
+
+Por hipotesis inductiva los conjuntos 
+\begin_inset Formula $D_{g}$
+\end_inset
+
+, 
+\begin_inset Formula $D_{g_{i}}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,...,n+m$
+\end_inset
+
+, son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ y por lo tanto
+\begin_inset Formula 
+\[
+S=\bigcap_{i=1}^{n+m}D_{g_{i}}
+\]
+
+\end_inset
+
+lo es.
+ Notese que
+\begin_inset Formula 
+\[
+\chi_{D_{F}}^{\omega^{k}\times\Sigma^{\ast l}}=(\chi_{D_{g}}^{\omega^{n}\times\Sigma^{\ast m}}\circ\left[\bar{g}_{1},...,\bar{g}_{n+m}\right]\wedge\chi_{S}^{\omega^{k}\times\Sigma^{\ast l}})
+\]
+
+\end_inset
+
+lo cual nos dice que 
+\begin_inset Formula $D_{F}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+\end_layout
+
+\begin_layout Section
+Teorema 2: Neumann vence a Godel
+\end_layout
+
+\begin_layout Subsection
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $h$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva, entonces 
+\begin_inset Formula $h$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-
+\shape default
+computable.
+\end_layout
+
+\begin_layout Standard
+Nota: en la inducción de la prueba hacer solo el caso 
+\begin_inset Formula $h=R(f,\mathcal{G})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Demostración
+\end_layout
+
+\begin_layout Standard
+Probaremos por induccion en 
+\begin_inset Formula $k$
+\end_inset
+
+ que
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(*)
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $h\in\mathrm{R}_{k}^{\Sigma}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $h$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-
+\shape default
+computable.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+El caso 
+\begin_inset Formula $k=0$
+\end_inset
+
+ es trivial.
+ Supongamos (*) vale para 
+\begin_inset Formula $k$
+\end_inset
+
+, veremos que vale para 
+\begin_inset Formula $k+1$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $h\in\mathrm{R}_{k+1}^{\Sigma}-\mathrm{R}_{k}^{\Sigma}$
+\end_inset
+
+.
+ Hay varios casos, pero solo consideraremos la recursión primitiva con variable
+ y valor alfabéticos.
+ Supongamos 
+\begin_inset Formula $h=R(f,\mathcal{G})$
+\end_inset
+
+, con
+\begin_inset Formula 
+\begin{align*}
+f & :S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}\rightarrow\Sigma^{\ast}\\
+\mathcal{G}_{a} & :S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}\times\Sigma^{\ast}\times\Sigma^{\ast}\rightarrow\Sigma^{\ast}\text{, }a\in\Sigma
+\end{align*}
+
+\end_inset
+
+elementos de 
+\begin_inset Formula $\mathrm{R}_{k}^{\Sigma}$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $\Sigma=\{a_{1},...,a_{r}\}.$
+\end_inset
+
+ Por hipotesis inductiva, las funciones 
+\begin_inset Formula $f$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{G}_{a}$
+\end_inset
+
+, 
+\begin_inset Formula $a\in\Sigma$
+\end_inset
+
+, son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-
+\shape default
+computables y por lo tanto podemos hacer el siguiente programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ via el uso de macros
+\begin_inset Formula 
+\[
+\begin{array}{rl}
+ & \left[\mathrm{P}\overline{m+3}\leftarrow f(\mathrm{N}1,...,\mathrm{N}\bar{n},\mathrm{P}1,...,\mathrm{P}\bar{m})\right]\\
+\mathrm{L}\overline{r+1} & \mathrm{IF}\;\mathrm{P}\overline{m+1}\ \mathrm{BEGINS\ }a_{1}\text{ }\mathrm{GOTO}\;\mathrm{L}1\\
+ & \ \ \ \ \ \ \ \ \ \ \ \ \vdots\\
+ & \mathrm{IF}\;\mathrm{P}\overline{m+1}\ \mathrm{BEGINS\ }a_{r}\text{ }\mathrm{GOTO}\;\mathrm{L}\bar{r}\\
+ & \mathrm{GOTO}\;\mathrm{L}\overline{r+2}\\
+\mathrm{L}1 & \mathrm{P}\overline{m+1}\leftarrow\text{ }^{\curvearrowright}\mathrm{P}\overline{m+1}\\
+ & \left[\mathrm{P}\overline{m+3}\leftarrow\mathcal{G}_{a_{1}}(\mathrm{N}1,...,\mathrm{N}\bar{n},\mathrm{P}1,...,\mathrm{P}\bar{m},\mathrm{P}\overline{m+2},\mathrm{P}\overline{m+3})\right]\\
+ & \mathrm{P}\overline{m+2}\leftarrow\mathrm{P}\overline{m+2}.a_{1}\\
+ & \mathrm{GOTO}\;\mathrm{L}\overline{r+1}\\
+ & \ \ \ \ \ \ \ \ \ \ \ \ \vdots\\
+\mathrm{L}\bar{r} & \mathrm{P}\overline{m+1}\leftarrow\text{ }^{\curvearrowright}\mathrm{P}\overline{m+1}\\
+ & \left[\mathrm{P}\overline{m+3}\leftarrow\mathcal{G}_{a_{r}}(\mathrm{N}1,...,\mathrm{N}\bar{n},\mathrm{P}1,...,\mathrm{P}\bar{m},\mathrm{P}\overline{m+2},\mathrm{P}\overline{m+3})\right]\\
+ & \mathrm{P}\overline{m+2}\leftarrow\mathrm{P}\overline{m+2}.a_{r}\\
+ & \mathrm{GOTO}\;\mathrm{L}\overline{r+1}\\
+\mathrm{L}\overline{r+2} & \mathrm{P}1\leftarrow\mathrm{P}\overline{m+3}
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Luego, si comprobamos que este programa computa 
+\begin_inset Formula $h$
+\end_inset
+
+, demostraríamos este caso.
+ Para ello, notemos que tenemos que ver que 
+\begin_inset Formula $h=\Psi_{\mathcal{P}}^{n,m,*}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D_{h}=D_{\Psi_{\mathcal{P}}^{n,m,*}}$
+\end_inset
+
+: Es fácil de ver porque se hace uso de 
+\begin_inset Formula $\mathcal{G}$
+\end_inset
+
+ en las macros y, en caso que no pertenezca al dominio de 
+\begin_inset Formula $h$
+\end_inset
+
+, entonces estas macros no se dentendrían, por lo que no estaría en el dominio
+ de 
+\begin_inset Formula $\Psi_{\mathcal{P}}^{n,m,*}$
+\end_inset
+
+ tampoco.
+ En todos los demás casos sí se detiene.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall(\vec{x},\vec{\alpha},\alpha)\in D_{h},h(\vec{x},\vec{\alpha},\alpha)=\Psi_{\mathcal{P}}^{n,m,*}(\vec{x},\vec{\alpha},\alpha)$
+\end_inset
+
+: Notemos que se cumple porque se hace desde el caso base de la recursión
+ en adelante, manteniendo en los valores contenidos en las variables 
+\begin_inset Formula $P\overline{m+3},P\overline{m+2}$
+\end_inset
+
+ el valor actual de la recursión y la palabra por la que 
+\begin_inset Quotes eld
+\end_inset
+
+iteramos
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Además, se aplica siempre la correcta 
+\begin_inset Formula $\mathcal{G}_{a}(a\in\Sigma)$
+\end_inset
+
+ para cada caso y se deja almacenado en 
+\begin_inset Formula $P1$
+\end_inset
+
+ el valor de retorno correspondiente cuando 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+se detiene.
+\end_layout
+
+\begin_layout Standard
+El caso de recursión primitiva de variable alfabética y valor numérico es
+ totalmente análogo.
+\end_layout
+
+\end_body
+\end_document

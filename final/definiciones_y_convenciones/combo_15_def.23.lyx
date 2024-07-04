@@ -1,0 +1,448 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\lang american
+Combo 15
+\end_layout
+
+\begin_layout Section
+
+\lang american
+Enunciado
+\end_layout
+
+\begin_layout Standard
+
+\lang american
+Dada una función 
+\begin_inset Formula $f:D_{f}\subseteq\omega\times\Sigma^{*}\to\omega$
+\end_inset
+
+, describa qué tipo de objeto es y qué propiedades debe tener el macro:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+\left[\mathrm{V}2\leftarrow f(\mathrm{V}1,\mathrm{W}1)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang american
+Resolución
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Dada una función 
+\begin_inset Formula $f:D_{f}\subseteq\omega\times\Sigma^{*}\to\omega$
+\end_inset
+
+, usaremos
+\begin_inset Formula 
+\[
+\left[\mathrm{V}2\leftarrow f(\mathrm{V}1,\mathrm{W}1)\right]
+\]
+
+\end_inset
+
+para denotar un macro 
+\begin_inset Formula $M$
+\end_inset
+
+ (cuyo TIPO de objeto es PALABRA) el cual cumpla las siguientes propiedades.
+ Cabe destacar que no siempre existira dicho macro, es decir solo para ciertas
+ funciones 
+\begin_inset Formula $f:D_{f}\subseteq\omega\times\Sigma^{\ast}\rightarrow\omega$
+\end_inset
+
+ habra un tal macro.
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+(1)
+\end_layout
+
+\end_inset
+
+Las variables oficiales de 
+\begin_inset Formula $M$
+\end_inset
+
+ son 
+\begin_inset Formula $\mathrm{V}1,\mathrm{V}2,\mathrm{W}1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+(2)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $M$
+\end_inset
+
+ no tiene labels oficiales
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+(3)
+\end_layout
+
+\end_inset
+
+Si reemplazamos:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\lang english
+las variables oficiales de 
+\begin_inset Formula $M$
+\end_inset
+
+ (i.e.
+ 
+\begin_inset Formula $\mathrm{V}1,\mathrm{V}2,\mathrm{W}1$
+\end_inset
+
+) por variables concretas
+\begin_inset Formula 
+\[
+\mathrm{N}\overline{k_{1}},\mathrm{N}\overline{k_{2}},\mathrm{P}\overline{j_{1}}
+\]
+
+\end_inset
+
+(elegidas libremente, es decir los números 
+\begin_inset Formula $k_{1},k_{2},j_{1}$
+\end_inset
+
+ son cualesquiera)
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+las variables auxiliares de 
+\begin_inset Formula $M$
+\end_inset
+
+ por variables concretas (distintas de a dos) y NO pertenecientes a la lista
+ 
+\begin_inset Formula $\mathrm{N}\overline{k_{1}},\mathrm{N}\overline{k_{2}},\mathrm{P}\overline{j_{1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+los labels auxiliares de 
+\begin_inset Formula $M$
+\end_inset
+
+ por labels concretos (distintos de a dos) 
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang english
+Entonces la palabra así obtenida es un programa de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+que denotaremos con
+\begin_inset Formula 
+\[
+\left[\mathrm{N}\overline{k_{2}}\leftarrow f(\mathrm{N}\overline{k_{1}},\mathrm{P}\overline{j_{1}})\right]
+\]
+
+\end_inset
+
+el cual debe tener la siguiente propiedad:
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+-
+\end_layout
+
+\end_inset
+
+Si hacemos correr 
+\begin_inset Formula $\left[\mathrm{N}\overline{k_{2}}\leftarrow f(\mathrm{N}\overline{k_{1}},\mathrm{P}\overline{j_{1}})\right]$
+\end_inset
+
+ partiendo de un estado 
+\begin_inset Formula $e$
+\end_inset
+
+ que le asigne a las variables 
+\begin_inset Formula $\mathrm{N}\overline{k_{1}},\mathrm{P}\overline{j_{1}}$
+\end_inset
+
+ valores 
+\begin_inset Formula $x_{1},\alpha_{1}$
+\end_inset
+
+, entonces independientemente de los valores que les asigne 
+\begin_inset Formula $e$
+\end_inset
+
+ al resto de las variables (incluidas las que fueron a reemplazar a las
+ variables auxiliares de 
+\begin_inset Formula $M$
+\end_inset
+
+) se dará que
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\lang english
+si 
+\begin_inset Formula $(x_{1},\alpha_{1})\notin D_{f}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\left[\mathrm{N}\overline{k_{2}}\leftarrow f(\mathrm{N}\overline{k_{1}},\mathrm{P}\overline{j_{1}})\right]$
+\end_inset
+
+ no se detiene
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+si 
+\begin_inset Formula $(x_{1},\alpha_{1})\in D_{f}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\left[\mathrm{N}\overline{k_{2}}\leftarrow f(\mathrm{N}\overline{k_{1}},\mathrm{P}\overline{j_{1}})\right]$
+\end_inset
+
+ se detiene (i.e.
+ intenta realizar la siguiente a su última instrucción) y llega a un estado
+ 
+\begin_inset Formula $e^{\prime}$
+\end_inset
+
+ el cual cumple:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $e^{\prime}$
+\end_inset
+
+ le asigna a 
+\begin_inset Formula $\mathrm{N}\overline{k_{2}}$
+\end_inset
+
+ el valor 
+\begin_inset Formula $f(x_{1},\alpha_{1})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $e^{\prime}$
+\end_inset
+
+ solo puede diferir de 
+\begin_inset Formula $e$
+\end_inset
+
+ en los valores que le asigna a 
+\begin_inset Formula $\mathrm{N}\overline{k_{2}}$
+\end_inset
+
+ o a las variables que fueron a reemplazar a las variables auxiliares de
+ 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Al resto de las variables, incluidas 
+\begin_inset Formula $\mathrm{N}\overline{k_{1}},\mathrm{P}\overline{j_{1}}$
+\end_inset
+
+ no las modifica (salvo en el caso de que 
+\begin_inset Formula $\mathrm{N}\overline{k_{1}}$
+\end_inset
+
+ sea la variable 
+\begin_inset Formula $\mathrm{N}\overline{k_{2}}$
+\end_inset
+
+, situación en la cual el valor final de la variable 
+\begin_inset Formula $\mathrm{N}\overline{k_{1}}$
+\end_inset
+
+ será 
+\begin_inset Formula $f(x_{1},\alpha_{1})$
+\end_inset
+
+) 
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\end_body
+\end_document

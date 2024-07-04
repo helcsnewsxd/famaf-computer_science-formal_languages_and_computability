@@ -1,0 +1,331 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Combo 14
+\end_layout
+
+\begin_layout Section
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Explique en forma detallada la notación lambda
+\end_layout
+
+\begin_layout Section
+Resolución
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Una expresión es 
+\emph on
+lambdificable
+\emph default
+ con respecto a 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ si cumple las siguientes características:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\lang english
+Involucra variables numéricas (que se valuaran en números de 
+\begin_inset Formula $\omega$
+\end_inset
+
+),
+ y variables alfabéticas (que se valuaran en palabras del alfabeto previamente fijado)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\lang english
+En cuanto a notación,
+ las numéricas son con letras latinas minúsculas (
+\begin_inset Formula $x,y,z$
+\end_inset
+
+) y las alfabéticas con letras griegas minúsculas (
+\begin_inset Formula $\alpha,\beta,\gamma$
+\end_inset
+
+) 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\lang english
+Para ciertas valuaciones de sus variables la expresión puede 
+\emph on
+no
+\emph default
+ estar definida (por ejemplo,
+ 
+\begin_inset Formula $Pred(|\alpha|)$
+\end_inset
+
+ para 
+\begin_inset Formula $\alpha=\varepsilon$
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Sea 
+\begin_inset Formula $E$
+\end_inset
+
+ la expresión,
+ los valores que asuma cuando hayan sido asignados los valores de 
+\begin_inset Formula $\omega$
+\end_inset
+
+ a sus variables numéricas y valores de 
+\begin_inset Formula $\Sigma^{*}$
+\end_inset
+
+ a sus variables alfabéticas,
+ deberán ser 
+\emph on
+siempre
+\emph default
+ elementos de 
+\begin_inset Formula $O\in\{\omega,\Sigma^{*}\}$
+\end_inset
+
+ (es decir,
+ no puede tomar valores mixtos) 
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+La expresión puede involucrar lenguaje coloquial castellano (i.e.,
+ no únicamente operaciones matemáticas).
+ Por ejemplo,
+ 
+\begin_inset Quotes eld
+\end_inset
+
+el menor número primo que es mayor que 
+\begin_inset Formula $x$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+A las 
+\emph on
+expresiones booleanas
+\emph default
+ (como 
+\begin_inset Formula $x=0$
+\end_inset
+
+),
+ se les considerará que asumen valores de 
+\begin_inset Formula $\{0,1\}\subseteq\omega$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\emph on
+\lang english
+Definición
+\emph default
+:
+ sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito fijo,
+ 
+\begin_inset Formula $E$
+\end_inset
+
+ una expresión lambdificable respecto a 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ y 
+\begin_inset Formula $x_{1},..,x_{n},\alpha_{1},..,\alpha_{m}$
+\end_inset
+
+ variables distintas tales que las numéricas que ocurren en 
+\begin_inset Formula $E$
+\end_inset
+
+ están en 
+\begin_inset Formula $\{x_{1},..,x_{n}\}$
+\end_inset
+
+ y las alfabéticas en 
+\begin_inset Formula $\{\alpha_{1},..,\alpha_{m}\}$
+\end_inset
+
+,
+ entonces 
+\begin_inset Formula $\lambda x_{1}..x_{n}\alpha_{1}..\alpha_{m}[E]$
+\end_inset
+
+ denota la función definida por:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\lang english
+\begin_inset Formula $D_{\lambda x_{1}..x_{n}\alpha_{1}..\alpha_{m}[E]}=\{(k_{1},..,k_{n},\beta_{1},..,\beta_{m})\in\omega^{n}\times\Sigma^{*m}:E$
+\end_inset
+
+ está definida cuando asignamos a cada 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ el valor 
+\begin_inset Formula $k_{i}$
+\end_inset
+
+,
+ y a cada 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+,
+ el valor 
+\begin_inset Formula $\beta_{i}\}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+\begin_inset Formula $\lambda x_{1}..x_{n}\alpha_{1}..\alpha_{m}[E](k_{1},..,k_{n},\beta_{1},..,\beta_{m})=$
+\end_inset
+
+ valor que asume o representa 
+\begin_inset Formula $E$
+\end_inset
+
+ cuando asignamos a cada 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ el valor 
+\begin_inset Formula $k_{i}$
+\end_inset
+
+,
+ y a cada 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+,
+ el valor 
+\begin_inset Formula $\beta_{i}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

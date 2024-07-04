@@ -1,0 +1,721 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Combo 7
+\end_layout
+
+\begin_layout Section
+Lema 13: Lema de minimización acotada
+\end_layout
+
+\begin_layout Subsection
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $n,m\geq0$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $P:D_{P}\subseteq\omega\times\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ un predicado 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Entonces
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(a)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $M(P)$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(b)
+\end_layout
+
+\end_inset
+
+Si hay una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ 
+\begin_inset Formula $f:\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+M(P)(\vec{x},\vec{\alpha})=\min\nolimits _{t}P(t,\vec{x},\vec{\alpha})\leq f(\vec{x},\vec{\alpha})\text{, para cada }(\vec{x},\vec{\alpha})\in D_{M(P)}\text{,}
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula $M(P)$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ 
+\end_layout
+
+\begin_layout Subsection
+Demostración
+\end_layout
+
+\begin_layout Description
+(a) Sea 
+\begin_inset Formula $\bar{P}=P\cup C_{0}^{n+1,m}|_{(\omega^{n+1}\times\Sigma^{\ast m})-D_{P}}$
+\end_inset
+
+.
+ Note que 
+\begin_inset Formula $\bar{P}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r., dado que:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Como 
+\begin_inset Formula $D_{P},\omega^{n+1}\times\Sigma^{*m}$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r., 
+\begin_inset Formula $(\omega^{n+1}\times\Sigma^{*m})-D_{P}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ por Lema
+\end_layout
+
+\begin_layout Itemize
+Como 
+\begin_inset Formula $C_{0}^{n+1,m}$
+\end_inset
+
+ y 
+\begin_inset Formula $(\omega^{n+1}\times\Sigma^{*m})-D_{P}$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r., 
+\begin_inset Formula $C_{0}^{n+1,m}|_{(\omega^{n+1}\times\Sigma^{\ast m})-D_{P}}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ por lema de 
+\begin_inset Quotes eld
+\end_inset
+
+clausura
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+La unión de dos funciones 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+\end_layout
+
+\begin_layout Standard
+Veremos a continuacion que 
+\begin_inset Formula $M(P)=M(\bar{P})$
+\end_inset
+
+.
+ Notese que
+\begin_inset Formula 
+\[
+\{t\in\omega:P(t,\vec{x},\vec{\alpha})=1\}=\{t\in\omega:\bar{P}(t,\vec{x},\vec{\alpha})=1\}
+\]
+
+\end_inset
+
+Esto claramente dice que 
+\begin_inset Formula $D_{M(P)}=D_{M(\bar{P})}$
+\end_inset
+
+ y que 
+\begin_inset Formula $M(P)(\vec{x},\vec{\alpha})=M(\bar{P})(\vec{x},\vec{\alpha})$
+\end_inset
+
+, para cada 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in D_{M(P)}$
+\end_inset
+
+., por lo cual 
+\begin_inset Formula $M(P)=M(\bar{P})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Veremos entonces que 
+\begin_inset Formula $M(\bar{P})$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva.
+ Sea 
+\begin_inset Formula $k$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\bar{P}\in\mathrm{PR}_{k}^{\Sigma}$
+\end_inset
+
+.
+ Ya que 
+\begin_inset Formula $\bar{P}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-total y 
+\begin_inset Formula $\bar{P}\in\mathrm{PR}_{k}^{\Sigma}\subseteq\mathrm{R}_{k}^{\Sigma}$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula $M(\bar{P})\in\mathrm{R}_{k+1}^{\Sigma}$
+\end_inset
+
+ y por lo tanto 
+\begin_inset Formula $M(\bar{P})\in\mathrm{R}^{\Sigma}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+(b) Ya que 
+\begin_inset Formula $M(P)=M(\bar{P})$
+\end_inset
+
+, basta con probar que 
+\begin_inset Formula $M(\bar{P})$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ Primero veremos que 
+\begin_inset Formula $D_{M(\bar{P})}$
+\end_inset
+
+ es un conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Notese que
+\begin_inset Formula 
+\[
+\chi_{D_{M(\bar{P})}}^{\omega^{n}\times\Sigma^{\ast m}}=\lambda\vec{x}\vec{\alpha}\left[(\exists t\in\omega)_{t\leq f(\vec{x},\vec{\alpha})}\;\bar{P}(t,\vec{x},\vec{\alpha})\right]
+\]
+
+\end_inset
+
+lo cual nos dice que
+\begin_inset Formula 
+\[
+\chi_{D_{M(\bar{P})}}^{\omega^{n}\times\Sigma^{\ast m}}=\lambda x\vec{x}\vec{\alpha}\left[(\exists t\in\omega)_{t\leq x}\;\bar{P}(t,\vec{x},\vec{\alpha})\right]\circ\left[f,p_{1}^{n,m},...,p_{n+m}^{n,m}\right]
+\]
+
+\end_inset
+
+Pero el Lema de cuantificación acotada nos dice que 
+\begin_inset Formula $\lambda x\vec{x}\vec{\alpha}\left[(\exists t\in\omega)_{t\leq x}\;\bar{P}(t,\vec{x},\vec{\alpha})\right]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ por lo cual tenemos que 
+\begin_inset Formula $\chi_{D_{M(\bar{P})}}^{\omega^{n}\times\Sigma^{\ast m}}$
+\end_inset
+
+ lo es.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Sea
+\begin_inset Formula 
+\[
+P_{1}=\lambda t\vec{x}\vec{\alpha}\left[\bar{P}(t,\vec{x},\vec{\alpha})\wedge(\forall j\in\omega)_{j\leq t}\;j=t\vee\lnot\bar{P}(j,\vec{x},\vec{\alpha})\right]
+\]
+
+\end_inset
+
+Note que 
+\begin_inset Formula $P_{1}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-total.
+ Ahora, 
+\begin_inset Formula $P_{1}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r dado que:
+\end_layout
+
+\begin_layout Itemize
+La negación de un predicado 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+\end_layout
+
+\begin_layout Itemize
+La conjunción de dos predicados 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ con igual dominio es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+\end_layout
+
+\begin_layout Itemize
+Sabemos que 
+\begin_inset Formula $\bar{P}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+\end_layout
+
+\begin_layout Itemize
+Por lema de cuantificación acotada y varias composiciones, 
+\begin_inset Formula $\lambda t\vec{x}\vec{\alpha}[(\forall j\in\omega)_{j\leq t}\;j=t]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+\end_layout
+
+\begin_layout Standard
+Ademas notese que para 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ se tiene que
+\begin_inset Formula 
+\[
+P_{1}(t,\vec{x},\vec{\alpha})=1\text{ si y solo si }(\vec{x},\vec{\alpha})\in D_{M(\bar{P})}\text{ y }t=M(\bar{P})(\vec{x},\vec{\alpha})
+\]
+
+\end_inset
+
+Esto nos dice que
+\begin_inset Formula 
+\[
+M(\bar{P})=\left(\lambda\vec{x}\vec{\alpha}\left[\prod_{t=0}^{f(\vec{x},\vec{\alpha})}t^{P_{1}(t,\vec{x},\vec{\alpha})}\right]\right)|_{D_{M(\bar{P})}}
+\]
+
+\end_inset
+
+por lo cual para probar que 
+\begin_inset Formula $M(\bar{P})$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ solo nos resta probar que
+\begin_inset Formula 
+\[
+F=\lambda\vec{x}\vec{\alpha}\left[\prod_{t=0}^{f(\vec{x},\vec{\alpha})}t^{P_{1}(t,\vec{x},\vec{\alpha})}\right]
+\]
+
+\end_inset
+
+lo es.
+ Pero
+\begin_inset Formula 
+\[
+F=\lambda xy\vec{x}\vec{\alpha}\left[\prod_{t=x}^{y}t^{P_{1}(t,\vec{x},\vec{\alpha})}\right]\circ\left[C_{0}^{n,m},f,p_{1}^{n,m},...,p_{n+m}^{n,m}\right]
+\]
+
+\end_inset
+
+y por lo tanto el Lema de Iteración, tenemos que 
+\begin_inset Formula $F$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Lema 14
+\end_layout
+
+\begin_layout Subsection
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Supongamos 
+\begin_inset Formula $f:D_{f}\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow O$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva y 
+\begin_inset Formula $S\subseteq D_{f}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e., entonces 
+\begin_inset Formula $f|_{S}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva.
+\end_layout
+
+\begin_layout Subsection
+Demostración
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $S=\emptyset$
+\end_inset
+
+ Entonces 
+\begin_inset Formula $f|_{S}=\emptyset$
+\end_inset
+
+ y por lo tanto 
+\begin_inset Formula $f|_{S}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $S\neq\emptyset$
+\end_inset
+
+ Haremos el caso 
+\begin_inset Formula $n=m=1$
+\end_inset
+
+ y 
+\begin_inset Formula $O=\Sigma^{\ast}$
+\end_inset
+
+.
+ Tenemos que hay una 
+\begin_inset Formula $F:\omega\rightarrow\omega\times\Sigma^{\ast}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $I_{F}=S$
+\end_inset
+
+ y 
+\begin_inset Formula $F_{(1)}$
+\end_inset
+
+, 
+\begin_inset Formula $F_{(2)}$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivas.
+ Ya que 
+\begin_inset Formula $f$
+\end_inset
+
+, 
+\begin_inset Formula $F_{(1)}$
+\end_inset
+
+ y 
+\begin_inset Formula $F_{(2)}$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computables, hay macros
+\begin_inset Formula 
+\begin{align*}
+ & \left[\mathrm{W}2\leftarrow f(\mathrm{V}1,\mathrm{W}1)\right]\\
+ & \left[\mathrm{V}2\leftarrow F_{(1)}(\mathrm{V}1)\right]\\
+ & \left[\mathrm{W}1\leftarrow F_{(2)}(\mathrm{V}1)\right]
+\end{align*}
+
+\end_inset
+
+Ya que los predicados 
+\begin_inset Formula $D=\lambda xy[x\neq y]$
+\end_inset
+
+ y 
+\begin_inset Formula $D^{\prime}=\lambda\alpha\beta\lbrack\alpha\neq\beta]$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r., tenemos que son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computables, por lo cual hay macros
+\begin_inset Formula 
+\begin{align*}
+ & \left[\mathrm{IF}\;D(\mathrm{V}1,\mathrm{V}2)\;\mathrm{GOTO}\;\mathrm{A}1\right]\\
+ & \left[\mathrm{IF}\;D^{\prime}(\mathrm{W}1,\mathrm{W}2)\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\end{align*}
+
+\end_inset
+
+Para para hacer mas amigable la lectura los escribieremos de la siguiente
+ manera
+\begin_inset Formula 
+\begin{align*}
+ & \left[\mathrm{IF}\;\mathrm{V}1\neq\mathrm{V}2\;\mathrm{GOTO}\;\mathrm{A}1\right]\\
+ & \left[\mathrm{IF}\;\mathrm{W}1\neq\mathrm{W}2\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\end{align*}
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ el siguiente programa
+\begin_inset Formula 
+\[
+\begin{array}{ll}
+\mathrm{L}2 & [\mathrm{N}2\leftarrow F_{(1)}(\mathrm{N}20)]\\
+ & [\mathrm{P}2\leftarrow F_{(2)}(\mathrm{N}20)]\\
+ & \left[\mathrm{IF}\;\mathrm{N}1\neq\mathrm{N}2\;\mathrm{GOTO}\;\mathrm{L}1\right]\\
+ & \left[\mathrm{IF}\;\mathrm{P}1\neq\mathrm{P}2\;\mathrm{GOTO}\;\mathrm{L}1\right]\\
+ & \left[\mathrm{P}1\leftarrow f(\mathrm{N}1,\mathrm{P}1)\right]\\
+ & \mathrm{GOTO}\;\mathrm{L}3\\
+\mathrm{L}1 & \mathrm{N}20\leftarrow\mathrm{N}20+1\\
+ & \mathrm{GOTO}\;\mathrm{L}2\\
+\mathrm{L}3 & \mathrm{SKIP}
+\end{array}
+\]
+
+\end_inset
+
+Es facil ver que 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ computa a 
+\begin_inset Formula $f|_{S}$
+\end_inset
+
+, dado que tenemos que ver que 
+\begin_inset Formula $f|_{S}=\Psi_{\mathcal{P}}^{1,1,*}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
