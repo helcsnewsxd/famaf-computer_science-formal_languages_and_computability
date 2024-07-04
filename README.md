@@ -28,6 +28,3 @@ Repositorio que contiene todo el material correspondiente a la materia de Lengua
 
 ### Lista de Combos (Examen Final - Parte Teórica)
 
-| Tipo | Material en Markdown | Material en Látex | Material en LyX |
-|------|----------------------|------------------|
-| Definiciones y convenciones notacionales | [MD](./final/definiciones_y_convenciones/definiciones_y_convenciones.md) y [PDF](./final/definiciones_y_convenciones/definiciones_y_convenciones-markdown.pdf) | [TEX](./final/definiciones_y_convenciones/definiciones_y_convenciones.tex) y [PDF](./final/definiciones_y_convenciones/definiciones_y_convenciones-latex.pdf) | [LYX](./final/definiciones_y_convenciones/definiciones_y_convenciones.lyx) |
