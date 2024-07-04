@@ -32,7 +32,7 @@ Repositorio que contiene todo el material correspondiente a la materia de Lengua
 
 | Combo | Tema | Material |
 |-------|------|----------|
-| 1 | Conjunto $\Sigma$-r, $\langle s_1,s_2,..\rangle$, función $\Sigma$-mixta, "familia $\Sigma$-indexada de funciones$, $R(f,\mathcal{G})$ | [LyX](./final/definiciones_y_convenciones/combo_1_def.23.lyx) y [PDF](./final/definiciones_y_convenciones/combo_1_def.23.pdf) |
+| 1 | Conjunto $\Sigma$-r, $\langle s_1,s_2,..\rangle$, función $\Sigma$-mixta, "familia $\Sigma$-indexada de funciones", $R(f,\mathcal{G})$ | [LyX](./final/definiciones_y_convenciones/combo_1_def.23.lyx) y [PDF](./final/definiciones_y_convenciones/combo_1_def.23.pdf) |
 | 2 | $d\overset{n}{\vdash}d'$, $L(M)$, $H(M)$, "función de tipo $(n,m,s)$ ", $(x)$, $(x)_i$ | [LyX](./final/definiciones_y_convenciones/combo_2_def.23.lyx) y [PDF](./final/definiciones_y_convenciones/combo_2_def.23.pdf) |
 | 3 | Conjunto $\Sigma$-r.e., $s^\leq$, $*^\leq$, $\\#^\leq$ | [LyX](./final/definiciones_y_convenciones/combo_3_def.23.lyx) y [PDF](./final/definiciones_y_convenciones/combo_3_def.23.pdf) |
 | 4 | Función $\Sigma$-efectivamente computable y procedimiento efectivo que la computa | [LyX](./final/definiciones_y_convenciones/combo_4_def.23.lyx) y [PDF](./final/definiciones_y_convenciones/combo_4_def.23.pdf) |
