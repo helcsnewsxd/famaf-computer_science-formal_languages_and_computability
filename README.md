@@ -50,3 +50,15 @@ Repositorio que contiene todo el material correspondiente a la materia de Lengua
 | 16 | Macro IF | [LyX](./final/definiciones_y_convenciones/combo_16_def.23.lyx) y [PDF](./final/definiciones_y_convenciones/combo_16_def.23.pdf) |
 
 #### Teoremas
+
+| Combo | Tema | Material |
+|-------|------|----------|
+| 1 | Caracterización de conjuntos p.r., Neumann vence a Godel | [LyX](./final/teoremas/combo_1_teo.23.lyx) y [PDF](./final/teoremas/combo_1_teo.23.pdf) |
+| 2 | Lema de división por casos para funciones p.r., Caracterización básica de conjuntos enumerables | [LyX](./final/teoremas/combo_2_teo.23.lyx) y [PDF](./final/teoremas/combo_2_teo.23.pdf) |
+| 3 | Godel vence a Neumann, Caracterización de conjuntos efectivamente computables | [LyX](./final/teoremas/combo_3_teo.23.lyx) y [PDF](./final/teoremas/combo_3_teo.23.pdf) |
+| 4 | Caracterización básica de conjuntos enumerables, Lema de la sumatoria | [LyX](./final/teoremas/combo_4_teo.23.lyx) y [PDF](./final/teoremas/combo_4_teo.23.pdf) |
+| 5 | Lema de intersección de conjuntos $\Sigma$-efectivamente enumerables, Lema de cuantificación acotada | [LyX](./final/teoremas/combo_5_teo.23.lyx) y [PDF](./final/teoremas/combo_5_teo.23.pdf) |
+| 6 | Efectivamente computable implica efectivamente enumerable, Caracterización de conjuntos r.e. | [LyX](./final/teoremas/combo_6_teo.23.lyx) y [PDF](./final/teoremas/combo_6_teo.23.pdf) |
+| 7 | Lema de minimización acotada, función con clausura | [LyX](./final/teoremas/combo_7_teo.23.lyx) y [PDF](./final/teoremas/combo_7_teo.23.pdf) |
+| 8 | $AutoHalt^\Sigma$ no $\Sigma$-r., $AutoHalt^\Sigma$ no $\Sigma$-efectivamente computable, $A$ $\Sigma$-r.e. y no $\Sigma$-r. y $N$ no $\Sigma$-r.e., Neumann vence a Godel | [LyX](./final/teoremas/combo_8_teo.23.lyx) y [PDF](./final/teoremas/combo_8_teo.23.pdf) |
+| 9 | Lema de división por casos para funciones recursivas, $Halt^{n,m}$ es $(\Sigma\cup\Sigma_p)$-p.r., $T^{n,m}$ es $(\Sigma\cup\Sigma_p)$-r. | [LyX](./final/teoremas/combo_9_teo.23.lyx) y [PDF](./final/teoremas/combo_9_teo.23.pdf) |
